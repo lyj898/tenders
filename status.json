@@ -1,1 +1,32 @@
-{"run_at":"2026-08-02T18:00:00+08:00","sources":{"GeBIZ":{"ok":true,"fetched":21,"note":"seeded from manual scan"},"TenderBoard":{"ok":true,"fetched":187,"note":"seeded from manual scan"},"SESAMi":{"ok":true,"fetched":99,"note":"seeded from manual scan"}},"live":21,"archived_total":0,"newly_archived":0}
+{
+ "run_at": "2026-08-02T21:08:03.609455+08:00",
+ "sources": {
+  "SESAMi": {
+   "ok": true,
+   "fetched": 99
+  },
+  "GeBIZ": {
+   "ok": true,
+   "fetched": 23
+  },
+  "TenderBoard": {
+   "ok": true,
+   "fetched": 187
+  },
+  "Jalan Besar Town Council": {
+   "ok": false,
+   "error": "HTTPSConnectionPool(host='www.jbtc.org.sg', port=443): Max retries exceeded with url: /tenders-notices/ (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.jbtc.org.sg', port=443) at 0x7fc3f2f96840>, 'Connection to www.jbtc.org.sg timed out. (connect timeout=60)'))"
+  },
+  "Marine Parade Town Council": {
+   "ok": true,
+   "fetched": 0
+  },
+  "Bishan-Toa Payoh Town Council": {
+   "ok": true,
+   "fetched": 0
+  }
+ },
+ "live": 49,
+ "archived_total": 0,
+ "newly_archived": 0
+}
