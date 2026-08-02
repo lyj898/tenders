@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tender Watch SG — disposal · handyman · skip</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;900&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+<style>
+  :root{
+    --concrete:#F1F3F2; --panel:#FFFFFF; --ink:#171D1C; --steel:#5A6663;
+    --line:#C9CFCB; --safety:#E8590C; --direct:#1E6B4F; --bundle:#8A5A00;
+  }
+  @media (prefers-reduced-motion: reduce){*{transition:none!important}}
+  *{box-sizing:border-box; margin:0}
+  body{background:var(--concrete); color:var(--ink); font-family:'Archivo',sans-serif; font-size:15px}
+  .mono{font-family:'IBM Plex Mono',monospace}
+
+  header{background:var(--ink); color:#F4F6F5; padding:22px 28px; display:flex; flex-wrap:wrap; gap:14px; align-items:baseline}
+  header h1{font-weight:900; font-size:26px; letter-spacing:.5px; text-transform:uppercase}
+  header h1 span{color:var(--safety)}
+  header .sub{font-family:'IBM Plex Mono',monospace; font-size:12px; color:#9BA6A2; margin-left:auto}
+
+  .bar{display:flex; flex-wrap:wrap; gap:10px; padding:16px 28px; align-items:center; border-bottom:1px solid var(--line); background:var(--panel)}
+  .tabs{display:flex; border:1px solid var(--ink)}
+  .tabs button{font:inherit; font-weight:700; padding:8px 18px; background:none; border:none; cursor:pointer; color:var(--ink)}
+  .tabs button.on{background:var(--ink); color:#fff}
+  input[type=search], select{font:inherit; padding:8px 10px; border:1px solid var(--line); background:#fff; color:var(--ink)}
+  input[type=search]{min-width:220px}
+  label.chk{display:flex; gap:6px; align-items:center; font-size:13px; color:var(--steel); cursor:pointer}
+  .grow{flex:1}
+  .xlsx{font:inherit; font-weight:700; padding:9px 18px; background:var(--safety); color:#fff; border:none; cursor:pointer}
+  .xlsx:hover{filter:brightness(.93)}
+  button:focus-visible, input:focus-visible, select:focus-visible{outline:2px solid var(--safety); outline-offset:1px}
+
+  main{padding:20px 28px 60px}
+  .count{font-family:'IBM Plex Mono',monospace; font-size:12px; color:var(--steel); margin-bottom:10px}
+  table{width:100%; border-collapse:collapse; background:var(--panel)}
+  th{font-size:11px; text-transform:uppercase; letter-spacing:.8px; text-align:left; color:var(--steel); padding:10px 12px; border-bottom:2px solid var(--ink); cursor:pointer; user-select:none}
+  td{padding:12px; border-bottom:1px solid var(--line); vertical-align:top}
+  tr.item{border-left:4px solid transparent}
+  tr.item.direct{border-left-color:var(--direct)}
+  tr.item.bundle{border-left-color:var(--bundle)}
+  tr.item:hover td{background:#FAFBFA}
+  .title{font-weight:700; max-width:520px}
+  .buyer{color:var(--steel); font-size:13px; margin-top:3px}
+  .tag{display:inline-block; font-size:11px; font-weight:700; padding:2px 8px; text-transform:uppercase; letter-spacing:.5px}
+  .tag.direct{color:var(--direct); border:1px solid var(--direct)}
+  .tag.bundle{color:var(--bundle); border:1px solid var(--bundle)}
+  .stamp{font-family:'IBM Plex Mono',monospace; font-weight:600; font-size:13px; border:2px solid var(--steel); color:var(--steel); padding:3px 8px; display:inline-block; white-space:nowrap}
+  .stamp.hot{border-color:var(--safety); color:var(--safety)}
+  .stamp.gone{border-style:dashed; opacity:.6}
+  a.src{color:var(--ink)}
+  .empty{padding:50px; text-align:center; color:var(--steel); background:var(--panel)}
+
+  footer{padding:18px 28px; font-family:'IBM Plex Mono',monospace; font-size:12px; color:var(--steel); border-top:1px solid var(--line)}
+  footer .ok{color:var(--direct)} footer .fail{color:var(--safety)}
+  @media (max-width:700px){
+    header,main,.bar,footer{padding-left:14px; padding-right:14px}
+    .hide-m{display:none}
+    .title{max-width:none}
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1>Tender<span>Watch</span> SG</h1>
+  <div class="mono" style="font-size:12px;color:#9BA6A2">junk disposal · handyman · skip tank</div>
+  <div class="sub" id="runAt">loading…</div>
+</header>
+
+<div class="bar">
+  <div class="tabs" role="tablist">
+    <button id="tabLive" class="on" onclick="setTab('live')">Live</button>
+    <button id="tabArch" onclick="setTab('archive')">Archive</button>
+  </div>
+  <input type="search" id="q" placeholder="Search title, buyer, ref…" oninput="render()">
+  <select id="fit" onchange="render()">
+    <option value="">All fits</option>
+    <option>Direct fit</option>
+    <option>Bundle/subcon</option>
+  </select>
+  <select id="src" onchange="render()"><option value="">All sources</option></select>
+  <label class="chk"><input type="checkbox" id="soon" onchange="render()"> Closing ≤ 7 days</label>
+  <div class="grow"></div>
+  <button class="xlsx" onclick="downloadXlsx()">Download Excel</button>
+</div>
+
+<main>
+  <div class="count" id="count"></div>
+  <table>
+    <thead><tr>
+      <th style="width:46%">Tender</th>
+      <th>Fit</th>
+      <th class="hide-m">Source / Ref</th>
+      <th class="hide-m">Published</th>
+      <th>Closes</th>
+      <th>Countdown</th>
+    </tr></thead>
+    <tbody id="rows"></tbody>
+  </table>
+  <div class="empty" id="empty" hidden>No tenders match. Adjust filters, or wait for the next Monday scan.</div>
+</main>
+
+<footer id="health">source health: loading…</footer>
+
+<script>
+let LIVE=[], ARCH=[], STATUS={}, tab='live';
+const fmt = d => d ? new Date(d+'T00:00:00').toLocaleDateString('en-SG',{day:'numeric',month:'short',year:'2-digit'}) : '—';
+
+function daysLeft(iso){
+  if(!iso) return null;
+  const t0 = new Date(); t0.setHours(0,0,0,0);
+  return Math.round((new Date(iso+'T00:00:00') - t0)/86400000);
+}
+
+function stamp(iso){
+  const d = daysLeft(iso);
+  if(d===null) return '<span class="stamp">—</span>';
+  if(d<0)  return `<span class="stamp gone">LAPSED</span>`;
+  if(d===0) return `<span class="stamp hot">TODAY</span>`;
+  return `<span class="stamp ${d<=3?'hot':''}">D-${d}</span>`;
+}
+
+function setTab(t){
+  tab=t;
+  document.getElementById('tabLive').classList.toggle('on', t==='live');
+  document.getElementById('tabArch').classList.toggle('on', t==='archive');
+  render();
+}
+
+function data(){ return tab==='live' ? LIVE : ARCH; }
+
+function render(){
+  const q = document.getElementById('q').value.toLowerCase();
+  const fit = document.getElementById('fit').value;
+  const src = document.getElementById('src').value;
+  const soon = document.getElementById('soon').checked;
+  const rows = data().filter(t=>{
+    if(q && !((t.title||'')+' '+(t.buyer||'')+' '+(t.ref||'')).toLowerCase().includes(q)) return false;
+    if(fit && t.fit!==fit) return false;
+    if(src && t.source!==src) return false;
+    if(soon){ const d=daysLeft(t.closing); if(d===null||d>7||d<0) return false; }
+    return true;
+  }).sort((a,b)=>(a.closing||'9999').localeCompare(b.closing||'9999'));
+
+  document.getElementById('count').textContent =
+    `${rows.length} of ${data().length} ${tab==='live'?'live tenders':'archived tenders'}`;
+  document.getElementById('rows').innerHTML = rows.map(t=>`
+    <tr class="item ${t.fit==='Direct fit'?'direct':'bundle'}">
+      <td><div class="title">${esc(t.title)}</div><div class="buyer">${esc(t.buyer||'')}</div></td>
+      <td><span class="tag ${t.fit==='Direct fit'?'direct':'bundle'}">${t.fit==='Direct fit'?'Direct':'Subcon'}</span></td>
+      <td class="hide-m mono" style="font-size:12px"><a class="src" href="${t.url||'#'}" target="_blank" rel="noopener">${esc(t.source)}</a><br>${esc(t.ref||'')}</td>
+      <td class="hide-m mono" style="font-size:13px">${fmt(t.published)}</td>
+      <td class="mono" style="font-size:13px">${fmt(t.closing)}</td>
+      <td>${tab==='archive' ? '<span class="stamp gone">ARCHIVED</span>' : stamp(t.closing)}</td>
+    </tr>`).join('');
+  document.getElementById('empty').hidden = rows.length>0;
+}
+
+function esc(s){ return String(s||'').replace(/[&<>"]/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c])); }
+
+function downloadXlsx(){
+  const cols = t => ({
+    Title:t.title, Buyer:t.buyer, Fit:t.fit, Source:t.source, Ref:t.ref||'',
+    Type:t.type||'', Category:t.category||'', Published:t.published||'',
+    Closing:t.closing||'', DaysLeft:daysLeft(t.closing) ?? '', URL:t.url||'',
+    FirstSeen:t.first_seen||'', ArchivedOn:t.archived_on||''
+  });
+  const wb = XLSX.utils.book_new();
+  XLSX.utils.book_append_sheet(wb, XLSX.utils.json_to_sheet(LIVE.map(cols)), 'Live');
+  XLSX.utils.book_append_sheet(wb, XLSX.utils.json_to_sheet(ARCH.map(cols)), 'Archive');
+  XLSX.writeFile(wb, `tender-watch-sg-${new Date().toISOString().slice(0,10)}.xlsx`);
+}
+
+async function load(){
+  const j = async f => { try{ return await (await fetch(f+'?t='+Date.now())).json(); }catch(e){ return null; } };
+  LIVE = await j('tenders.json') || [];
+  ARCH = await j('archive.json') || [];
+  STATUS = await j('status.json') || {};
+  const srcs=[...new Set([...LIVE,...ARCH].map(t=>t.source))].sort();
+  document.getElementById('src').innerHTML = '<option value="">All sources</option>'+srcs.map(s=>`<option>${esc(s)}</option>`).join('');
+  document.getElementById('runAt').textContent = STATUS.run_at ? 'last scan: '+STATUS.run_at.slice(0,16).replace('T',' ')+' SGT' : 'no scan data';
+  const h = Object.entries(STATUS.sources||{}).map(([k,v])=>
+    `<span class="${v.ok?'ok':'fail'}">${esc(k)}: ${v.ok?('OK ('+(v.fetched??0)+')'):'FAILED'}</span>`).join(' · ');
+  document.getElementById('health').innerHTML = 'source health — '+(h||'n/a')+
+    ' · scans run Mondays 08:00 SGT · archive holds lapsed tenders';
+  render();
+}
+load();
+</script>
+</body>
+</html>
