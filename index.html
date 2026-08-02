@@ -52,6 +52,9 @@
   .stamp.hot{border-color:var(--safety); color:var(--safety)}
   .stamp.gone{border-style:dashed; opacity:.6}
   a.src{color:var(--ink)}
+  a.titlelink{color:inherit; text-decoration:none; display:block}
+  a.titlelink:hover .title, a.titlelink:focus-visible .title{color:var(--safety)}
+  .show-m{display:none}
   .empty{padding:50px; text-align:center; color:var(--steel); background:var(--panel)}
 
   footer{padding:18px 28px; font-family:'IBM Plex Mono',monospace; font-size:12px; color:var(--steel); border-top:1px solid var(--line)}
@@ -71,6 +74,7 @@
     main{padding:14px 10px 50px}
     footer{padding:14px; line-height:1.7}
     .hide-m{display:none}
+    .show-m{display:inline}
     .title{max-width:none}
     /* table becomes stacked cards */
     table,tbody{display:block; background:none}
@@ -172,7 +176,7 @@ function render(){
     `${rows.length} of ${data().length} ${tab==='live'?'live tenders':'archived tenders'}`;
   document.getElementById('rows').innerHTML = rows.map(t=>`
     <tr class="item ${t.fit==='Direct fit'?'direct':'bundle'}">
-      <td><div class="title">${esc(t.title)}</div><div class="buyer">${esc(t.buyer||'')}</div></td>
+      <td><a class="titlelink" href="${t.url||'#'}" target="_blank" rel="noopener"><div class="title">${esc(t.title)}</div></a><div class="buyer">${esc(t.buyer||'')}<span class="show-m"> · <a class="src" href="${t.url||'#'}" target="_blank" rel="noopener">${esc(t.source)} ↗</a></span></div></td>
       <td><span class="tag ${t.fit==='Direct fit'?'direct':'bundle'}">${t.fit==='Direct fit'?'Direct':'Subcon'}</span></td>
       <td class="hide-m mono" style="font-size:12px"><a class="src" href="${t.url||'#'}" target="_blank" rel="noopener">${esc(t.source)}</a><br>${esc(t.ref||'')}</td>
       <td class="hide-m mono" style="font-size:13px">${fmt(t.published)}</td>
