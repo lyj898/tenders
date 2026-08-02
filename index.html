@@ -52,6 +52,9 @@
   .stamp.hot{border-color:var(--safety); color:var(--safety)}
   .stamp.gone{border-style:dashed; opacity:.6}
   a.src{color:var(--ink)}
+  .copyref{font:inherit; font-family:'IBM Plex Mono',monospace; font-size:11px; padding:2px 7px; border:1px solid var(--line); background:#fff; color:var(--steel); cursor:pointer; border-radius:2px; white-space:nowrap}
+  .copyref:hover{border-color:var(--ink); color:var(--ink)}
+  .copyref:active{background:var(--concrete)}
   a.titlelink{color:inherit; text-decoration:none; display:block}
   a.titlelink:hover .title, a.titlelink:focus-visible .title{color:var(--safety)}
   .show-m{display:none}
@@ -176,9 +179,9 @@ function render(){
     `${rows.length} of ${data().length} ${tab==='live'?'live tenders':'archived tenders'}`;
   document.getElementById('rows').innerHTML = rows.map(t=>`
     <tr class="item ${t.fit==='Direct fit'?'direct':'bundle'}">
-      <td><a class="titlelink" href="${t.url||'#'}" target="_blank" rel="noopener"><div class="title">${esc(t.title)}</div></a><div class="buyer">${esc(t.buyer||'')}<span class="show-m"> · <a class="src" href="${t.url||'#'}" target="_blank" rel="noopener">${esc(t.source)} ↗</a></span></div></td>
+      <td><a class="titlelink" href="${t.url||'#'}" target="_blank" rel="noopener"><div class="title">${esc(t.title)}</div></a><div class="buyer">${esc(t.buyer||'')}<span class="show-m"> · <a class="src" href="${t.url||'#'}" target="_blank" rel="noopener">Search ${esc(t.source)} ↗</a> <button class="copyref" data-ref="${esc(t.ref||t.title)}">Copy</button></span></div></td>
       <td><span class="tag ${t.fit==='Direct fit'?'direct':'bundle'}">${t.fit==='Direct fit'?'Direct':'Subcon'}</span></td>
-      <td class="hide-m mono" style="font-size:12px"><a class="src" href="${t.url||'#'}" target="_blank" rel="noopener">${esc(t.source)}</a><br>${esc(t.ref||'')}</td>
+      <td class="hide-m mono" style="font-size:12px"><a class="src" href="${t.url||'#'}" target="_blank" rel="noopener">Search ${esc(t.source)} ↗</a><br>${esc(t.ref||'')} <button class="copyref" data-ref="${esc(t.ref||t.title)}">Copy</button></td>
       <td class="hide-m mono" style="font-size:13px">${fmt(t.published)}</td>
       <td class="mono" style="font-size:13px">${fmt(t.closing)}</td>
       <td>${tab==='archive' ? '<span class="stamp gone">ARCHIVED</span>' : stamp(t.closing)}</td>
@@ -187,6 +190,20 @@ function render(){
 }
 
 function esc(s){ return String(s||'').replace(/[&<>"]/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c])); }
+
+document.getElementById('rows').addEventListener('click', e=>{
+  const btn = e.target.closest('.copyref');
+  if(!btn) return;
+  const val = btn.dataset.ref;
+  const orig = btn.textContent;
+  navigator.clipboard.writeText(val).then(()=>{
+    btn.textContent = 'Copied!';
+    setTimeout(()=>{ btn.textContent = orig; }, 1400);
+  }).catch(()=>{
+    btn.textContent = 'Failed';
+    setTimeout(()=>{ btn.textContent = orig; }, 1400);
+  });
+});
 
 function downloadXlsx(){
   const cols = t => ({
