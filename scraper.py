@@ -420,7 +420,9 @@ def main():
         else:
             still_live.append(t)
 
+    # Newly discovered tenders first; within the same first_seen, soonest to close.
     still_live.sort(key=lambda t: t.get("closing") or "9999")
+    still_live.sort(key=lambda t: t.get("first_seen") or "", reverse=True)
     archive = archive[-1500:]
 
     status["live"] = len(still_live)
