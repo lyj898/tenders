@@ -84,8 +84,10 @@
   .src-item i{width:8px; height:8px; border-radius:50%; flex:none}
   .src-item.ok i{background:var(--brand)} .src-item.fail i{background:var(--danger)}
   .src-item .sn{flex:1; font-weight:600}
-  .src-item .sc{font-family:'IBM Plex Mono',monospace; font-size:12px; color:var(--muted)}
+  .src-item .sc{font-family:'IBM Plex Mono',monospace; font-size:12px; color:var(--ink); font-weight:600; margin-left:auto}
+  .src-item .scanned{color:var(--faint); font-weight:400}
   .src-item.fail{color:var(--danger)} .src-item.fail .sc{color:var(--danger)}
+  .src-menu-note{font-size:10.5px; color:var(--faint); padding:9px 10px 3px; margin-top:4px; border-top:1px solid var(--hair); line-height:1.5}
 
   /* ---------- toolbar ---------- */
   .bar{display:flex; flex-wrap:wrap; gap:10px; align-items:center; padding-block:18px 4px}
@@ -331,9 +333,19 @@ function updateKpis(){
   const fresh = live.filter(isNew).length;
   const entries = Object.entries(STATUS.sources||{});
   const ok = entries.filter(([,v])=>v.ok).length;
-  const items = entries.map(([k,v])=>
-    `<div class="src-item ${v.ok?'ok':'fail'}"><i></i><span class="sn">${esc(k)}</span><span class="sc">${v.ok?(v.fetched??0):'failed'}</span></div>`
-  ).join('') || '<div class="src-item">no scan data yet</div>';
+  const bySrc = {};
+  live.forEach(t=>{ bySrc[t.source] = (bySrc[t.source]||0)+1; });
+  const seen = new Set();
+  const rows = entries.map(([k,v])=>{
+    seen.add(k);
+    const lc = bySrc[k]||0;
+    const right = v.ok ? `${lc}<span class="scanned"> / ${v.fetched??0}</span>` : 'failed';
+    return `<div class="src-item ${v.ok?'ok':'fail'}"><i></i><span class="sn">${esc(k)}</span><span class="sc">${right}</span></div>`;
+  });
+  Object.keys(bySrc).filter(k=>!seen.has(k)).forEach(k=>
+    rows.push(`<div class="src-item"><i></i><span class="sn">${esc(k)}</span><span class="sc">${bySrc[k]}</span></div>`));
+  const items = (rows.join('') || '<div class="src-item">no scan data yet</div>')
+    + `<div class="src-menu-note"><b>live</b> in scope <span class="scanned">/ total scanned</span> — live totals ${live.length}; scanned counts are pre-filter.</div>`;
   document.getElementById('kpis').innerHTML =
       `<div class="kpi"><div class="kpi-n">${live.length}</div><div class="kpi-l">Live tenders</div></div>`
     + `<div class="kpi ${soon?'hot':''}"><div class="kpi-n">${soon}</div><div class="kpi-l">Closing ≤ 7 days</div></div>`
@@ -341,7 +353,7 @@ function updateKpis(){
     + `<button class="kpi src-kpi ${(entries.length&&ok<entries.length)?'warn':''} ${srcOpen?'open':''}" id="srcKpi" aria-haspopup="true" aria-expanded="${srcOpen}">`
     +   `<div class="kpi-n">${entries.length?ok+'/'+entries.length:'—'}<svg class="caret" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3 4.5L6 7.5 9 4.5"/></svg></div>`
     +   `<div class="kpi-l">Sources online</div>`
-    +   `<div class="src-menu"><div class="src-menu-h">Sources scanned${entries.length?' ('+entries.length+')':''}</div>${items}</div>`
+    +   `<div class="src-menu"><div class="src-menu-h">Live tenders by source${entries.length?' ('+entries.length+')':''}</div>${items}</div>`
     + `</button>`;
 }
 
