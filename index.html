@@ -51,6 +51,7 @@
   .stamp{font-family:'IBM Plex Mono',monospace; font-weight:600; font-size:13px; border:2px solid var(--steel); color:var(--steel); padding:3px 8px; display:inline-block; white-space:nowrap}
   .stamp.hot{border-color:var(--safety); color:var(--safety)}
   .stamp.gone{border-style:dashed; opacity:.6}
+  .new{font-family:'IBM Plex Mono',monospace; font-weight:700; font-size:10px; letter-spacing:.5px; color:#fff; background:var(--safety); padding:1px 5px; margin-left:6px; vertical-align:middle}
   a.src{color:var(--ink)}
   .copyref{font:inherit; font-family:'IBM Plex Mono',monospace; font-size:11px; padding:2px 7px; border:1px solid var(--line); background:#fff; color:var(--steel); cursor:pointer; border-radius:2px; white-space:nowrap}
   .copyref:hover{border-color:var(--ink); color:var(--ink)}
@@ -121,10 +122,11 @@
   <div class="count" id="count"></div>
   <table>
     <thead><tr>
-      <th style="width:46%">Tender</th>
+      <th style="width:44%">Tender</th>
       <th>Fit</th>
       <th class="hide-m">Source / Ref</th>
       <th class="hide-m">Published</th>
+      <th>Scanned</th>
       <th>Closes</th>
       <th>Countdown</th>
     </tr></thead>
@@ -173,7 +175,10 @@ function render(){
     if(src && t.source!==src) return false;
     if(soon){ const d=daysLeft(t.closing); if(d===null||d>7||d<0) return false; }
     return true;
-  }).sort((a,b)=>(a.closing||'9999').localeCompare(b.closing||'9999'));
+  }).sort((a,b)=>
+    (b.first_seen||'').localeCompare(a.first_seen||'')     // newest scan first
+    || (a.closing||'9999').localeCompare(b.closing||'9999') // then soonest to close
+  );
 
   document.getElementById('count').textContent =
     `${rows.length} of ${data().length} ${tab==='live'?'live tenders':'archived tenders'}`;
@@ -183,6 +188,7 @@ function render(){
       <td><span class="tag ${t.fit==='Direct fit'?'direct':'bundle'}">${t.fit==='Direct fit'?'Direct':'Subcon'}</span></td>
       <td class="hide-m mono" style="font-size:12px"><a class="src" href="${t.url||'#'}" target="_blank" rel="noopener">Search ${esc(t.source)} ↗</a><br>${esc(t.ref||'')} <button class="copyref" data-ref="${esc(t.ref||t.title)}">Copy</button></td>
       <td class="hide-m mono" style="font-size:13px">${fmt(t.published)}</td>
+      <td class="mono" style="font-size:13px">${fmt(t.first_seen)}${isNew(t)?' <span class="new">NEW</span>':''}</td>
       <td class="mono" style="font-size:13px">${fmt(t.closing)}</td>
       <td>${tab==='archive' ? '<span class="stamp gone">ARCHIVED</span>' : stamp(t.closing)}</td>
     </tr>`).join('');
@@ -190,6 +196,7 @@ function render(){
 }
 
 function esc(s){ return String(s||'').replace(/[&<>"]/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c])); }
+function isNew(t){ return !!(t.first_seen && STATUS.run_at && t.first_seen===STATUS.run_at.slice(0,10)); }
 
 document.getElementById('rows').addEventListener('click', e=>{
   const btn = e.target.closest('.copyref');
@@ -229,7 +236,7 @@ async function load(){
   const h = Object.entries(STATUS.sources||{}).map(([k,v])=>
     `<span class="${v.ok?'ok':'fail'}">${esc(k)}: ${v.ok?('OK ('+(v.fetched??0)+')'):'FAILED'}</span>`).join(' · ');
   document.getElementById('health').innerHTML = 'source health — '+(h||'n/a')+
-    ' · scans run Mondays 08:00 SGT · archive holds lapsed tenders';
+    ' · scans run Mondays ~14:17 SGT · archive holds lapsed tenders';
   render();
 }
 load();
