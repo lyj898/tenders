@@ -23,23 +23,9 @@
     --shadow:0 1px 2px rgba(18,30,24,.05), 0 12px 28px -16px rgba(18,30,24,.18);
     --radius:14px;
   }
-  @media (prefers-color-scheme: dark){
-    :root{
-      --bg:#0E1512; --panel:#141C18; --panel-2:#18211C;
-      --ink:#E8EEEA; --muted:#9CAAA3; --faint:#71807A;
-      --line:#243129; --hair:#1B2620;
-      --brand:#43C193; --brand-2:#5ED0A6;
-      --direct:#43C193; --bundle:#DBA24A;
-      --danger:#EC7359; --amber:#E1A94F;
-      --direct-bg:#123028; --bundle-bg:#302716;
-      --danger-bg:#331e19; --amber-bg:#2f2815; --ok-bg:#123028;
-      --head-bg:#0A100D; --head-ink:#ECF2EE; --head-faint:#7E918A; --head-line:#1D2A23;
-      --shadow:0 1px 2px rgba(0,0,0,.4), 0 16px 40px -20px rgba(0,0,0,.7);
-    }
-  }
   @media (prefers-reduced-motion: reduce){*{transition:none!important; animation:none!important}}
   *{box-sizing:border-box; margin:0}
-  html{-webkit-text-size-adjust:100%}
+  html{-webkit-text-size-adjust:100%; color-scheme:light}
   body{background:var(--bg); color:var(--ink);
     font-family:'Archivo',system-ui,sans-serif; font-size:15px; line-height:1.45;
     -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility}
@@ -186,7 +172,8 @@
 
   /* ---------- footer ---------- */
   footer{padding-block:22px 40px; border-top:1px solid var(--line); margin-top:26px; color:var(--muted)}
-  .health-row{display:flex; flex-wrap:wrap; gap:8px; margin-bottom:12px}
+  .health-head{font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:.7px; color:var(--faint); margin-bottom:11px}
+  .health-row{display:flex; flex-wrap:wrap; gap:8px; margin-bottom:14px}
   .src-chip{display:inline-flex; align-items:center; gap:7px; font-family:'IBM Plex Mono',monospace;
     font-size:11.5px; padding:5px 11px; border:1px solid var(--line); border-radius:999px; background:var(--panel)}
   .src-chip i{width:7px; height:7px; border-radius:50%; flex:none}
@@ -480,11 +467,13 @@ async function load(){
   const srcs=[...new Set([...LIVE,...ARCH].map(t=>t.source))].sort();
   document.getElementById('src').innerHTML = '<option value="">All sources</option>'+srcs.map(s=>`<option>${esc(s)}</option>`).join('');
   document.getElementById('runAt').textContent = STATUS.run_at ? 'Scanned '+STATUS.run_at.slice(0,16).replace('T',' ')+' SGT' : 'no scan data';
-  const h = Object.entries(STATUS.sources||{}).map(([k,v])=>
+  const entries = Object.entries(STATUS.sources||{});
+  const h = entries.map(([k,v])=>
     `<span class="src-chip ${v.ok?'ok':'fail'}"><i></i>${esc(k)} ${v.ok?('· '+(v.fetched??0)):'· failed'}</span>`).join('');
   document.getElementById('health').innerHTML =
-    `<div class="health-row">${h||'<span class="src-chip">no scan data</span>'}</div>`
-    + `<div class="health-note">Scans run Mondays ~14:17 SGT · ${STATUS.dismissed?STATUS.dismissed+' hidden · ':''}archive holds lapsed tenders</div>`;
+    `<div class="health-head">Sources scanned${entries.length?' ('+entries.length+')':''}</div>`
+    + `<div class="health-row">${h||'<span class="src-chip">no scan data yet</span>'}</div>`
+    + `<div class="health-note">Scans run Mondays ~14:17 SGT · counts show tenders fetched per source · ${STATUS.dismissed?STATUS.dismissed+' hidden · ':''}archive holds lapsed tenders</div>`;
   render();
 }
 load();
