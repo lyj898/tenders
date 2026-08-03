@@ -70,6 +70,22 @@
   .kpi-n{font-weight:800; font-size:27px; letter-spacing:-.5px; line-height:1.05; font-variant-numeric:tabular-nums}
   .kpi.hot .kpi-n{color:var(--danger)} .kpi.fresh .kpi-n{color:var(--brand)} .kpi.warn .kpi-n{color:var(--amber)}
   .kpi-l{font-size:12px; color:var(--muted); margin-top:5px; font-weight:600; letter-spacing:.2px}
+  .src-kpi{cursor:pointer; text-align:left; overflow:visible; appearance:none; -webkit-appearance:none; font:inherit; color:inherit; transition:border-color .15s}
+  .src-kpi:hover{border-color:color-mix(in srgb,var(--brand) 40%,var(--line))}
+  .src-kpi .kpi-n{display:flex; align-items:center; gap:8px}
+  .caret{width:12px; height:12px; color:var(--faint); transition:transform .18s; margin-top:2px}
+  .src-kpi.open .caret{transform:rotate(180deg)}
+  .src-menu{position:absolute; top:calc(100% + 8px); left:0; min-width:100%; width:max-content; max-width:340px; z-index:40;
+    background:var(--panel); border:1px solid var(--line); border-radius:12px; box-shadow:var(--shadow);
+    padding:6px; display:none}
+  .src-kpi.open .src-menu{display:block}
+  .src-menu-h{font-size:10.5px; font-weight:700; text-transform:uppercase; letter-spacing:.6px; color:var(--faint); padding:8px 10px 6px}
+  .src-item{display:flex; align-items:center; gap:10px; padding:8px 10px; border-radius:8px; font-size:13px; white-space:nowrap}
+  .src-item i{width:8px; height:8px; border-radius:50%; flex:none}
+  .src-item.ok i{background:var(--brand)} .src-item.fail i{background:var(--danger)}
+  .src-item .sn{flex:1; font-weight:600}
+  .src-item .sc{font-family:'IBM Plex Mono',monospace; font-size:12px; color:var(--muted)}
+  .src-item.fail{color:var(--danger)} .src-item.fail .sc{color:var(--danger)}
 
   /* ---------- toolbar ---------- */
   .bar{display:flex; flex-wrap:wrap; gap:10px; align-items:center; padding-block:18px 4px}
@@ -282,7 +298,7 @@
 <footer class="pad" id="health">source health: loading…</footer>
 
 <script>
-let LIVE=[], ARCH=[], STATUS={}, tab='live';
+let LIVE=[], ARCH=[], STATUS={}, tab='live', srcOpen=false;
 const fmt = d => d ? new Date(d+'T00:00:00').toLocaleDateString('en-SG',{day:'numeric',month:'short',year:'2-digit'}) : '—';
 
 function daysLeft(iso){
@@ -313,16 +329,20 @@ function updateKpis(){
   const live = LIVE.filter(t=>!DISMISSED.has(keyOf(t)));
   const soon = live.filter(t=>{const d=daysLeft(t.closing); return d!==null && d>=0 && d<=7;}).length;
   const fresh = live.filter(isNew).length;
-  const srcs = Object.values(STATUS.sources||{});
-  const ok = srcs.filter(s=>s.ok).length;
-  const tiles = [
-    {n:live.length, l:'Live tenders'},
-    {n:soon, l:'Closing ≤ 7 days', tone:soon?'hot':''},
-    {n:fresh, l:'New this scan', tone:fresh?'fresh':''},
-    {n:srcs.length?`${ok}/${srcs.length}`:'—', l:'Sources online', tone:(srcs.length&&ok<srcs.length)?'warn':''},
-  ];
-  document.getElementById('kpis').innerHTML = tiles.map(t=>
-    `<div class="kpi ${t.tone||''}"><div class="kpi-n">${t.n}</div><div class="kpi-l">${t.l}</div></div>`).join('');
+  const entries = Object.entries(STATUS.sources||{});
+  const ok = entries.filter(([,v])=>v.ok).length;
+  const items = entries.map(([k,v])=>
+    `<div class="src-item ${v.ok?'ok':'fail'}"><i></i><span class="sn">${esc(k)}</span><span class="sc">${v.ok?(v.fetched??0):'failed'}</span></div>`
+  ).join('') || '<div class="src-item">no scan data yet</div>';
+  document.getElementById('kpis').innerHTML =
+      `<div class="kpi"><div class="kpi-n">${live.length}</div><div class="kpi-l">Live tenders</div></div>`
+    + `<div class="kpi ${soon?'hot':''}"><div class="kpi-n">${soon}</div><div class="kpi-l">Closing ≤ 7 days</div></div>`
+    + `<div class="kpi ${fresh?'fresh':''}"><div class="kpi-n">${fresh}</div><div class="kpi-l">New this scan</div></div>`
+    + `<button class="kpi src-kpi ${(entries.length&&ok<entries.length)?'warn':''} ${srcOpen?'open':''}" id="srcKpi" aria-haspopup="true" aria-expanded="${srcOpen}">`
+    +   `<div class="kpi-n">${entries.length?ok+'/'+entries.length:'—'}<svg class="caret" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3 4.5L6 7.5 9 4.5"/></svg></div>`
+    +   `<div class="kpi-l">Sources online</div>`
+    +   `<div class="src-menu"><div class="src-menu-h">Sources scanned${entries.length?' ('+entries.length+')':''}</div>${items}</div>`
+    + `</button>`;
 }
 
 function render(){
@@ -342,7 +362,6 @@ function render(){
     || (a.closing||'9999').localeCompare(b.closing||'9999') // then soonest to close
   );
 
-  updateKpis();
   const hid = data().filter(t=>DISMISSED.has(keyOf(t))).length;
   document.getElementById('count').innerHTML =
     `${rows.length} of ${data().length} ${tab==='live'?'live tenders':'archived tenders'}`
@@ -393,7 +412,7 @@ async function loadDismissed(){
 }
 
 async function hideTender(key){
-  DISMISSED.add(key); cacheDismissed(); render(); showUndo(key);
+  DISMISSED.add(key); cacheDismissed(); render(); updateKpis(); showUndo(key);
   const t = [...LIVE, ...ARCH].find(x=>keyOf(x)===key) || {};
   try{
     const r = await fetch(SB_URL+'/rest/v1/dismissals', {
@@ -405,13 +424,13 @@ async function hideTender(key){
 }
 
 async function unhide(key){
-  DISMISSED.delete(key); cacheDismissed(); render();
+  DISMISSED.delete(key); cacheDismissed(); render(); updateKpis();
   try{ await fetch(SB_URL+'/rest/v1/dismissals?key=eq.'+encodeURIComponent(key), {method:'DELETE', headers:sbHeaders}); }catch(e){}
 }
 
 async function restoreAll(){
   if(!DISMISSED.size) return;
-  const keys=[...DISMISSED]; DISMISSED.clear(); cacheDismissed(); render();
+  const keys=[...DISMISSED]; DISMISSED.clear(); cacheDismissed(); render(); updateKpis();
   try{ await Promise.all(keys.map(k=>fetch(SB_URL+'/rest/v1/dismissals?key=eq.'+encodeURIComponent(k), {method:'DELETE', headers:sbHeaders}))); }catch(e){}
 }
 
@@ -445,6 +464,19 @@ document.getElementById('rows').addEventListener('click', e=>{
   });
 });
 
+function setSrcOpen(v){
+  srcOpen=v;
+  const t=document.getElementById('srcKpi');
+  if(t){ t.classList.toggle('open', v); t.setAttribute('aria-expanded', v); }
+}
+document.getElementById('kpis').addEventListener('click', e=>{
+  const tile=e.target.closest('.src-kpi');
+  if(!tile || e.target.closest('.src-menu')) return;   // ignore clicks inside the open menu
+  setSrcOpen(!srcOpen);
+});
+document.addEventListener('click', e=>{ if(srcOpen && !e.target.closest('.src-kpi')) setSrcOpen(false); });
+document.addEventListener('keydown', e=>{ if(e.key==='Escape' && srcOpen) setSrcOpen(false); });
+
 function downloadXlsx(){
   const cols = t => ({
     Title:t.title, Buyer:t.buyer, Fit:t.fit, Source:t.source, Ref:t.ref||'',
@@ -467,13 +499,9 @@ async function load(){
   const srcs=[...new Set([...LIVE,...ARCH].map(t=>t.source))].sort();
   document.getElementById('src').innerHTML = '<option value="">All sources</option>'+srcs.map(s=>`<option>${esc(s)}</option>`).join('');
   document.getElementById('runAt').textContent = STATUS.run_at ? 'Scanned '+STATUS.run_at.slice(0,16).replace('T',' ')+' SGT' : 'no scan data';
-  const entries = Object.entries(STATUS.sources||{});
-  const h = entries.map(([k,v])=>
-    `<span class="src-chip ${v.ok?'ok':'fail'}"><i></i>${esc(k)} ${v.ok?('· '+(v.fetched??0)):'· failed'}</span>`).join('');
   document.getElementById('health').innerHTML =
-    `<div class="health-head">Sources scanned${entries.length?' ('+entries.length+')':''}</div>`
-    + `<div class="health-row">${h||'<span class="src-chip">no scan data yet</span>'}</div>`
-    + `<div class="health-note">Scans run Mondays ~14:17 SGT · counts show tenders fetched per source · ${STATUS.dismissed?STATUS.dismissed+' hidden · ':''}archive holds lapsed tenders</div>`;
+    `<div class="health-note">Scans run Mondays ~14:17 SGT · source list in the “Sources online” panel above · ${STATUS.dismissed?STATUS.dismissed+' hidden · ':''}archive holds lapsed tenders</div>`;
+  updateKpis();
   render();
 }
 load();
