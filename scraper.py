@@ -30,6 +30,13 @@ TODAY = datetime.now(SGT).date()
 
 UA = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0 Safari/537.36"}
 
+# Supabase holds the shared "dismissed" list (tenders the user hid in the
+# tracker). The publishable key is designed to live in client code and is
+# safe to commit; access is gated by row-level security on the dismissals
+# table (public select/insert/delete only).
+SUPABASE_URL = "https://drgvmnetkqbnwtuqzgvi.supabase.co"
+SUPABASE_KEY = "sb_publishable_t04rG7cIzuhDp-qamnuj0g_xwFx5oez"
+
 # ----------------------------- matching rules ------------------------------
 
 DIRECT_KEYWORDS = [
@@ -420,6 +427,25 @@ def key_of(t: dict) -> str:
     return f"{t.get('source','')}|{t.get('ref') or ''}|{t.get('title','')[:120].lower()}"
 
 
+def fetch_dismissed_keys() -> set:
+    """Keys the user hid in the tracker, from the Supabase dismissals table.
+
+    Fails open (returns an empty set) so a Supabase hiccup never blocks a scan.
+    """
+    try:
+        r = requests.get(
+            f"{SUPABASE_URL}/rest/v1/dismissals",
+            params={"select": "key"},
+            headers={"apikey": SUPABASE_KEY, "Authorization": f"Bearer {SUPABASE_KEY}"},
+            timeout=30,
+        )
+        r.raise_for_status()
+        return {row["key"] for row in r.json() if row.get("key")}
+    except Exception as e:
+        print(f"dismissals fetch failed ({e}); proceeding with none", file=sys.stderr)
+        return set()
+
+
 def main():
     status = {"run_at": datetime.now(SGT).isoformat(), "sources": {}}
     scraped: list[dict] = []
@@ -468,16 +494,9 @@ def main():
             t["fit"] = tag
             matched.append(t)
 
-    # Server-side suppression list: keys the user hid in the tracker and
-    # committed to dismissed.json. These are dropped from the live set and
-    # never re-added by future scans. Accepts bare key strings or objects
-    # with a "key" field.
-    dismissed_keys = set()
-    for d in load_json(ROOT / "dismissed.json", []):
-        if isinstance(d, str):
-            dismissed_keys.add(d)
-        elif isinstance(d, dict) and d.get("key"):
-            dismissed_keys.add(d["key"])
+    # Shared suppression list from Supabase: tenders the user hid in the
+    # tracker. Dropped from the live set and never re-added by future scans.
+    dismissed_keys = fetch_dismissed_keys()
 
     # Merge with existing live set (preserves manually added rows/notes),
     # skipping anything the user dismissed.

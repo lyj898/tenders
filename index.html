@@ -180,7 +180,7 @@ function render(){
   const src = document.getElementById('src').value;
   const soon = document.getElementById('soon').checked;
   const rows = data().filter(t=>{
-    { const k=keyOf(t); if(DISMISSED.has(k)||REPO_DISMISSED.has(k)) return false; }
+    if(DISMISSED.has(keyOf(t))) return false;
     if(q && !((t.title||'')+' '+(t.buyer||'')+' '+(t.ref||'')).toLowerCase().includes(q)) return false;
     if(fit && t.fit!==fit) return false;
     if(src && t.source!==src) return false;
@@ -191,13 +191,10 @@ function render(){
     || (a.closing||'9999').localeCompare(b.closing||'9999') // then soonest to close
   );
 
-  const hid = data().filter(t=>{const k=keyOf(t); return DISMISSED.has(k)||REPO_DISMISSED.has(k);}).length;
-  const unsaved = [...DISMISSED].filter(k=>!REPO_DISMISSED.has(k)).length;
+  const hid = data().filter(t=>DISMISSED.has(keyOf(t))).length;
   document.getElementById('count').innerHTML =
     `${rows.length} of ${data().length} ${tab==='live'?'live tenders':'archived tenders'}`
-    + (hid ? ` · ${hid} hidden` : '')
-    + (DISMISSED.size ? ` · <button class="linkbtn" onclick="restoreAll()">restore all</button>` : '')
-    + (unsaved ? ` · <button class="linkbtn" onclick="exportDismissed()" title="Download dismissed.json to commit — makes these hides permanent and shared across devices">save ${unsaved} to repo ↓</button>` : '');
+    + (hid ? ` · ${hid} hidden · <button class="linkbtn" onclick="restoreAll()">restore all</button>` : '');
   document.getElementById('rows').innerHTML = rows.map(t=>`
     <tr class="item ${t.fit==='Direct fit'?'direct':'bundle'}">
       <td><a class="titlelink" href="${t.url||'#'}" target="_blank" rel="noopener"><div class="title">${esc(t.title)}</div></a><div class="buyer">${esc(t.buyer||'')}<span class="show-m"> · <a class="src" href="${t.url||'#'}" target="_blank" rel="noopener">Search ${esc(t.source)} ↗</a> <button class="copyref" data-ref="${esc(t.ref||t.title)}">Copy</button></span></div></td>
@@ -215,50 +212,61 @@ function render(){
 function esc(s){ return String(s||'').replace(/[&<>"]/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c])); }
 function isNew(t){ return !!(t.first_seen && STATUS.run_at && t.first_seen===STATUS.run_at.slice(0,10)); }
 
-// Two dismissal layers, both keyed like scraper.py's key_of() so hides survive
-// re-scrapes:
-//  - DISMISSED: this browser's local hides (localStorage), instant, private.
-//  - REPO_DISMISSED: keys committed to dismissed.json, which the scraper also
-//    excludes from tenders.json. These sync to every viewer. Export your local
-//    hides with exportDismissed() and commit the file to make them permanent.
+// Shared "hidden tenders" list, stored in Supabase and keyed like scraper.py's
+// key_of() so hides survive re-scrapes. Hiding a tender syncs it to every
+// visitor, and the weekly scan drops it from tenders.json. localStorage is an
+// offline cache so hides show instantly and persist if Supabase is briefly
+// unreachable. The publishable key is safe in client code (access is gated by
+// row-level security on the dismissals table).
+const SB_URL = 'https://drgvmnetkqbnwtuqzgvi.supabase.co';
+const SB_KEY = 'sb_publishable_t04rG7cIzuhDp-qamnuj0g_xwFx5oez';
+const sbHeaders = { apikey: SB_KEY, Authorization: 'Bearer '+SB_KEY, 'Content-Type':'application/json' };
 function keyOf(t){ return (t.source||'')+'|'+(t.ref||'')+'|'+(t.title||'').slice(0,120).toLowerCase(); }
 let DISMISSED = new Set(JSON.parse(localStorage.getItem('tw_dismissed')||'[]'));
-let REPO_DISMISSED = new Set();   // keys from dismissed.json
-let REPO_DISMISSED_RAW = [];      // original objects, preserved on export
-function saveDismissed(){ localStorage.setItem('tw_dismissed', JSON.stringify([...DISMISSED])); }
-function hideTender(key){ DISMISSED.add(key); saveDismissed(); render(); showUndo(key); }
-function restoreAll(){ if(DISMISSED.size){ DISMISSED.clear(); saveDismissed(); render(); } }
+function cacheDismissed(){ localStorage.setItem('tw_dismissed', JSON.stringify([...DISMISSED])); }
 
-// Build a dismissed.json merging the committed list with this browser's local
-// hides, and download it so the user can commit it to the repo.
-function exportDismissed(){
-  const map = new Map();
-  REPO_DISMISSED_RAW.forEach(d=>{ const k = typeof d==='string'?d:d&&d.key; if(k) map.set(k, typeof d==='string'?{key:k}:d); });
-  const all = [...LIVE, ...ARCH];
-  [...DISMISSED].forEach(k=>{
-    if(map.has(k)) return;
-    const t = all.find(x=>keyOf(x)===k);
-    map.set(k, t ? {key:k, source:t.source, ref:t.ref||'', title:t.title, dismissed_on:(STATUS.run_at||'').slice(0,10)} : {key:k});
-  });
-  const blob = new Blob([JSON.stringify([...map.values()], null, 1)+'\n'], {type:'application/json'});
-  const a = document.createElement('a');
-  a.href = URL.createObjectURL(blob); a.download = 'dismissed.json'; a.click();
-  URL.revokeObjectURL(a.href);
-  const t = document.getElementById('toast');
-  t.querySelector('.msg').textContent = 'dismissed.json downloaded — commit it to the repo to apply permanently.';
-  t.querySelector('button').style.display = 'none';
-  t.classList.add('show'); clearTimeout(undoTimer);
-  undoTimer = setTimeout(()=>{ t.classList.remove('show'); t.querySelector('button').style.display=''; }, 7000);
+async function loadDismissed(){
+  try{
+    const r = await fetch(SB_URL+'/rest/v1/dismissals?select=key', {headers:sbHeaders});
+    if(r.ok){ DISMISSED = new Set((await r.json()).map(x=>x.key).filter(Boolean)); cacheDismissed(); }
+  }catch(e){ /* offline: fall back to the localStorage cache */ }
 }
+
+async function hideTender(key){
+  DISMISSED.add(key); cacheDismissed(); render(); showUndo(key);
+  const t = [...LIVE, ...ARCH].find(x=>keyOf(x)===key) || {};
+  try{
+    const r = await fetch(SB_URL+'/rest/v1/dismissals', {
+      method:'POST', headers:{...sbHeaders, Prefer:'resolution=merge-duplicates'},
+      body: JSON.stringify([{key, source:t.source||'', ref:t.ref||'', title:t.title||''}])
+    });
+    if(!r.ok) throw 0;
+  }catch(e){ flash('Offline — hidden here, but not synced to others yet.', false); }
+}
+
+async function unhide(key){
+  DISMISSED.delete(key); cacheDismissed(); render();
+  try{ await fetch(SB_URL+'/rest/v1/dismissals?key=eq.'+encodeURIComponent(key), {method:'DELETE', headers:sbHeaders}); }catch(e){}
+}
+
+async function restoreAll(){
+  if(!DISMISSED.size) return;
+  const keys=[...DISMISSED]; DISMISSED.clear(); cacheDismissed(); render();
+  try{ await Promise.all(keys.map(k=>fetch(SB_URL+'/rest/v1/dismissals?key=eq.'+encodeURIComponent(k), {method:'DELETE', headers:sbHeaders}))); }catch(e){}
+}
+
 let undoTimer=null;
-function showUndo(key){
+function flash(msg, withUndo){
   const t=document.getElementById('toast');
-  t.classList.add('show');
-  t.querySelector('button').onclick=()=>{
-    DISMISSED.delete(key); saveDismissed(); render(); t.classList.remove('show');
-  };
-  clearTimeout(undoTimer);
-  undoTimer=setTimeout(()=>t.classList.remove('show'), 6000);
+  t.querySelector('.msg').textContent=msg;
+  t.querySelector('button').style.display = withUndo?'':'none';
+  t.classList.add('show'); clearTimeout(undoTimer);
+  undoTimer=setTimeout(()=>{ t.classList.remove('show'); t.querySelector('button').style.display=''; }, withUndo?6000:4500);
+  return t;
+}
+function showUndo(key){
+  const t=flash('Tender hidden for everyone.', true);
+  t.querySelector('button').onclick=()=>{ unhide(key); t.classList.remove('show'); };
 }
 
 document.getElementById('rows').addEventListener('click', e=>{
@@ -295,8 +303,7 @@ async function load(){
   LIVE = await j('tenders.json') || [];
   ARCH = await j('archive.json') || [];
   STATUS = await j('status.json') || {};
-  REPO_DISMISSED_RAW = await j('dismissed.json') || [];
-  REPO_DISMISSED = new Set(REPO_DISMISSED_RAW.map(d=> typeof d==='string' ? d : d && d.key).filter(Boolean));
+  await loadDismissed();
   const srcs=[...new Set([...LIVE,...ARCH].map(t=>t.source))].sort();
   document.getElementById('src').innerHTML = '<option value="">All sources</option>'+srcs.map(s=>`<option>${esc(s)}</option>`).join('');
   document.getElementById('runAt').textContent = STATUS.run_at ? 'last scan: '+STATUS.run_at.slice(0,16).replace('T',' ')+' SGT' : 'no scan data';
