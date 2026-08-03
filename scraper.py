@@ -100,6 +100,21 @@ def parse_dmy(s: str) -> str | None:
     return f"{y:04d}-{mon:02d}-{d:02d}"
 
 
+def parse_ordinal_date(s: str) -> str | None:
+    """'7th August 2026, 12pm' / '17th July 2026' -> ISO date."""
+    m = re.search(r"(\d{1,2})(?:st|nd|rd|th)?\s+([A-Za-z]+)\s+(\d{4})", s)
+    if not m:
+        return None
+    d, y = int(m.group(1)), int(m.group(3))
+    mon = MONTHS.get(m.group(2)[:3].title())
+    if not mon:
+        return None
+    try:
+        return date(y, mon, d).isoformat()
+    except ValueError:
+        return None
+
+
 def parse_dm_infer_year(s: str) -> str | None:
     """'7 Aug' -> ISO date, inferring the year (assume within +11 months)."""
     m = re.match(r"(\d{1,2})\s+([A-Za-z]{3})", s.strip())
@@ -242,6 +257,51 @@ def scrape_tenderboard(pw) -> list[dict]:
     return out
 
 
+def scrape_jbtc() -> list[dict]:
+    """Jalan Besar Town Council tender notices (server-rendered Elementor table).
+
+    The page has two tables: the live 'Tender Notice' table (identified by a
+    'Tender Calling Date' column) and a 'Tender Results' table (has a 'Status'
+    column). We only read the live notices; results/closed rows are ignored.
+    """
+    url = "https://jbtc.org.sg/publications/tenders/"
+    html = requests.get(url, headers=UA, timeout=60).text
+    soup = BeautifulSoup(html, "html.parser")
+    out = []
+    tables = soup.find_all("table")
+    if not tables:
+        raise RuntimeError("JBTC: no tables found (page layout changed or blocked)")
+    for table in tables:
+        headers = [th.get_text(" ", strip=True) for th in table.find_all("th")]
+        # Only the live notice table carries a calling-date column.
+        if not any("Calling Date" in h for h in headers):
+            continue
+        for tr in table.select("tbody tr"):
+            tds = tr.find_all("td")
+            if len(tds) < 4:
+                continue
+            calling = tds[0].get_text(" ", strip=True)
+            closing = tds[1].get_text(" ", strip=True)
+            ref = tds[2].get_text(" ", strip=True)
+            title = tds[3].get_text(" ", strip=True)
+            if not title:
+                continue
+            link = tds[4].find("a") if len(tds) > 4 else None
+            href = link.get("href") if link and link.get("href") else None
+            if href and not href.startswith("http"):
+                href = requests.compat.urljoin(url, href)
+            out.append({
+                "source": "Jalan Besar Town Council",
+                "url": href or url,
+                "ref": ref,
+                "title": title,
+                "buyer": "Jalan Besar Town Council",
+                "published": parse_ordinal_date(calling),
+                "closing": parse_ordinal_date(closing),
+            })
+    return out
+
+
 def scrape_generic(src: dict) -> list[dict]:
     """Best-effort keyword scan of a plain HTML page listed in sources.json."""
     html = requests.get(src["url"], headers=UA, timeout=60).text
@@ -288,13 +348,14 @@ def main():
     status = {"run_at": datetime.now(SGT).isoformat(), "sources": {}}
     scraped: list[dict] = []
 
-    # SESAMi (no browser needed)
-    try:
-        rows = scrape_sesami()
-        status["sources"]["SESAMi"] = {"ok": True, "fetched": len(rows)}
-        scraped += rows
-    except Exception as e:
-        status["sources"]["SESAMi"] = {"ok": False, "error": str(e)[:300]}
+    # Plain-HTTP sources (no browser needed)
+    for name, fn in [("SESAMi", scrape_sesami), ("Jalan Besar Town Council", scrape_jbtc)]:
+        try:
+            rows = fn()
+            status["sources"][name] = {"ok": True, "fetched": len(rows)}
+            scraped += rows
+        except Exception as e:
+            status["sources"][name] = {"ok": False, "error": str(e)[:300]}
 
     # Playwright sources
     try:

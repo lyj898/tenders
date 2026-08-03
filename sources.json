@@ -2,7 +2,7 @@
   "note": "Add extra tender pages here. Each is scanned best-effort for keyword-matching links; failures show on the tracker's source health panel. Set enabled:false to skip.",
   "extra_sources": [
     { "name": "Mandai (SESAMi hosted)", "url": "https://sesami.online/bizopps/businessOpportunities.jsp", "enabled": false, "comment": "Already covered by the SESAMi scraper" },
-    { "name": "Jalan Besar Town Council", "url": "https://www.jbtc.org.sg/tenders-notices/", "enabled": true, "comment": "Unverified URL - watch source health after first run" },
+    { "name": "Jalan Besar Town Council", "url": "https://jbtc.org.sg/publications/tenders/", "enabled": false, "comment": "Handled by dedicated scrape_jbtc() parser; generic scan disabled" },
     { "name": "Marine Parade Town Council", "url": "https://mptc.org.sg/tenders/", "enabled": true, "comment": "Unverified URL - watch source health after first run" },
     { "name": "Bishan-Toa Payoh Town Council", "url": "https://www.btptc.org.sg/tenders/", "enabled": true, "comment": "Unverified URL - watch source health after first run" }
   ]
