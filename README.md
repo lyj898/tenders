@@ -1,12 +1,12 @@
 # Tender Watch SG
 
-Weekly automated scan of Singapore tender boards for **junk disposal, handyman services, and skip tank** opportunities, with a hosted tracker and Excel export.
+Daily automated scan of Singapore tender boards for **junk disposal, handyman services, and skip tank** opportunities, with a hosted tracker and Excel export.
 
 **Tracker:** enable GitHub Pages (Settings → Pages → Deploy from branch → `main` / root) and the site serves at `https://<user>.github.io/tenders/`.
 
 ## How it works
 
-- `.github/workflows/scrape.yml` runs every **Monday 08:00 SGT** (and on demand via the Actions tab → Run workflow).
+- `.github/workflows/scrape.yml` runs **daily at 04:00 SGT** (and on demand via the Actions tab → Run workflow).
 - `scraper.py` scans:
   - **GeBIZ** — open listings only, via headless Chromium (keyword searches)
   - **TenderBoard** — public open deals pages
