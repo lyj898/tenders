@@ -3,7 +3,7 @@
   "extra_sources": [
     { "name": "Mandai (SESAMi hosted)", "url": "https://sesami.online/bizopps/businessOpportunities.jsp", "enabled": false, "comment": "Already covered by the SESAMi scraper" },
     { "name": "Jalan Besar Town Council", "url": "https://jbtc.org.sg/publications/tenders/", "enabled": false, "comment": "Handled by dedicated scrape_jbtc() parser; generic scan disabled" },
-    { "name": "Marine Parade Town Council", "url": "https://mptc.org.sg/tenders/", "enabled": true, "comment": "Unverified URL - watch source health after first run" },
-    { "name": "Bishan-Toa Payoh Town Council", "url": "https://www.btptc.org.sg/tenders/", "enabled": true, "comment": "Unverified URL - watch source health after first run" }
+    { "name": "Marine Parade Town Council", "url": "https://www.mbtc.org.sg/TenderAdvertisement", "enabled": false, "comment": "Handled by dedicated scrape_mbtc(); site moved to mbtc.org.sg (Marine Parade-Braddell Heights TC)" },
+    { "name": "Bishan-Toa Payoh Town Council", "url": "https://www.btptc.org.sg/NewsRoom/ViewTender", "enabled": false, "comment": "Handled by dedicated scrape_btptc(); generic scan disabled" }
   ]
 }

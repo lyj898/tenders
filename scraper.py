@@ -302,6 +302,82 @@ def scrape_jbtc() -> list[dict]:
     return out
 
 
+def scrape_mbtc(url: str = "https://www.mbtc.org.sg/TenderAdvertisement") -> list[dict]:
+    """Marine Parade-Braddell Heights TC (formerly Marine Parade TC).
+
+    Each tender is a `div.item` whose `.box` holds labelled fields as
+    `<b>Label:</b><span>value</span>` pairs (e.g. 'Closing Date:', 'Tender
+    for:'/'Project Title:', 'Advertisement Date:', 'Project Reference No.:').
+    Dates look like '19-Jun-2026'. `url` is overridable for testing against
+    the populated results page; production reads the live advertisement page.
+    """
+    html = requests.get(url, headers=UA, timeout=60).text
+    soup = BeautifulSoup(html, "html.parser")
+    out = []
+    for item in soup.select("div.item"):
+        scope = item.find(class_="box") or item
+        fields = {}
+        for b in scope.find_all("b"):
+            span = b.find_next_sibling("span")
+            if span is None:
+                continue
+            label = b.get_text(" ", strip=True).rstrip(":").strip()
+            fields[label] = span.get_text(" ", strip=True)
+        title = fields.get("Tender for") or fields.get("Project Title") or ""
+        if not title:
+            continue
+        adv = fields.get("Advertisement Date", "")
+        closing = fields.get("Closing Date", "")
+        out.append({
+            "source": "Marine Parade Town Council",
+            "url": url,
+            "ref": fields.get("Project Reference No.", ""),
+            "title": title,
+            "buyer": "Marine Parade-Braddell Heights Town Council",
+            "published": parse_dmy(adv.replace("-", " ")) if adv else None,
+            "closing": parse_dmy(closing.replace("-", " ")) if closing else None,
+        })
+    return out
+
+
+def scrape_btptc() -> list[dict]:
+    """Bishan-Toa Payoh TC tender notices (server-rendered tables).
+
+    Three tables share the page: id='notices' (open), 'results' (closed) and
+    'awards'. We read only 'notices': Advertisement Date, Closing Date,
+    Projects, Status, Preview/Download. Dates look like '31 Jul 2026'.
+    """
+    url = "https://www.btptc.org.sg/NewsRoom/ViewTender"
+    html = requests.get(url, headers=UA, timeout=60).text
+    soup = BeautifulSoup(html, "html.parser")
+    node = soup.find(id="notices")
+    table = node if (node and node.name == "table") else (node.find("table") if node else None)
+    if table is None:
+        raise RuntimeError("BTPTC: notices table not found (layout changed)")
+    out = []
+    for tr in table.find_all("tr"):
+        tds = tr.find_all("td")
+        if len(tds) < 3:  # header / spacer rows have no <td>
+            continue
+        title = tds[2].get_text(" ", strip=True)
+        if not title:
+            continue
+        link = tds[4].find("a") if len(tds) > 4 else None
+        href = link.get("href") if link and link.get("href") else None
+        if href and not href.startswith("http"):
+            href = requests.compat.urljoin(url, href)
+        out.append({
+            "source": "Bishan-Toa Payoh Town Council",
+            "url": href or url,
+            "ref": "",
+            "title": title,
+            "buyer": "Bishan-Toa Payoh Town Council",
+            "published": parse_dmy(tds[0].get_text(" ", strip=True)),
+            "closing": parse_dmy(tds[1].get_text(" ", strip=True)),
+        })
+    return out
+
+
 def scrape_generic(src: dict) -> list[dict]:
     """Best-effort keyword scan of a plain HTML page listed in sources.json."""
     html = requests.get(src["url"], headers=UA, timeout=60).text
@@ -349,7 +425,9 @@ def main():
     scraped: list[dict] = []
 
     # Plain-HTTP sources (no browser needed)
-    for name, fn in [("SESAMi", scrape_sesami), ("Jalan Besar Town Council", scrape_jbtc)]:
+    for name, fn in [("SESAMi", scrape_sesami), ("Jalan Besar Town Council", scrape_jbtc),
+                     ("Marine Parade Town Council", scrape_mbtc),
+                     ("Bishan-Toa Payoh Town Council", scrape_btptc)]:
         try:
             rows = fn()
             status["sources"][name] = {"ok": True, "fetched": len(rows)}
