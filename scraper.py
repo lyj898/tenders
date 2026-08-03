@@ -468,18 +468,36 @@ def main():
             t["fit"] = tag
             matched.append(t)
 
-    # Merge with existing live set (preserves manually added rows/notes)
-    live = {key_of(t): t for t in load_json(ROOT / "tenders.json", [])}
+    # Server-side suppression list: keys the user hid in the tracker and
+    # committed to dismissed.json. These are dropped from the live set and
+    # never re-added by future scans. Accepts bare key strings or objects
+    # with a "key" field.
+    dismissed_keys = set()
+    for d in load_json(ROOT / "dismissed.json", []):
+        if isinstance(d, str):
+            dismissed_keys.add(d)
+        elif isinstance(d, dict) and d.get("key"):
+            dismissed_keys.add(d["key"])
+
+    # Merge with existing live set (preserves manually added rows/notes),
+    # skipping anything the user dismissed.
+    live = {}
+    for t in load_json(ROOT / "tenders.json", []):
+        k = key_of(t)
+        if k not in dismissed_keys:
+            live[k] = t
     for t in matched:
         k = key_of(t)
+        if k in dismissed_keys:
+            continue
         if k in live:
             live[k].update({kk: vv for kk, vv in t.items() if vv})
         else:
             t["first_seen"] = TODAY.isoformat()
             live[k] = t
 
-    # Archive lapsed
-    archive = load_json(ROOT / "archive.json", [])
+    # Archive lapsed (also honouring the dismissal list)
+    archive = [t for t in load_json(ROOT / "archive.json", []) if key_of(t) not in dismissed_keys]
     archived_keys = {key_of(t) for t in archive}
     still_live, newly_archived = [], 0
     for t in live.values():
@@ -506,6 +524,7 @@ def main():
     status["live"] = len(still_live)
     status["archived_total"] = len(archive)
     status["newly_archived"] = newly_archived
+    status["dismissed"] = len(dismissed_keys)
 
     (ROOT / "tenders.json").write_text(json.dumps(still_live, indent=1, ensure_ascii=False), encoding="utf-8")
     (ROOT / "archive.json").write_text(json.dumps(archive, indent=1, ensure_ascii=False), encoding="utf-8")

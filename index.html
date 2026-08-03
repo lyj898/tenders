@@ -180,7 +180,7 @@ function render(){
   const src = document.getElementById('src').value;
   const soon = document.getElementById('soon').checked;
   const rows = data().filter(t=>{
-    if(DISMISSED.has(keyOf(t))) return false;
+    { const k=keyOf(t); if(DISMISSED.has(k)||REPO_DISMISSED.has(k)) return false; }
     if(q && !((t.title||'')+' '+(t.buyer||'')+' '+(t.ref||'')).toLowerCase().includes(q)) return false;
     if(fit && t.fit!==fit) return false;
     if(src && t.source!==src) return false;
@@ -191,10 +191,13 @@ function render(){
     || (a.closing||'9999').localeCompare(b.closing||'9999') // then soonest to close
   );
 
-  const hid = data().filter(t=>DISMISSED.has(keyOf(t))).length;
+  const hid = data().filter(t=>{const k=keyOf(t); return DISMISSED.has(k)||REPO_DISMISSED.has(k);}).length;
+  const unsaved = [...DISMISSED].filter(k=>!REPO_DISMISSED.has(k)).length;
   document.getElementById('count').innerHTML =
     `${rows.length} of ${data().length} ${tab==='live'?'live tenders':'archived tenders'}`
-    + (hid ? ` · ${hid} hidden · <button class="linkbtn" onclick="restoreAll()">restore all</button>` : '');
+    + (hid ? ` · ${hid} hidden` : '')
+    + (DISMISSED.size ? ` · <button class="linkbtn" onclick="restoreAll()">restore all</button>` : '')
+    + (unsaved ? ` · <button class="linkbtn" onclick="exportDismissed()" title="Download dismissed.json to commit — makes these hides permanent and shared across devices">save ${unsaved} to repo ↓</button>` : '');
   document.getElementById('rows').innerHTML = rows.map(t=>`
     <tr class="item ${t.fit==='Direct fit'?'direct':'bundle'}">
       <td><a class="titlelink" href="${t.url||'#'}" target="_blank" rel="noopener"><div class="title">${esc(t.title)}</div></a><div class="buyer">${esc(t.buyer||'')}<span class="show-m"> · <a class="src" href="${t.url||'#'}" target="_blank" rel="noopener">Search ${esc(t.source)} ↗</a> <button class="copyref" data-ref="${esc(t.ref||t.title)}">Copy</button></span></div></td>
@@ -212,14 +215,41 @@ function render(){
 function esc(s){ return String(s||'').replace(/[&<>"]/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c])); }
 function isNew(t){ return !!(t.first_seen && STATUS.run_at && t.first_seen===STATUS.run_at.slice(0,10)); }
 
-// Deletions are remembered in this browser and re-applied on every load, so a
-// tender you hide stays hidden even when the next scan re-adds it to the JSON.
-// Key mirrors scraper.py's key_of() so hides survive re-scrapes.
+// Two dismissal layers, both keyed like scraper.py's key_of() so hides survive
+// re-scrapes:
+//  - DISMISSED: this browser's local hides (localStorage), instant, private.
+//  - REPO_DISMISSED: keys committed to dismissed.json, which the scraper also
+//    excludes from tenders.json. These sync to every viewer. Export your local
+//    hides with exportDismissed() and commit the file to make them permanent.
 function keyOf(t){ return (t.source||'')+'|'+(t.ref||'')+'|'+(t.title||'').slice(0,120).toLowerCase(); }
 let DISMISSED = new Set(JSON.parse(localStorage.getItem('tw_dismissed')||'[]'));
+let REPO_DISMISSED = new Set();   // keys from dismissed.json
+let REPO_DISMISSED_RAW = [];      // original objects, preserved on export
 function saveDismissed(){ localStorage.setItem('tw_dismissed', JSON.stringify([...DISMISSED])); }
 function hideTender(key){ DISMISSED.add(key); saveDismissed(); render(); showUndo(key); }
 function restoreAll(){ if(DISMISSED.size){ DISMISSED.clear(); saveDismissed(); render(); } }
+
+// Build a dismissed.json merging the committed list with this browser's local
+// hides, and download it so the user can commit it to the repo.
+function exportDismissed(){
+  const map = new Map();
+  REPO_DISMISSED_RAW.forEach(d=>{ const k = typeof d==='string'?d:d&&d.key; if(k) map.set(k, typeof d==='string'?{key:k}:d); });
+  const all = [...LIVE, ...ARCH];
+  [...DISMISSED].forEach(k=>{
+    if(map.has(k)) return;
+    const t = all.find(x=>keyOf(x)===k);
+    map.set(k, t ? {key:k, source:t.source, ref:t.ref||'', title:t.title, dismissed_on:(STATUS.run_at||'').slice(0,10)} : {key:k});
+  });
+  const blob = new Blob([JSON.stringify([...map.values()], null, 1)+'\n'], {type:'application/json'});
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob); a.download = 'dismissed.json'; a.click();
+  URL.revokeObjectURL(a.href);
+  const t = document.getElementById('toast');
+  t.querySelector('.msg').textContent = 'dismissed.json downloaded — commit it to the repo to apply permanently.';
+  t.querySelector('button').style.display = 'none';
+  t.classList.add('show'); clearTimeout(undoTimer);
+  undoTimer = setTimeout(()=>{ t.classList.remove('show'); t.querySelector('button').style.display=''; }, 7000);
+}
 let undoTimer=null;
 function showUndo(key){
   const t=document.getElementById('toast');
@@ -265,6 +295,8 @@ async function load(){
   LIVE = await j('tenders.json') || [];
   ARCH = await j('archive.json') || [];
   STATUS = await j('status.json') || {};
+  REPO_DISMISSED_RAW = await j('dismissed.json') || [];
+  REPO_DISMISSED = new Set(REPO_DISMISSED_RAW.map(d=> typeof d==='string' ? d : d && d.key).filter(Boolean));
   const srcs=[...new Set([...LIVE,...ARCH].map(t=>t.source))].sort();
   document.getElementById('src').innerHTML = '<option value="">All sources</option>'+srcs.map(s=>`<option>${esc(s)}</option>`).join('');
   document.getElementById('runAt').textContent = STATUS.run_at ? 'last scan: '+STATUS.run_at.slice(0,16).replace('T',' ')+' SGT' : 'no scan data';
