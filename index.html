@@ -3,149 +3,296 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tender Watch SG — disposal · handyman · skip</title>
+<title>Tenders Watch — Singapore tender tracker</title>
+<meta name="description" content="Weekly scan of Singapore tenders — junk disposal, handyman, skip tank.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;900&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
 <style>
   :root{
-    --concrete:#F1F3F2; --panel:#FFFFFF; --ink:#171D1C; --steel:#5A6663;
-    --line:#C9CFCB; --safety:#E8590C; --direct:#1E6B4F; --bundle:#8A5A00;
+    --bg:#F3F5F1; --panel:#FFFFFF; --panel-2:#FAFBF8;
+    --ink:#17211D; --muted:#68746E; --faint:#93A099;
+    --line:#E7EBE5; --hair:#EFF2EC;
+    --brand:#0E7B58; --brand-2:#0A5E43;
+    --direct:#0E7B58; --bundle:#B0730F;
+    --danger:#CB4A34; --amber:#C1841A;
+    --direct-bg:#E7F3ED; --bundle-bg:#F7EEDD;
+    --danger-bg:#F9E7E2; --amber-bg:#F8EFD9; --ok-bg:#E7F3ED;
+    --head-bg:#111E19; --head-ink:#ECF2EE; --head-faint:#8AA096; --head-line:#24352D;
+    --shadow:0 1px 2px rgba(18,30,24,.05), 0 12px 28px -16px rgba(18,30,24,.18);
+    --radius:14px;
   }
-  @media (prefers-reduced-motion: reduce){*{transition:none!important}}
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#0E1512; --panel:#141C18; --panel-2:#18211C;
+      --ink:#E8EEEA; --muted:#9CAAA3; --faint:#71807A;
+      --line:#243129; --hair:#1B2620;
+      --brand:#43C193; --brand-2:#5ED0A6;
+      --direct:#43C193; --bundle:#DBA24A;
+      --danger:#EC7359; --amber:#E1A94F;
+      --direct-bg:#123028; --bundle-bg:#302716;
+      --danger-bg:#331e19; --amber-bg:#2f2815; --ok-bg:#123028;
+      --head-bg:#0A100D; --head-ink:#ECF2EE; --head-faint:#7E918A; --head-line:#1D2A23;
+      --shadow:0 1px 2px rgba(0,0,0,.4), 0 16px 40px -20px rgba(0,0,0,.7);
+    }
+  }
+  @media (prefers-reduced-motion: reduce){*{transition:none!important; animation:none!important}}
   *{box-sizing:border-box; margin:0}
-  body{background:var(--concrete); color:var(--ink); font-family:'Archivo',sans-serif; font-size:15px}
-  .mono{font-family:'IBM Plex Mono',monospace}
+  html{-webkit-text-size-adjust:100%}
+  body{background:var(--bg); color:var(--ink);
+    font-family:'Archivo',system-ui,sans-serif; font-size:15px; line-height:1.45;
+    -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility}
+  .mono{font-family:'IBM Plex Mono',ui-monospace,monospace; font-variant-numeric:tabular-nums}
+  a{color:inherit}
+  ::selection{background:color-mix(in srgb, var(--brand) 26%, transparent)}
+  .pad{padding-inline:clamp(16px,4vw,48px)}
 
-  header{background:var(--ink); color:#F4F6F5; padding:22px 28px; display:flex; flex-wrap:wrap; gap:14px; align-items:baseline}
-  header h1{font-weight:900; font-size:26px; letter-spacing:.5px; text-transform:uppercase}
-  header h1 span{color:var(--safety)}
-  header .sub{font-family:'IBM Plex Mono',monospace; font-size:12px; color:#9BA6A2; margin-left:auto}
+  /* ---------- header ---------- */
+  header{background:var(--head-bg); color:var(--head-ink);
+    padding-block:20px; display:flex; flex-wrap:wrap; gap:16px 20px; align-items:center;
+    border-bottom:1px solid var(--head-line)}
+  .brand{display:flex; align-items:center; gap:13px; min-width:0}
+  .mark{position:relative; width:38px; height:38px; border-radius:11px; flex:none;
+    background:radial-gradient(120% 120% at 30% 20%, var(--brand-2), var(--head-bg) 140%);
+    box-shadow:inset 0 0 0 1px rgba(255,255,255,.08); display:grid; place-items:center}
+  .mark::before{content:""; width:15px; height:15px; border-radius:50%;
+    border:2px solid var(--brand); box-shadow:0 0 0 4px color-mix(in srgb,var(--brand) 22%, transparent)}
+  .mark::after{content:""; position:absolute; width:5px; height:5px; border-radius:50%; background:var(--brand);
+    box-shadow:0 0 10px 1px var(--brand); animation:ping 2.6s ease-out infinite}
+  @keyframes ping{0%{transform:scale(.6); opacity:.4} 60%{transform:scale(1.9); opacity:0} 100%{opacity:0}}
+  header h1{font-weight:800; font-size:23px; letter-spacing:-.4px; line-height:1}
+  header h1 span{color:var(--brand)}
+  .tagline{font-size:12px; color:var(--head-faint); margin-top:4px; letter-spacing:.2px}
+  .status{margin-left:auto; display:flex; align-items:center; gap:8px;
+    font-family:'IBM Plex Mono',monospace; font-size:12px; color:var(--head-faint);
+    background:rgba(255,255,255,.04); border:1px solid var(--head-line);
+    padding:7px 12px; border-radius:999px; white-space:nowrap}
+  .status .pulse{width:7px; height:7px; border-radius:50%; background:var(--brand); flex:none;
+    box-shadow:0 0 0 0 color-mix(in srgb,var(--brand) 60%, transparent); animation:pulse 2.4s infinite}
+  @keyframes pulse{0%{box-shadow:0 0 0 0 color-mix(in srgb,var(--brand) 55%, transparent)}
+    70%{box-shadow:0 0 0 7px transparent} 100%{box-shadow:0 0 0 0 transparent}}
 
-  .bar{display:flex; flex-wrap:wrap; gap:10px; padding:16px 28px; align-items:center; border-bottom:1px solid var(--line); background:var(--panel)}
-  .tabs{display:flex; border:1px solid var(--ink)}
-  .tabs button{font:inherit; font-weight:700; padding:8px 18px; background:none; border:none; cursor:pointer; color:var(--ink)}
-  .tabs button.on{background:var(--ink); color:#fff}
-  input[type=search], select{font:inherit; padding:8px 10px; border:1px solid var(--line); background:#fff; color:var(--ink)}
-  input[type=search]{min-width:220px}
-  label.chk{display:flex; gap:6px; align-items:center; font-size:13px; color:var(--steel); cursor:pointer}
+  /* ---------- KPI strip ---------- */
+  .kpis{display:grid; grid-template-columns:repeat(4,1fr); gap:12px; padding-top:22px}
+  .kpi{background:var(--panel); border:1px solid var(--line); border-radius:var(--radius);
+    padding:15px 16px; position:relative; overflow:hidden; box-shadow:var(--shadow)}
+  .kpi::before{content:""; position:absolute; left:0; top:0; bottom:0; width:3px; background:var(--faint); opacity:.5}
+  .kpi.hot::before{background:var(--danger); opacity:1}
+  .kpi.fresh::before{background:var(--brand); opacity:1}
+  .kpi.warn::before{background:var(--amber); opacity:1}
+  .kpi-n{font-weight:800; font-size:27px; letter-spacing:-.5px; line-height:1.05; font-variant-numeric:tabular-nums}
+  .kpi.hot .kpi-n{color:var(--danger)} .kpi.fresh .kpi-n{color:var(--brand)} .kpi.warn .kpi-n{color:var(--amber)}
+  .kpi-l{font-size:12px; color:var(--muted); margin-top:5px; font-weight:600; letter-spacing:.2px}
+
+  /* ---------- toolbar ---------- */
+  .bar{display:flex; flex-wrap:wrap; gap:10px; align-items:center; padding-block:18px 4px}
+  .tabs{display:inline-flex; background:var(--panel); border:1px solid var(--line);
+    border-radius:11px; padding:3px; box-shadow:var(--shadow)}
+  .tabs button{font:inherit; font-weight:700; font-size:14px; padding:7px 16px; background:none;
+    border:none; cursor:pointer; color:var(--muted); border-radius:8px; transition:.15s}
+  .tabs button:hover{color:var(--ink)}
+  .tabs button.on{background:var(--ink); color:var(--panel)}
+  .search{position:relative; flex:1 1 240px; min-width:180px}
+  .search svg{position:absolute; left:12px; top:50%; transform:translateY(-50%); color:var(--faint); pointer-events:none}
+  input[type=search]{width:100%; font:inherit; font-size:14px; padding:9px 12px 9px 34px;
+    border:1px solid var(--line); background:var(--panel); color:var(--ink); border-radius:10px; box-shadow:var(--shadow)}
+  input[type=search]::placeholder{color:var(--faint)}
+  select{font:inherit; font-size:14px; padding:9px 30px 9px 12px; border:1px solid var(--line);
+    background:var(--panel); color:var(--ink); border-radius:10px; cursor:pointer; box-shadow:var(--shadow);
+    appearance:none; -webkit-appearance:none;
+    background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='14' height='14' fill='none' stroke='%2393A099' stroke-width='2'><path d='M3 5l4 4 4-4'/></svg>");
+    background-repeat:no-repeat; background-position:right 10px center}
+  .chip{display:inline-flex; align-items:center; gap:8px; font-size:13px; font-weight:600; color:var(--muted);
+    cursor:pointer; padding:9px 13px; border:1px solid var(--line); background:var(--panel);
+    border-radius:10px; box-shadow:var(--shadow); user-select:none; transition:.15s}
+  .chip input{position:absolute; opacity:0; width:0; height:0}
+  .chip::before{content:""; width:15px; height:15px; border-radius:5px; border:1.5px solid var(--faint); flex:none; transition:.15s}
+  .chip:has(input:checked){color:var(--brand); border-color:color-mix(in srgb,var(--brand) 45%,var(--line))}
+  .chip:has(input:checked)::before{background:var(--brand); border-color:var(--brand);
+    background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='15' height='15' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'><path d='M20 6L9 17l-5-5'/></svg>")}
   .grow{flex:1}
-  .xlsx{font:inherit; font-weight:700; padding:9px 18px; background:var(--safety); color:#fff; border:none; cursor:pointer}
-  .xlsx:hover{filter:brightness(.93)}
-  button:focus-visible, input:focus-visible, select:focus-visible{outline:2px solid var(--safety); outline-offset:1px}
+  .xlsx{font:inherit; font-weight:700; font-size:14px; padding:9px 16px; background:var(--brand);
+    color:#fff; border:none; cursor:pointer; border-radius:10px; box-shadow:var(--shadow); transition:.15s}
+  .xlsx:hover{background:var(--brand-2)}
+  button:focus-visible, input:focus-visible, select:focus-visible, a:focus-visible{
+    outline:2px solid var(--brand); outline-offset:2px}
 
-  main{padding:20px 28px 60px}
-  .count{font-family:'IBM Plex Mono',monospace; font-size:12px; color:var(--steel); margin-bottom:10px}
-  table{width:100%; border-collapse:collapse; background:var(--panel)}
-  th{font-size:11px; text-transform:uppercase; letter-spacing:.8px; text-align:left; color:var(--steel); padding:10px 12px; border-bottom:2px solid var(--ink); cursor:pointer; user-select:none}
-  td{padding:12px; border-bottom:1px solid var(--line); vertical-align:top}
-  tr.item{border-left:4px solid transparent}
-  tr.item.direct{border-left-color:var(--direct)}
-  tr.item.bundle{border-left-color:var(--bundle)}
-  tr.item:hover td{background:#FAFBFA}
-  .title{font-weight:700; max-width:520px}
-  .buyer{color:var(--steel); font-size:13px; margin-top:3px}
-  .tag{display:inline-block; font-size:11px; font-weight:700; padding:2px 8px; text-transform:uppercase; letter-spacing:.5px}
-  .tag.direct{color:var(--direct); border:1px solid var(--direct)}
-  .tag.bundle{color:var(--bundle); border:1px solid var(--bundle)}
-  .stamp{font-family:'IBM Plex Mono',monospace; font-weight:600; font-size:13px; border:2px solid var(--steel); color:var(--steel); padding:3px 8px; display:inline-block; white-space:nowrap}
-  .stamp.hot{border-color:var(--safety); color:var(--safety)}
-  .stamp.gone{border-style:dashed; opacity:.6}
-  .new{font-family:'IBM Plex Mono',monospace; font-weight:700; font-size:10px; letter-spacing:.5px; color:#fff; background:var(--safety); padding:1px 5px; margin-left:6px; vertical-align:middle}
-  td.act{text-align:right; white-space:nowrap}
-  .del{font:inherit; font-weight:700; font-size:13px; line-height:1; padding:4px 9px; border:1px solid var(--line); background:#fff; color:var(--steel); cursor:pointer; border-radius:2px}
-  .del:hover{border-color:var(--safety); color:var(--safety)}
-  .linkbtn{background:none; border:none; color:var(--safety); font:inherit; font-weight:700; cursor:pointer; padding:0; text-decoration:underline}
-  #toast{position:fixed; left:50%; bottom:22px; transform:translateX(-50%); background:var(--ink); color:#fff; padding:10px 8px 10px 16px; font-size:13px; display:none; align-items:center; gap:14px; box-shadow:0 4px 16px rgba(0,0,0,.25); z-index:50}
-  #toast.show{display:flex}
-  #toast button{background:none; border:none; color:#FFB27A; font:inherit; font-weight:700; cursor:pointer; padding:6px 10px}
-  a.src{color:var(--ink)}
-  .copyref{font:inherit; font-family:'IBM Plex Mono',monospace; font-size:11px; padding:2px 7px; border:1px solid var(--line); background:#fff; color:var(--steel); cursor:pointer; border-radius:2px; white-space:nowrap}
-  .copyref:hover{border-color:var(--ink); color:var(--ink)}
-  .copyref:active{background:var(--concrete)}
-  a.titlelink{color:inherit; text-decoration:none; display:block}
-  a.titlelink:hover .title, a.titlelink:focus-visible .title{color:var(--safety)}
+  /* ---------- table ---------- */
+  main{padding-bottom:70px}
+  .count{font-family:'IBM Plex Mono',monospace; font-size:12px; color:var(--muted); padding:14px 2px 12px}
+  .board{background:var(--panel); border:1px solid var(--line); border-radius:var(--radius);
+    box-shadow:var(--shadow); overflow:hidden}
+  table{width:100%; border-collapse:collapse; table-layout:fixed}
+  th{font-size:11px; text-transform:uppercase; letter-spacing:.7px; text-align:left; font-weight:700;
+    color:var(--faint); padding:13px 14px; background:var(--panel-2); border-bottom:1px solid var(--line); white-space:nowrap}
+  td{padding:14px; border-bottom:1px solid var(--hair); vertical-align:middle}
+  tbody tr:last-child td{border-bottom:none}
+  tr.item{transition:background .12s}
+  tr.item:hover{background:var(--panel-2)}
+  .c-tender{position:relative; max-width:540px}
+  .c-tender::before{content:""; position:absolute; left:0; top:0; bottom:0; width:3px; background:transparent}
+  tr.item.direct .c-tender::before{background:var(--direct)}
+  tr.item.bundle .c-tender::before{background:var(--bundle)}
+  .title{font-weight:700; font-size:14.5px; letter-spacing:-.1px; display:block; overflow-wrap:anywhere}
+  .buyer{color:var(--muted); font-size:12.5px; margin-top:3px}
+  a.titlelink{text-decoration:none; display:block}
+  a.titlelink:hover .title, a.titlelink:focus-visible .title{color:var(--brand)}
+  .dt{color:var(--muted); font-size:12.5px; white-space:nowrap}
+  .src-cell{font-size:12px}
+  .src-cell .ref{color:var(--muted); margin-top:4px; display:flex; align-items:center; gap:6px; flex-wrap:wrap}
+  a.src{color:var(--brand); font-weight:600; text-decoration:none}
+  a.src:hover{text-decoration:underline}
+
+  .tag{display:inline-flex; align-items:center; gap:6px; font-size:11px; font-weight:700; letter-spacing:.3px;
+    padding:4px 9px 4px 8px; border-radius:999px; white-space:nowrap}
+  .tag i{width:6px; height:6px; border-radius:50%; flex:none}
+  .tag.direct{color:var(--direct); background:var(--direct-bg)} .tag.direct i{background:var(--direct)}
+  .tag.bundle{color:var(--bundle); background:var(--bundle-bg)} .tag.bundle i{background:var(--bundle)}
+
+  .cd{font-family:'IBM Plex Mono',monospace; font-weight:600; font-size:12px; padding:4px 9px;
+    border-radius:8px; display:inline-block; white-space:nowrap; border:1px solid transparent}
+  .cd.ok{color:var(--brand); background:var(--ok-bg)}
+  .cd.soon{color:var(--amber); background:var(--amber-bg)}
+  .cd.now{color:var(--danger); background:var(--danger-bg)}
+  .cd.gone{color:var(--faint); border-color:var(--line); border-style:dashed}
+  .cd.none{color:var(--faint)}
+  .new{font-family:'IBM Plex Mono',monospace; font-weight:700; font-size:9.5px; letter-spacing:.5px;
+    color:#fff; background:var(--brand); padding:2px 5px; border-radius:5px; margin-left:6px; vertical-align:1px}
+
+  td.act{text-align:right; width:44px}
+  .del{width:28px; height:28px; display:inline-grid; place-items:center; font-size:13px; line-height:1;
+    border:1px solid var(--line); background:var(--panel); color:var(--faint); cursor:pointer;
+    border-radius:8px; transition:.14s}
+  .del:hover{border-color:var(--danger); color:var(--danger); background:var(--danger-bg)}
+  .copyref{font-family:'IBM Plex Mono',monospace; font-size:10.5px; font-weight:500; padding:2px 7px;
+    border:1px solid var(--line); background:var(--panel); color:var(--muted); cursor:pointer; border-radius:6px; white-space:nowrap; transition:.14s}
+  .copyref:hover{border-color:var(--brand); color:var(--brand)}
+  .linkbtn{background:none; border:none; color:var(--brand); font:inherit; font-weight:700; cursor:pointer; padding:0}
+  .linkbtn:hover{text-decoration:underline}
   .show-m{display:none}
-  .empty{padding:50px; text-align:center; color:var(--steel); background:var(--panel)}
+  .empty{padding:60px 24px; text-align:center; color:var(--muted)}
+  .empty b{display:block; font-size:16px; color:var(--ink); margin-bottom:6px; font-weight:700}
 
-  footer{padding:18px 28px; font-family:'IBM Plex Mono',monospace; font-size:12px; color:var(--steel); border-top:1px solid var(--line)}
-  footer .ok{color:var(--direct)} footer .fail{color:var(--safety)}
-  @media (max-width:700px){
-    header{padding:14px; gap:4px 12px}
-    header h1{font-size:20px}
-    header .sub{margin-left:0; width:100%}
-    .bar{padding:12px 14px; gap:8px}
-    input[type=search]{min-width:0; flex:1 1 100%; order:-1}
-    select{flex:1 1 40%}
-    label.chk{flex:1 1 100%}
-    .tabs{flex:1}
-    .tabs button{flex:1; padding:10px 0}
-    .xlsx{flex:1; padding:12px 0}
+  /* ---------- toast ---------- */
+  #toast{position:fixed; left:50%; bottom:26px; transform:translateX(-50%) translateY(8px);
+    background:var(--ink); color:var(--panel); padding:11px 10px 11px 18px; font-size:13.5px; font-weight:600;
+    display:none; align-items:center; gap:12px; box-shadow:0 12px 30px -8px rgba(0,0,0,.45); z-index:60;
+    border-radius:12px; opacity:0; transition:opacity .18s, transform .18s}
+  #toast.show{display:flex; opacity:1; transform:translateX(-50%) translateY(0)}
+  #toast button{background:color-mix(in srgb,var(--brand) 24%, transparent); border:none; color:var(--brand);
+    font:inherit; font-weight:700; cursor:pointer; padding:6px 12px; border-radius:8px}
+  #toast button:hover{background:color-mix(in srgb,var(--brand) 34%, transparent)}
+
+  /* ---------- footer ---------- */
+  footer{padding-block:22px 40px; border-top:1px solid var(--line); margin-top:26px; color:var(--muted)}
+  .health-row{display:flex; flex-wrap:wrap; gap:8px; margin-bottom:12px}
+  .src-chip{display:inline-flex; align-items:center; gap:7px; font-family:'IBM Plex Mono',monospace;
+    font-size:11.5px; padding:5px 11px; border:1px solid var(--line); border-radius:999px; background:var(--panel)}
+  .src-chip i{width:7px; height:7px; border-radius:50%; flex:none}
+  .src-chip.ok i{background:var(--brand)} .src-chip.fail i{background:var(--danger)}
+  .src-chip.fail{color:var(--danger); border-color:color-mix(in srgb,var(--danger) 40%,var(--line))}
+  .health-note{font-family:'IBM Plex Mono',monospace; font-size:11.5px; color:var(--faint)}
+
+  /* ---------- mobile ---------- */
+  @media (max-width:760px){
+    header{padding-block:16px}
+    .status{margin-left:0; width:100%; justify-content:flex-start}
+    .kpis{grid-template-columns:repeat(2,1fr); padding-top:18px}
+    .bar{gap:8px}
+    .tabs{flex:1 1 100%; order:-2}
+    .tabs button{flex:1}
+    .search{flex:1 1 100%; order:-1}
+    select{flex:1 1 42%}
+    .chip{flex:1 1 100%; justify-content:center}
     .grow{display:none}
-    main{padding:14px 10px 50px}
-    footer{padding:14px; line-height:1.7}
-    .hide-m{display:none}
+    .xlsx{flex:1 1 100%}
+    .hide-m{display:none!important}
     .show-m{display:inline}
-    .title{max-width:none}
-    /* table becomes stacked cards */
-    table,tbody{display:block; background:none}
+    .board{background:transparent; border:none; box-shadow:none; overflow:visible}
+    table,tbody{display:block}
     thead{display:none}
-    tr.item{display:flex; flex-wrap:wrap; align-items:center; gap:8px 12px;
-      background:var(--panel); border:1px solid var(--line);
-      border-left:4px solid var(--steel); margin-bottom:10px; padding:12px}
+    tr.item{display:grid; grid-template-columns:1fr auto; gap:8px 12px; align-items:center;
+      background:var(--panel); border:1px solid var(--line); border-left-width:3px; border-radius:12px;
+      margin-bottom:10px; padding:14px 14px 14px 16px; box-shadow:var(--shadow)}
     tr.item.direct{border-left-color:var(--direct)}
     tr.item.bundle{border-left-color:var(--bundle)}
-    td{display:block; padding:0; border:none}
-    td:first-child{width:100%}
-    tr.item:hover td{background:none}
+    tr.item:hover{background:var(--panel)}
+    .c-tender::before{display:none}
+    td{display:block; padding:0; border:none!important}
+    .c-tender{grid-column:1 / -1; max-width:none}
+    td.act{width:auto; grid-row:1; grid-column:2; text-align:right}
+    .c-tender{grid-row:1; grid-column:1}
   }
 </style>
 </head>
 <body>
-<header>
-  <h1>Tender<span>Watch</span> SG</h1>
-  <div class="mono" style="font-size:12px;color:#9BA6A2">junk disposal · handyman · skip tank</div>
-  <div class="sub" id="runAt">loading…</div>
+<header class="pad">
+  <div class="brand">
+    <span class="mark" aria-hidden="true"></span>
+    <div>
+      <h1>Tenders<span>Watch</span></h1>
+      <div class="tagline">Singapore tenders · junk disposal · handyman · skip tank</div>
+    </div>
+  </div>
+  <div class="status"><span class="pulse"></span><span id="runAt">loading…</span></div>
 </header>
 
-<div class="bar">
+<section class="kpis pad" id="kpis" aria-label="Overview"></section>
+
+<div class="bar pad">
   <div class="tabs" role="tablist">
     <button id="tabLive" class="on" onclick="setTab('live')">Live</button>
     <button id="tabArch" onclick="setTab('archive')">Archive</button>
   </div>
-  <input type="search" id="q" placeholder="Search title, buyer, ref…" oninput="render()">
+  <div class="search">
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+    <input type="search" id="q" placeholder="Search title, buyer, ref…" oninput="render()">
+  </div>
   <select id="fit" onchange="render()">
     <option value="">All fits</option>
     <option>Direct fit</option>
     <option>Bundle/subcon</option>
   </select>
   <select id="src" onchange="render()"><option value="">All sources</option></select>
-  <label class="chk"><input type="checkbox" id="soon" onchange="render()"> Closing ≤ 7 days</label>
+  <label class="chip"><input type="checkbox" id="soon" onchange="render()"><span>Closing ≤ 7 days</span></label>
   <div class="grow"></div>
-  <button class="xlsx" onclick="downloadXlsx()">Download Excel</button>
+  <button class="xlsx" onclick="downloadXlsx()">↓ Excel</button>
 </div>
 
-<main>
+<main class="pad">
   <div class="count" id="count"></div>
-  <table>
-    <thead><tr>
-      <th style="width:44%">Tender</th>
-      <th>Fit</th>
-      <th class="hide-m">Source / Ref</th>
-      <th class="hide-m">Published</th>
-      <th>Scanned</th>
-      <th>Closes</th>
-      <th>Countdown</th>
-      <th class="act" aria-label="Actions"></th>
-    </tr></thead>
-    <tbody id="rows"></tbody>
-  </table>
-  <div class="empty" id="empty" hidden>No tenders match. Adjust filters, or wait for the next Monday scan.</div>
+  <div class="board">
+    <table>
+      <colgroup>
+        <col>
+        <col style="width:88px">
+        <col style="width:150px">
+        <col style="width:100px">
+        <col style="width:120px">
+        <col style="width:96px">
+        <col style="width:106px">
+        <col style="width:48px">
+      </colgroup>
+      <thead><tr>
+        <th>Tender</th>
+        <th>Fit</th>
+        <th class="hide-m">Source / Ref</th>
+        <th class="hide-m">Published</th>
+        <th>Scanned</th>
+        <th>Closes</th>
+        <th>Countdown</th>
+        <th class="act" aria-label="Actions"></th>
+      </tr></thead>
+      <tbody id="rows"></tbody>
+    </table>
+    <div class="empty" id="empty" hidden><b>No tenders match.</b>Adjust your filters, or wait for the next Monday scan.</div>
+  </div>
 </main>
 
-<div id="toast"><span class="msg">Tender hidden — stays hidden after future scans.</span><button>Undo</button></div>
+<div id="toast"><span class="msg">Tender hidden.</span><button>Undo</button></div>
 
-<footer id="health">source health: loading…</footer>
+<footer class="pad" id="health">source health: loading…</footer>
 
 <script>
 let LIVE=[], ARCH=[], STATUS={}, tab='live';
@@ -159,10 +306,11 @@ function daysLeft(iso){
 
 function stamp(iso){
   const d = daysLeft(iso);
-  if(d===null) return '<span class="stamp">—</span>';
-  if(d<0)  return `<span class="stamp gone">LAPSED</span>`;
-  if(d===0) return `<span class="stamp hot">TODAY</span>`;
-  return `<span class="stamp ${d<=3?'hot':''}">D-${d}</span>`;
+  if(d===null) return '<span class="cd none">—</span>';
+  if(d<0)  return '<span class="cd gone">Lapsed</span>';
+  if(d===0) return '<span class="cd now">Today</span>';
+  const cls = d<=3 ? 'now' : (d<=7 ? 'soon' : 'ok');
+  return `<span class="cd ${cls}">D-${d}</span>`;
 }
 
 function setTab(t){
@@ -173,6 +321,22 @@ function setTab(t){
 }
 
 function data(){ return tab==='live' ? LIVE : ARCH; }
+
+function updateKpis(){
+  const live = LIVE.filter(t=>!DISMISSED.has(keyOf(t)));
+  const soon = live.filter(t=>{const d=daysLeft(t.closing); return d!==null && d>=0 && d<=7;}).length;
+  const fresh = live.filter(isNew).length;
+  const srcs = Object.values(STATUS.sources||{});
+  const ok = srcs.filter(s=>s.ok).length;
+  const tiles = [
+    {n:live.length, l:'Live tenders'},
+    {n:soon, l:'Closing ≤ 7 days', tone:soon?'hot':''},
+    {n:fresh, l:'New this scan', tone:fresh?'fresh':''},
+    {n:srcs.length?`${ok}/${srcs.length}`:'—', l:'Sources online', tone:(srcs.length&&ok<srcs.length)?'warn':''},
+  ];
+  document.getElementById('kpis').innerHTML = tiles.map(t=>
+    `<div class="kpi ${t.tone||''}"><div class="kpi-n">${t.n}</div><div class="kpi-l">${t.l}</div></div>`).join('');
+}
 
 function render(){
   const q = document.getElementById('q').value.toLowerCase();
@@ -191,21 +355,30 @@ function render(){
     || (a.closing||'9999').localeCompare(b.closing||'9999') // then soonest to close
   );
 
+  updateKpis();
   const hid = data().filter(t=>DISMISSED.has(keyOf(t))).length;
   document.getElementById('count').innerHTML =
     `${rows.length} of ${data().length} ${tab==='live'?'live tenders':'archived tenders'}`
     + (hid ? ` · ${hid} hidden · <button class="linkbtn" onclick="restoreAll()">restore all</button>` : '');
-  document.getElementById('rows').innerHTML = rows.map(t=>`
-    <tr class="item ${t.fit==='Direct fit'?'direct':'bundle'}">
-      <td><a class="titlelink" href="${t.url||'#'}" target="_blank" rel="noopener"><div class="title">${esc(t.title)}</div></a><div class="buyer">${esc(t.buyer||'')}<span class="show-m"> · <a class="src" href="${t.url||'#'}" target="_blank" rel="noopener">Search ${esc(t.source)} ↗</a> <button class="copyref" data-ref="${esc(t.ref||t.title)}">Copy</button></span></div></td>
-      <td><span class="tag ${t.fit==='Direct fit'?'direct':'bundle'}">${t.fit==='Direct fit'?'Direct':'Subcon'}</span></td>
-      <td class="hide-m mono" style="font-size:12px"><a class="src" href="${t.url||'#'}" target="_blank" rel="noopener">Search ${esc(t.source)} ↗</a><br>${esc(t.ref||'')} <button class="copyref" data-ref="${esc(t.ref||t.title)}">Copy</button></td>
-      <td class="hide-m mono" style="font-size:13px">${fmt(t.published)}</td>
-      <td class="mono" style="font-size:13px">${fmt(t.first_seen)}${isNew(t)?' <span class="new">NEW</span>':''}</td>
-      <td class="mono" style="font-size:13px">${fmt(t.closing)}</td>
-      <td>${tab==='archive' ? '<span class="stamp gone">ARCHIVED</span>' : stamp(t.closing)}</td>
-      <td class="act"><button class="del" data-key="${esc(keyOf(t))}" title="Hide this tender — it stays hidden after future scans" aria-label="Hide this tender">✕</button></td>
-    </tr>`).join('');
+  document.getElementById('rows').innerHTML = rows.map(t=>{
+    const cls = t.fit==='Direct fit' ? 'direct' : 'bundle';
+    const label = t.fit==='Direct fit' ? 'Direct' : 'Subcon';
+    const url = t.url||'#';
+    return `
+    <tr class="item ${cls}">
+      <td class="c-tender">
+        <a class="titlelink" href="${url}" target="_blank" rel="noopener"><span class="title">${esc(t.title)}</span></a>
+        <div class="buyer">${esc(t.buyer||'')}<span class="show-m"> · <a class="src" href="${url}" target="_blank" rel="noopener">${esc(t.source)} ↗</a> <button class="copyref" data-ref="${esc(t.ref||t.title)}">Copy</button></span></div>
+      </td>
+      <td><span class="tag ${cls}"><i></i>${label}</span></td>
+      <td class="hide-m src-cell"><a class="src" href="${url}" target="_blank" rel="noopener">${esc(t.source)} ↗</a><div class="ref mono">${esc(t.ref||'—')}${t.ref?` <button class="copyref" data-ref="${esc(t.ref)}">Copy</button>`:''}</div></td>
+      <td class="hide-m dt mono">${fmt(t.published)}</td>
+      <td class="dt mono">${fmt(t.first_seen)}${isNew(t)?' <span class="new">NEW</span>':''}</td>
+      <td class="dt mono">${fmt(t.closing)}</td>
+      <td>${tab==='archive' ? '<span class="cd gone">Archived</span>' : stamp(t.closing)}</td>
+      <td class="act"><button class="del" data-key="${esc(keyOf(t))}" title="Hide this tender for everyone" aria-label="Hide this tender">✕</button></td>
+    </tr>`;
+  }).join('');
   document.getElementById('empty').hidden = rows.length>0;
 }
 
@@ -295,7 +468,7 @@ function downloadXlsx(){
   const wb = XLSX.utils.book_new();
   XLSX.utils.book_append_sheet(wb, XLSX.utils.json_to_sheet(LIVE.map(cols)), 'Live');
   XLSX.utils.book_append_sheet(wb, XLSX.utils.json_to_sheet(ARCH.map(cols)), 'Archive');
-  XLSX.writeFile(wb, `tender-watch-sg-${new Date().toISOString().slice(0,10)}.xlsx`);
+  XLSX.writeFile(wb, `tenders-watch-${new Date().toISOString().slice(0,10)}.xlsx`);
 }
 
 async function load(){
@@ -306,11 +479,12 @@ async function load(){
   await loadDismissed();
   const srcs=[...new Set([...LIVE,...ARCH].map(t=>t.source))].sort();
   document.getElementById('src').innerHTML = '<option value="">All sources</option>'+srcs.map(s=>`<option>${esc(s)}</option>`).join('');
-  document.getElementById('runAt').textContent = STATUS.run_at ? 'last scan: '+STATUS.run_at.slice(0,16).replace('T',' ')+' SGT' : 'no scan data';
+  document.getElementById('runAt').textContent = STATUS.run_at ? 'Scanned '+STATUS.run_at.slice(0,16).replace('T',' ')+' SGT' : 'no scan data';
   const h = Object.entries(STATUS.sources||{}).map(([k,v])=>
-    `<span class="${v.ok?'ok':'fail'}">${esc(k)}: ${v.ok?('OK ('+(v.fetched??0)+')'):'FAILED'}</span>`).join(' · ');
-  document.getElementById('health').innerHTML = 'source health — '+(h||'n/a')+
-    ' · scans run Mondays ~14:17 SGT · archive holds lapsed tenders';
+    `<span class="src-chip ${v.ok?'ok':'fail'}"><i></i>${esc(k)} ${v.ok?('· '+(v.fetched??0)):'· failed'}</span>`).join('');
+  document.getElementById('health').innerHTML =
+    `<div class="health-row">${h||'<span class="src-chip">no scan data</span>'}</div>`
+    + `<div class="health-note">Scans run Mondays ~14:17 SGT · ${STATUS.dismissed?STATUS.dismissed+' hidden · ':''}archive holds lapsed tenders</div>`;
   render();
 }
 load();
