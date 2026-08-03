@@ -6,7 +6,7 @@ Daily automated scan of Singapore tender boards for **junk disposal, handyman se
 
 ## How it works
 
-- `.github/workflows/scrape.yml` runs **daily at 04:00 SGT** (and on demand via the Actions tab → Run workflow).
+- `.github/workflows/scrape.yml` runs **daily at 04:00 SGT**, with self-healing backup runs at 08:00 and 12:00 SGT — a guard step skips the backups if the day's scan already succeeded (GitHub's scheduled runs are best-effort and sometimes skipped). Also runs on demand via the Actions tab → Run workflow.
 - `scraper.py` scans:
   - **GeBIZ** — open listings only, via headless Chromium (keyword searches)
   - **TenderBoard** — public open deals pages
@@ -20,7 +20,7 @@ Daily automated scan of Singapore tender boards for **junk disposal, handyman se
 
 - **Keywords / exclusions:** edit the lists at the top of `scraper.py`.
 - **Add a source:** append `{ "name": ..., "url": ..., "enabled": true }` to `sources.json`.
-- **Schedule:** change the cron in `scrape.yml` (times are UTC; SGT = UTC+8).
+- **Schedule:** change the cron entries in `scrape.yml` (times are UTC; SGT = UTC+8). The guard step keys off `run_at` in `status.json`, so backup runs only fire if the day's scan hasn't landed yet.
 
 ## Known limits
 

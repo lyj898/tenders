@@ -2,7 +2,12 @@ name: Daily tender scan
 
 on:
   schedule:
-    - cron: "0 20 * * *"  # 04:00 SGT (UTC+8)
+    # GitHub cron is UTC and its scheduled runs are best-effort (often delayed,
+    # occasionally skipped). We fire three times a day as self-healing backups;
+    # the guard step below makes every run after the first of the day a no-op.
+    - cron: "0 20 * * *"  # 04:00 SGT (primary)
+    - cron: "0 0 * * *"   # 08:00 SGT (backup)
+    - cron: "0 4 * * *"   # 12:00 SGT (backup)
   workflow_dispatch:
 
 permissions:
@@ -14,19 +19,40 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Decide whether to run (self-healing guard)
+        id: guard
+        run: |
+          today=$(TZ='Asia/Singapore' date +%F)
+          last_run=$(jq -r '.run_at // ""' status.json 2>/dev/null || echo "")
+          last_date=${last_run:0:10}
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "Manual dispatch — running."
+            echo "run=true" >> "$GITHUB_OUTPUT"
+          elif [ "$last_date" = "$today" ]; then
+            echo "Already scanned today ($today, last run $last_run) — skipping."
+            echo "run=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "Last scan $last_date, today is $today — running."
+            echo "run=true" >> "$GITHUB_OUTPUT"
+          fi
+
       - uses: actions/setup-python@v5
+        if: steps.guard.outputs.run == 'true'
         with:
           python-version: "3.12"
 
       - name: Install dependencies
+        if: steps.guard.outputs.run == 'true'
         run: |
           pip install -r requirements.txt
           playwright install --with-deps chromium
 
       - name: Run scraper
+        if: steps.guard.outputs.run == 'true'
         run: python scraper.py
 
       - name: Commit updated data
+        if: steps.guard.outputs.run == 'true'
         run: |
           git config user.name "tender-bot"
           git config user.email "actions@users.noreply.github.com"
