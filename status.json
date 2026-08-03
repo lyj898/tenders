@@ -1,21 +1,13 @@
 {
- "run_at": "2026-08-03T12:48:53.274114+08:00",
+ "run_at": "2026-08-03T17:23:24.410609+08:00",
  "sources": {
   "SESAMi": {
    "ok": true,
-   "fetched": 100
+   "fetched": 107
   },
   "Jalan Besar Town Council": {
-   "ok": true,
-   "fetched": 2
-  },
-  "GeBIZ": {
-   "ok": true,
-   "fetched": 24
-  },
-  "TenderBoard": {
-   "ok": true,
-   "fetched": 192
+   "ok": false,
+   "error": "JBTC: no tables found (page layout changed or blocked)"
   },
   "Marine Parade Town Council": {
    "ok": true,
@@ -23,10 +15,19 @@
   },
   "Bishan-Toa Payoh Town Council": {
    "ok": true,
-   "fetched": 0
+   "fetched": 1
+  },
+  "GeBIZ": {
+   "ok": true,
+   "fetched": 23
+  },
+  "TenderBoard": {
+   "ok": true,
+   "fetched": 196
   }
  },
- "live": 52,
+ "live": 14,
  "archived_total": 0,
- "newly_archived": 0
+ "newly_archived": 0,
+ "dismissed": 43
 }
