@@ -260,6 +260,18 @@
   "source": "TenderBoard",
   "url": "https://www.tenderboard.biz/singaporetenders",
   "ref": "",
+  "title": "Quotation for Replacement of APC UPS Battery (RBC43) for APC UPS Model SMT3000RMI2UC (Serial No. AS2451166827)",
+  "buyer": "CITY HARVEST CHURCH",
+  "category": "Not Specified",
+  "published": "2026-08-01",
+  "closing": "2026-08-07",
+  "fit": "Bundle/subcon",
+  "first_seen": "2026-08-03"
+ },
+ {
+  "source": "TenderBoard",
+  "url": "https://www.tenderboard.biz/singaporetenders",
+  "ref": "",
   "title": "Request for Quotation (RFQ): Bidding for the Proper Disposal of Old Buggies",
   "buyer": "The Singapore Island Country Club",
   "category": "Others: Others",
@@ -513,6 +525,18 @@
   "first_seen": "2026-08-02"
  },
  {
+  "source": "TenderBoard",
+  "url": "https://www.tenderboard.biz/singaporetenders",
+  "ref": "",
+  "title": "Request For Quotation (RFQ) for the Supply and Installation of New Ceiling Cassette FUC X 2units at Covenant Family Service Centre - Hougang",
+  "buyer": "Methodist Welfare Services",
+  "category": "Others: Others",
+  "published": "2026-08-03",
+  "closing": "2026-08-17",
+  "fit": "Bundle/subcon",
+  "first_seen": "2026-08-03"
+ },
+ {
   "source": "GeBIZ",
   "url": "https://www.gebiz.gov.sg/ptn/opportunity/BOListing.xhtml?origin=menu",
   "ref": "FINCEDETT26000011",
@@ -598,5 +622,50 @@
   "closing": "2026-08-27",
   "fit": "Bundle/subcon",
   "first_seen": "2026-08-02"
+ },
+ {
+  "source": "TenderBoard",
+  "url": "https://www.tenderboard.biz/singaporetenders",
+  "ref": "",
+  "title": "Design, Supply, Installation and Commissioning of VRV Air-Conditioning System",
+  "buyer": "SINGAPORE YOUTH FLYING CLUB",
+  "category": "Facilities Management: Airconditioning, Refrigeration & Ventilation Works & Maintenance",
+  "published": "2026-08-02",
+  "closing": "2026-08-28",
+  "fit": "Bundle/subcon",
+  "first_seen": "2026-08-03"
+ },
+ {
+  "source": "Jalan Besar Town Council",
+  "url": "https://www.jbtc.org.sg/tenders-notices/",
+  "ref": "",
+  "title": "Our Services Use of Common Area and Open Spaces Essential Maintenance Service Unit ( EMSU ) Free Bulky Items Removal Service & Conservancy Charges FAQ",
+  "buyer": "Jalan Besar Town Council",
+  "published": null,
+  "closing": null,
+  "fit": "Direct fit",
+  "first_seen": "2026-08-03"
+ },
+ {
+  "source": "Jalan Besar Town Council",
+  "url": "https://www.jbtc.org.sg/tenders-notices/",
+  "ref": "",
+  "title": "Free Bulky Items Removal",
+  "buyer": "Jalan Besar Town Council",
+  "published": null,
+  "closing": null,
+  "fit": "Direct fit",
+  "first_seen": "2026-08-03"
+ },
+ {
+  "source": "Jalan Besar Town Council",
+  "url": "https://www.jbtc.org.sg/our-services/free-bulky-items-removal/",
+  "ref": "",
+  "title": "Bulky Item Removal",
+  "buyer": "Jalan Besar Town Council",
+  "published": null,
+  "closing": null,
+  "fit": "Direct fit",
+  "first_seen": "2026-08-03"
  }
 ]
