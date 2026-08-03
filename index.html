@@ -52,6 +52,13 @@
   .stamp.hot{border-color:var(--safety); color:var(--safety)}
   .stamp.gone{border-style:dashed; opacity:.6}
   .new{font-family:'IBM Plex Mono',monospace; font-weight:700; font-size:10px; letter-spacing:.5px; color:#fff; background:var(--safety); padding:1px 5px; margin-left:6px; vertical-align:middle}
+  td.act{text-align:right; white-space:nowrap}
+  .del{font:inherit; font-weight:700; font-size:13px; line-height:1; padding:4px 9px; border:1px solid var(--line); background:#fff; color:var(--steel); cursor:pointer; border-radius:2px}
+  .del:hover{border-color:var(--safety); color:var(--safety)}
+  .linkbtn{background:none; border:none; color:var(--safety); font:inherit; font-weight:700; cursor:pointer; padding:0; text-decoration:underline}
+  #toast{position:fixed; left:50%; bottom:22px; transform:translateX(-50%); background:var(--ink); color:#fff; padding:10px 8px 10px 16px; font-size:13px; display:none; align-items:center; gap:14px; box-shadow:0 4px 16px rgba(0,0,0,.25); z-index:50}
+  #toast.show{display:flex}
+  #toast button{background:none; border:none; color:#FFB27A; font:inherit; font-weight:700; cursor:pointer; padding:6px 10px}
   a.src{color:var(--ink)}
   .copyref{font:inherit; font-family:'IBM Plex Mono',monospace; font-size:11px; padding:2px 7px; border:1px solid var(--line); background:#fff; color:var(--steel); cursor:pointer; border-radius:2px; white-space:nowrap}
   .copyref:hover{border-color:var(--ink); color:var(--ink)}
@@ -129,11 +136,14 @@
       <th>Scanned</th>
       <th>Closes</th>
       <th>Countdown</th>
+      <th class="act" aria-label="Actions"></th>
     </tr></thead>
     <tbody id="rows"></tbody>
   </table>
   <div class="empty" id="empty" hidden>No tenders match. Adjust filters, or wait for the next Monday scan.</div>
 </main>
+
+<div id="toast"><span class="msg">Tender hidden — stays hidden after future scans.</span><button>Undo</button></div>
 
 <footer id="health">source health: loading…</footer>
 
@@ -170,6 +180,7 @@ function render(){
   const src = document.getElementById('src').value;
   const soon = document.getElementById('soon').checked;
   const rows = data().filter(t=>{
+    if(DISMISSED.has(keyOf(t))) return false;
     if(q && !((t.title||'')+' '+(t.buyer||'')+' '+(t.ref||'')).toLowerCase().includes(q)) return false;
     if(fit && t.fit!==fit) return false;
     if(src && t.source!==src) return false;
@@ -180,8 +191,10 @@ function render(){
     || (a.closing||'9999').localeCompare(b.closing||'9999') // then soonest to close
   );
 
-  document.getElementById('count').textContent =
-    `${rows.length} of ${data().length} ${tab==='live'?'live tenders':'archived tenders'}`;
+  const hid = data().filter(t=>DISMISSED.has(keyOf(t))).length;
+  document.getElementById('count').innerHTML =
+    `${rows.length} of ${data().length} ${tab==='live'?'live tenders':'archived tenders'}`
+    + (hid ? ` · ${hid} hidden · <button class="linkbtn" onclick="restoreAll()">restore all</button>` : '');
   document.getElementById('rows').innerHTML = rows.map(t=>`
     <tr class="item ${t.fit==='Direct fit'?'direct':'bundle'}">
       <td><a class="titlelink" href="${t.url||'#'}" target="_blank" rel="noopener"><div class="title">${esc(t.title)}</div></a><div class="buyer">${esc(t.buyer||'')}<span class="show-m"> · <a class="src" href="${t.url||'#'}" target="_blank" rel="noopener">Search ${esc(t.source)} ↗</a> <button class="copyref" data-ref="${esc(t.ref||t.title)}">Copy</button></span></div></td>
@@ -191,6 +204,7 @@ function render(){
       <td class="mono" style="font-size:13px">${fmt(t.first_seen)}${isNew(t)?' <span class="new">NEW</span>':''}</td>
       <td class="mono" style="font-size:13px">${fmt(t.closing)}</td>
       <td>${tab==='archive' ? '<span class="stamp gone">ARCHIVED</span>' : stamp(t.closing)}</td>
+      <td class="act"><button class="del" data-key="${esc(keyOf(t))}" title="Hide this tender — it stays hidden after future scans" aria-label="Hide this tender">✕</button></td>
     </tr>`).join('');
   document.getElementById('empty').hidden = rows.length>0;
 }
@@ -198,7 +212,28 @@ function render(){
 function esc(s){ return String(s||'').replace(/[&<>"]/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c])); }
 function isNew(t){ return !!(t.first_seen && STATUS.run_at && t.first_seen===STATUS.run_at.slice(0,10)); }
 
+// Deletions are remembered in this browser and re-applied on every load, so a
+// tender you hide stays hidden even when the next scan re-adds it to the JSON.
+// Key mirrors scraper.py's key_of() so hides survive re-scrapes.
+function keyOf(t){ return (t.source||'')+'|'+(t.ref||'')+'|'+(t.title||'').slice(0,120).toLowerCase(); }
+let DISMISSED = new Set(JSON.parse(localStorage.getItem('tw_dismissed')||'[]'));
+function saveDismissed(){ localStorage.setItem('tw_dismissed', JSON.stringify([...DISMISSED])); }
+function hideTender(key){ DISMISSED.add(key); saveDismissed(); render(); showUndo(key); }
+function restoreAll(){ if(DISMISSED.size){ DISMISSED.clear(); saveDismissed(); render(); } }
+let undoTimer=null;
+function showUndo(key){
+  const t=document.getElementById('toast');
+  t.classList.add('show');
+  t.querySelector('button').onclick=()=>{
+    DISMISSED.delete(key); saveDismissed(); render(); t.classList.remove('show');
+  };
+  clearTimeout(undoTimer);
+  undoTimer=setTimeout(()=>t.classList.remove('show'), 6000);
+}
+
 document.getElementById('rows').addEventListener('click', e=>{
+  const del = e.target.closest('.del');
+  if(del){ hideTender(del.dataset.key); return; }
   const btn = e.target.closest('.copyref');
   if(!btn) return;
   const val = btn.dataset.ref;
