@@ -1,5 +1,5 @@
 {
- "run_at": "2026-08-09T05:04:42.141890+08:00",
+ "run_at": "2026-08-10T05:17:30.334122+08:00",
  "sources": {
   "SESAMi": {
    "ok": true,
@@ -7,7 +7,7 @@
   },
   "Jalan Besar Town Council": {
    "ok": false,
-   "error": "HTTPSConnectionPool(host='jbtc.org.sg', port=443): Max retries exceeded with url: /publications/tenders/ (Caused by ConnectTimeoutError(<HTTPSConnection(host='jbtc.org.sg', port=443) at 0x7f9259cce7e0>, 'Connection to jbtc.org.sg timed out. (connect timeout=60)'))"
+   "error": "JBTC: no tables found (page layout changed or blocked)"
   },
   "Marine Parade Town Council": {
    "ok": true,
@@ -23,7 +23,7 @@
   },
   "TenderBoard": {
    "ok": true,
-   "fetched": 204
+   "fetched": 202
   }
  },
  "live": 61,
