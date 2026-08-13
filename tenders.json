@@ -3,6 +3,30 @@
   "source": "TenderBoard",
   "url": "https://www.tenderboard.biz/singaporetenders",
   "ref": "",
+  "title": "Supply of kitchen equipment - Foam cups, 8 oz",
+  "buyer": "Sree Narayana Mission (Singapore)",
+  "category": "Others: Others",
+  "published": "2026-08-12",
+  "closing": "2026-08-20",
+  "fit": "Bundle/subcon",
+  "first_seen": "2026-08-14"
+ },
+ {
+  "source": "TenderBoard",
+  "url": "https://www.tenderboard.biz/singaporetenders",
+  "ref": "",
+  "title": "Replacement of Booster Pump Control Panel",
+  "buyer": "ALL SAINTS HOME",
+  "category": "Others: Others",
+  "published": "2026-08-13",
+  "closing": "2026-08-26",
+  "fit": "Bundle/subcon",
+  "first_seen": "2026-08-14"
+ },
+ {
+  "source": "TenderBoard",
+  "url": "https://www.tenderboard.biz/singaporetenders",
+  "ref": "",
   "title": "10000661 Disposal of IT equipment",
   "buyer": "SIM - Singapore Institute of Management",
   "category": "Not Specified",
@@ -194,43 +218,6 @@
   "first_seen": "2026-08-08"
  },
  {
-  "source": "GeBIZ",
-  "url": "https://www.gebiz.gov.sg/ptn/opportunity/BOListing.xhtml?origin=menu",
-  "ref": "HSA000ETQ26000073",
-  "title": "INVITATION TO QUOTE FOR THE PROVISION OF TREE FELLING, REMOVAL AND DISPOSAL WORKS AT HEALTH SCIENCES AUTHORITY",
-  "buyer": "Health Sciences Authority",
-  "type": "Quotation",
-  "category": "Facilities Management ⇒ Horticulture Works",
-  "published": "2026-07-24",
-  "closing": "2026-08-13",
-  "fit": "Direct fit",
-  "first_seen": "2026-08-07"
- },
- {
-  "source": "TenderBoard",
-  "url": "https://www.tenderboard.biz/singaporetenders",
-  "ref": "",
-  "title": "Delivery & Installation of Customised Clear Acrylic Panels for Lifts in Moulmein-Cairnhill Division",
-  "buyer": "TANJONG PAGAR TOWN COUNCIL",
-  "category": "Construction: Signages",
-  "published": "2026-08-07",
-  "closing": "2026-08-13",
-  "fit": "Bundle/subcon",
-  "first_seen": "2026-08-07"
- },
- {
-  "source": "TenderBoard",
-  "url": "https://www.tenderboard.biz/singaporetenders",
-  "ref": "",
-  "title": "F26071 RFQ for Supply, Delivery, Installation, Testing and Commissioning of Car Park Barrier System (Include Dismantling and Disposal of Existing) at All Saints Home Jurong East",
-  "buyer": "ALL SAINTS HOME",
-  "category": "Facilities Management: Carpark Operator & Equipment",
-  "published": "2026-07-29",
-  "closing": "2026-08-13",
-  "fit": "Direct fit",
-  "first_seen": "2026-08-07"
- },
- {
   "source": "SESAMi",
   "url": "https://sesami.online/bizopps/businessOpportunities.jsp",
   "ref": "30008834",
@@ -252,18 +239,6 @@
   "published": "2026-08-04",
   "closing": "2026-08-14",
   "fit": "Direct fit",
-  "first_seen": "2026-08-07"
- },
- {
-  "source": "SESAMi",
-  "url": "https://sesami.online/bizopps/businessOpportunities.jsp",
-  "ref": "WRS-IDA-Q26-07-02008",
-  "title": "Provision of Design, Fabrication, Installation and Multimedia Enhancement Works for Exploria Storytelling Experience",
-  "buyer": "Singapore Zoological Gardens",
-  "type": "RFQ",
-  "published": "2026-08-04",
-  "closing": "2026-08-14",
-  "fit": "Bundle/subcon",
   "first_seen": "2026-08-07"
  },
  {
@@ -300,18 +275,6 @@
   "published": "2026-07-28",
   "closing": "2026-08-14",
   "fit": "Direct fit",
-  "first_seen": "2026-08-07"
- },
- {
-  "source": "SESAMi",
-  "url": "https://sesami.online/bizopps/businessOpportunities.jsp",
-  "ref": "ITT-NTUCHealth-26-008",
-  "title": "Supply of Skilled Labour, Approved Materials and Other Accessories To Carry Out New Installation to Air-Conditioning and Mechanical Ventilation (ACMV) for Nursing Home Dormitory inclusive of planned preventive maintenance during the Defect Liability Period (DLP)",
-  "buyer": "NTUC HEALTH CO-OPERATIVE LTD",
-  "type": "Tender",
-  "published": "2026-07-23",
-  "closing": "2026-08-14",
-  "fit": "Bundle/subcon",
   "first_seen": "2026-08-07"
  },
  {
@@ -372,6 +335,18 @@
   "type": "RFQ",
   "published": "2026-07-10",
   "closing": "2026-08-15",
+  "fit": "Bundle/subcon",
+  "first_seen": "2026-08-07"
+ },
+ {
+  "source": "SESAMi",
+  "url": "https://sesami.online/bizopps/businessOpportunities.jsp",
+  "ref": "ITT-NTUCHealth-26-008",
+  "title": "Supply of Skilled Labour, Approved Materials and Other Accessories To Carry Out New Installation to Air-Conditioning and Mechanical Ventilation (ACMV) for Nursing Home Dormitory inclusive of planned preventive maintenance during the Defect Liability Period (DLP)",
+  "buyer": "NTUC HEALTH CO-OPERATIVE LTD",
+  "type": "Tender",
+  "published": "2026-07-23",
+  "closing": "2026-08-17",
   "fit": "Bundle/subcon",
   "first_seen": "2026-08-07"
  },
@@ -496,6 +471,18 @@
   "published": "2026-08-07",
   "closing": "2026-08-19",
   "fit": "Direct fit",
+  "first_seen": "2026-08-07"
+ },
+ {
+  "source": "SESAMi",
+  "url": "https://sesami.online/bizopps/businessOpportunities.jsp",
+  "ref": "WRS-IDA-Q26-07-02008",
+  "title": "Provision of Design, Fabrication, Installation and Multimedia Enhancement Works for Exploria Storytelling Experience",
+  "buyer": "Singapore Zoological Gardens",
+  "type": "RFQ",
+  "published": "2026-08-04",
+  "closing": "2026-08-21",
+  "fit": "Bundle/subcon",
   "first_seen": "2026-08-07"
  },
  {

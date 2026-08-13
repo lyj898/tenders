@@ -314,5 +314,45 @@
   "fit": "Bundle/subcon",
   "first_seen": "2026-08-06",
   "archived_on": "2026-08-13"
+ },
+ {
+  "source": "GeBIZ",
+  "url": "https://www.gebiz.gov.sg/ptn/opportunity/BOListing.xhtml?origin=menu",
+  "ref": "HSA000ETQ26000073",
+  "title": "INVITATION TO QUOTE FOR THE PROVISION OF TREE FELLING, REMOVAL AND DISPOSAL WORKS AT HEALTH SCIENCES AUTHORITY",
+  "buyer": "Health Sciences Authority",
+  "type": "Quotation",
+  "category": "Facilities Management ⇒ Horticulture Works",
+  "published": "2026-07-24",
+  "closing": "2026-08-13",
+  "fit": "Direct fit",
+  "first_seen": "2026-08-07",
+  "archived_on": "2026-08-14"
+ },
+ {
+  "source": "TenderBoard",
+  "url": "https://www.tenderboard.biz/singaporetenders",
+  "ref": "",
+  "title": "Delivery & Installation of Customised Clear Acrylic Panels for Lifts in Moulmein-Cairnhill Division",
+  "buyer": "TANJONG PAGAR TOWN COUNCIL",
+  "category": "Construction: Signages",
+  "published": "2026-08-07",
+  "closing": "2026-08-13",
+  "fit": "Bundle/subcon",
+  "first_seen": "2026-08-07",
+  "archived_on": "2026-08-14"
+ },
+ {
+  "source": "TenderBoard",
+  "url": "https://www.tenderboard.biz/singaporetenders",
+  "ref": "",
+  "title": "F26071 RFQ for Supply, Delivery, Installation, Testing and Commissioning of Car Park Barrier System (Include Dismantling and Disposal of Existing) at All Saints Home Jurong East",
+  "buyer": "ALL SAINTS HOME",
+  "category": "Facilities Management: Carpark Operator & Equipment",
+  "published": "2026-07-29",
+  "closing": "2026-08-13",
+  "fit": "Direct fit",
+  "first_seen": "2026-08-07",
+  "archived_on": "2026-08-14"
  }
 ]
