@@ -472,5 +472,18 @@
   "fit": "Bundle/subcon",
   "first_seen": "2026-08-06",
   "archived_on": "2026-08-15"
+ },
+ {
+  "source": "SESAMi",
+  "url": "https://sesami.online/bizopps/businessOpportunities.jsp",
+  "ref": "RFQ FOR PYSICAL SAFETY BARRIER",
+  "title": "RFQ FOR PYSICAL SAFETY BARRIER INCLUDING INSTALLATION",
+  "buyer": "BOMBARDIER AEROSPACE SERVICES SINGAPORE PTE. LTD.",
+  "type": "RFQ",
+  "published": "2026-07-10",
+  "closing": "2026-08-15",
+  "fit": "Bundle/subcon",
+  "first_seen": "2026-08-07",
+  "archived_on": "2026-08-16"
  }
 ]
