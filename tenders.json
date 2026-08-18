@@ -1,5 +1,54 @@
 [
  {
+  "source": "TenderBoard",
+  "url": "https://www.tenderboard.biz/singaporetenders",
+  "ref": "",
+  "title": "Supply, delivery and installation of gardening supplies (refer to attached specs in ITQ)",
+  "buyer": "APSN",
+  "category": "Others: Others",
+  "published": "2026-08-18",
+  "closing": "2026-08-25",
+  "fit": "Bundle/subcon",
+  "first_seen": "2026-08-19"
+ },
+ {
+  "source": "TenderBoard",
+  "url": "https://www.tenderboard.biz/singaporetenders",
+  "ref": "",
+  "title": "Supply, Installation, Configuration, Testing, Commissioning & Warranty of IP Phone System",
+  "buyer": "TANJONG PAGAR TOWN COUNCIL",
+  "category": "IT&Telecommunication: Telecommunication Devices",
+  "published": "2026-08-18",
+  "closing": "2026-08-26",
+  "fit": "Bundle/subcon",
+  "first_seen": "2026-08-19"
+ },
+ {
+  "source": "TenderBoard",
+  "url": "https://www.tenderboard.biz/singaporetenders",
+  "ref": "",
+  "title": "Proposed dismantle, disposal of used aircon and installation of new aircon.",
+  "buyer": "Lembaga Pentadbir Masjid Kampung Siglap",
+  "category": "Facilities Management: Airconditioning, Refrigeration & Ventilation Accessories & Parts",
+  "published": "2026-08-18",
+  "closing": "2026-09-01",
+  "fit": "Direct fit",
+  "first_seen": "2026-08-19"
+ },
+ {
+  "source": "GeBIZ",
+  "url": "https://www.gebiz.gov.sg/ptn/opportunity/BOListing.xhtml?origin=menu",
+  "ref": "NEA000ETQ26000078",
+  "title": "Supply and delivery of Refuse and Ash Cranes wire ropes to Tuas South Incineration Plant",
+  "buyer": "National Environment Agency",
+  "type": "Quotation",
+  "category": "Workshop Equipment and Services ⇒ Workshop Machinery, DIY Machinery & Supplies",
+  "published": "2026-08-19",
+  "closing": "2026-09-04",
+  "fit": "Direct fit",
+  "first_seen": "2026-08-19"
+ },
+ {
   "source": "GeBIZ",
   "url": "https://www.gebiz.gov.sg/ptn/opportunity/BOListing.xhtml?origin=menu",
   "ref": "LTA000ETQ26000089",
@@ -296,18 +345,6 @@
   "source": "TenderBoard",
   "url": "https://www.tenderboard.biz/singaporetenders",
   "ref": "",
-  "title": "SUPPLY, DELIVERY, INSTALLATION AND COMMISSIONING OF ELECTRICAL REMOTE CONTROLLED FOAM MONITOR",
-  "buyer": "City Energy Pte. Ltd. (as Trustee of City Energy Trust)",
-  "category": "Others: Others",
-  "published": "2026-08-07",
-  "closing": "2026-08-18",
-  "fit": "Bundle/subcon",
-  "first_seen": "2026-08-08"
- },
- {
-  "source": "TenderBoard",
-  "url": "https://www.tenderboard.biz/singaporetenders",
-  "ref": "",
   "title": "INVITATION TO QUOTE - TO SUPPLY AND INSTALL STAGE LIGHTS @ ATRIUM FOR SAFRA PUNGGOL",
   "buyer": "SAFRA National Service Association",
   "category": "Furniture, Office Equipment & Audio-Visual: Others",
@@ -580,19 +617,6 @@
   "closing": "2026-08-24",
   "fit": "Bundle/subcon",
   "first_seen": "2026-08-06"
- },
- {
-  "source": "GeBIZ",
-  "url": "https://www.gebiz.gov.sg/ptn/opportunity/BOListing.xhtml?origin=menu",
-  "ref": "FINCEDETT26000011",
-  "title": "TENDER FOR THE DISMANTLING AND DISPOSAL, SUPPLY AND INSTALLATION OF TWO (2) COMPUTER ROOM AIR CONDITIONING (CRAC) UNITS FOR SINGAPORE CUSTOMS PPEIS",
-  "buyer": "Ministry of Finance - Singapore Customs",
-  "type": "Tender Lite",
-  "category": "Facilities Management ⇒ Building, M&E Maintenance",
-  "published": "2026-07-10",
-  "closing": "2026-08-18",
-  "fit": "Direct fit",
-  "first_seen": "2026-08-02"
  },
  {
   "source": "GeBIZ",
