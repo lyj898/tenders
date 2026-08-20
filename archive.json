@@ -710,5 +710,31 @@
   "fit": "Direct fit",
   "first_seen": "2026-08-07",
   "archived_on": "2026-08-20"
+ },
+ {
+  "source": "TenderBoard",
+  "url": "https://www.tenderboard.biz/singaporetenders",
+  "ref": "",
+  "title": "Supply of kitchen equipment - Foam cups, 8 oz",
+  "buyer": "Sree Narayana Mission (Singapore)",
+  "category": "Others: Others",
+  "published": "2026-08-12",
+  "closing": "2026-08-20",
+  "fit": "Bundle/subcon",
+  "first_seen": "2026-08-14",
+  "archived_on": "2026-08-21"
+ },
+ {
+  "source": "TenderBoard",
+  "url": "https://www.tenderboard.biz/singaporetenders",
+  "ref": "",
+  "title": "Supply and Install New Workstation and Chairs for Staff Office and Computer Rooms",
+  "buyer": "APSN",
+  "category": "Construction: Interior Decoration",
+  "published": "2026-08-12",
+  "closing": "2026-08-20",
+  "fit": "Bundle/subcon",
+  "first_seen": "2026-08-13",
+  "archived_on": "2026-08-21"
  }
 ]
