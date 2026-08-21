@@ -171,18 +171,6 @@
   "first_seen": "2026-08-18"
  },
  {
-  "source": "TenderBoard",
-  "url": "https://www.tenderboard.biz/singaporetenders",
-  "ref": "",
-  "title": "Request for Quotation (RFQ): Bidding for the Proper Disposal of Old Buggies",
-  "buyer": "The Singapore Island Country Club",
-  "category": "Others: Others",
-  "published": "2026-07-31",
-  "closing": "2026-08-21",
-  "fit": "Direct fit",
-  "first_seen": "2026-08-15"
- },
- {
   "source": "GeBIZ",
   "url": "https://www.gebiz.gov.sg/ptn/opportunity/BOListing.xhtml?origin=menu",
   "ref": "MOESCHETQ26003091",
@@ -293,30 +281,6 @@
   "first_seen": "2026-08-13"
  },
  {
-  "source": "TenderBoard",
-  "url": "https://www.tenderboard.biz/singaporetenders",
-  "ref": "",
-  "title": "Installation of LED Floodlights at Main Pitch, Futsal Pitch and Swimming pool. Installation of Streetlights at Swimming pool (Optional)",
-  "buyer": "SAFRA National Service Association",
-  "category": "Facilities Management: Electrical Engineering Services",
-  "published": "2026-08-11",
-  "closing": "2026-08-21",
-  "fit": "Bundle/subcon",
-  "first_seen": "2026-08-12"
- },
- {
-  "source": "TenderBoard",
-  "url": "https://www.tenderboard.biz/singaporetenders",
-  "ref": "",
-  "title": "REPLACEMENT OF 4” ACTUATOR VALVES AND FITTINGS FOR SWIMMING POOL FILTRATION TANK AT TAMPINES SAFRA",
-  "buyer": "SAFRA National Service Association",
-  "category": "Facilities Management: Pumps Installation & Maintenance Swimming Pool Maintenance",
-  "published": "2026-08-11",
-  "closing": "2026-08-21",
-  "fit": "Bundle/subcon",
-  "first_seen": "2026-08-12"
- },
- {
   "source": "GeBIZ",
   "url": "https://www.gebiz.gov.sg/ptn/opportunity/BOListing.xhtml?origin=menu",
   "ref": "MOESCHETQ26003009",
@@ -377,54 +341,6 @@
   "closing": "2026-09-03",
   "fit": "Bundle/subcon",
   "first_seen": "2026-08-12"
- },
- {
-  "source": "SESAMi",
-  "url": "https://sesami.online/bizopps/businessOpportunities.jsp",
-  "ref": "WRS-FM-T26-07-01981",
-  "title": "Tender for the Supply, Delivery and Replacement of Ultrafiltration Membranes at WRP1 & WRP2",
-  "buyer": "Singapore Zoological Gardens",
-  "type": "Tender",
-  "published": "2026-07-31",
-  "closing": "2026-08-21",
-  "fit": "Bundle/subcon",
-  "first_seen": "2026-08-07"
- },
- {
-  "source": "SESAMi",
-  "url": "https://sesami.online/bizopps/businessOpportunities.jsp",
-  "ref": "WRS-IDA-Q26-07-02008",
-  "title": "Provision of Design, Fabrication, Installation and Multimedia Enhancement Works for Exploria Storytelling Experience",
-  "buyer": "Singapore Zoological Gardens",
-  "type": "RFQ",
-  "published": "2026-08-04",
-  "closing": "2026-08-21",
-  "fit": "Bundle/subcon",
-  "first_seen": "2026-08-07"
- },
- {
-  "source": "SESAMi",
-  "url": "https://sesami.online/bizopps/businessOpportunities.jsp",
-  "ref": "2026/00487",
-  "title": "Installation of T3 Basement Post Crash Rated Barrier",
-  "buyer": "CAG",
-  "type": "RFQ",
-  "published": "2026-08-06",
-  "closing": "2026-08-21",
-  "fit": "Bundle/subcon",
-  "first_seen": "2026-08-07"
- },
- {
-  "source": "SESAMi",
-  "url": "https://sesami.online/bizopps/businessOpportunities.jsp",
-  "ref": "2026/00327",
-  "title": "End-of-Life Replacement of Baggage Conveyance System at Singapore Changi Airport",
-  "buyer": "CAG",
-  "type": "Tender",
-  "published": "2026-05-22",
-  "closing": "2026-08-21",
-  "fit": "Bundle/subcon",
-  "first_seen": "2026-08-07"
  },
  {
   "source": "TenderBoard",
@@ -590,7 +506,7 @@
   "buyer": "CAG",
   "type": "Tender",
   "published": "2026-08-05",
-  "closing": "2026-08-24",
+  "closing": "2026-08-31",
   "fit": "Bundle/subcon",
   "first_seen": "2026-08-06"
  },
