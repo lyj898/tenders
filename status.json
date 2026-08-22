@@ -1,13 +1,13 @@
 {
- "run_at": "2026-08-22T04:13:26.559319+08:00",
+ "run_at": "2026-08-23T04:10:49.786236+08:00",
  "sources": {
   "SESAMi": {
    "ok": true,
    "fetched": 104
   },
   "Jalan Besar Town Council": {
-   "ok": true,
-   "fetched": 2
+   "ok": false,
+   "error": "JBTC: no tables found (page layout changed or blocked)"
   },
   "Marine Parade Town Council": {
    "ok": true,
@@ -26,8 +26,8 @@
    "fetched": 178
   }
  },
- "live": 43,
- "archived_total": 62,
- "newly_archived": 6,
+ "live": 42,
+ "archived_total": 63,
+ "newly_archived": 1,
  "dismissed": 0
 }
