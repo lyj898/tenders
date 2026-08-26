@@ -3,6 +3,54 @@
   "source": "TenderBoard",
   "url": "https://www.tenderboard.biz/singaporetenders",
   "ref": "",
+  "title": "water point installation",
+  "buyer": "Singapore Recreation Club",
+  "category": "Facilities Management: Plumbing & Sanitary Works",
+  "published": "2026-08-26",
+  "closing": "2026-08-29",
+  "fit": "Bundle/subcon",
+  "first_seen": "2026-08-27"
+ },
+ {
+  "source": "SESAMi",
+  "url": "https://sesami.online/bizopps/businessOpportunities.jsp",
+  "ref": "2026/00542",
+  "title": "Installation of one (1) overhead traffic light with pole and one (1) advance warning light with pole at T4 Boulevard, Changi Airport Singapore.",
+  "buyer": "CAG",
+  "type": "RFQ",
+  "published": "2026-08-26",
+  "closing": "2026-09-08",
+  "fit": "Bundle/subcon",
+  "first_seen": "2026-08-27"
+ },
+ {
+  "source": "SESAMi",
+  "url": "https://sesami.online/bizopps/businessOpportunities.jsp",
+  "ref": "21002682",
+  "title": "CCP3,4&5 SUPPLY, DELIVERY, INSTALLATION AND COMMISSIONING OF AUMA ACTUATORS AT SENOKO ENERGY PTE LTD",
+  "buyer": "SENOKO ENERGY PTE. LTD.",
+  "type": "Tender",
+  "published": "2026-08-26",
+  "closing": "2026-09-25",
+  "fit": "Bundle/subcon",
+  "first_seen": "2026-08-27"
+ },
+ {
+  "source": "SESAMi",
+  "url": "https://sesami.online/bizopps/businessOpportunities.jsp",
+  "ref": "PCF/TND/2026/020",
+  "title": "TENDER FOR THE PROVISION OF MINOR REPAIR AND REPLACEMENT WORK FOR PCF HQ AND PCF CENTRES FOR A PERIOD OF ONE YEAR WITH AN OPTION TO EXTEND FOR ANOTHER ONE YEAR",
+  "buyer": "PAP Community Foundation",
+  "type": "Tender",
+  "published": "2026-08-26",
+  "closing": "2026-09-28",
+  "fit": "Direct fit",
+  "first_seen": "2026-08-27"
+ },
+ {
+  "source": "TenderBoard",
+  "url": "https://www.tenderboard.biz/singaporetenders",
+  "ref": "",
   "title": "Electrical Cable tray installation",
   "buyer": "Singapore Recreation Club",
   "category": "Facilities Management: Electrical Engineering Services",
@@ -207,18 +255,6 @@
   "first_seen": "2026-08-21"
  },
  {
-  "source": "TenderBoard",
-  "url": "https://www.tenderboard.biz/singaporetenders",
-  "ref": "",
-  "title": "Dismantle & dispose damaged doors and Supply, Deliver and Install new wooden doors for safety",
-  "buyer": "APSN",
-  "category": "Others: Others",
-  "published": "2026-08-19",
-  "closing": "2026-08-26",
-  "fit": "Direct fit",
-  "first_seen": "2026-08-20"
- },
- {
   "source": "GeBIZ",
   "url": "https://www.gebiz.gov.sg/ptn/opportunity/BOListing.xhtml?origin=menu",
   "ref": "SSC000ETT26000032",
@@ -259,18 +295,6 @@
   "source": "TenderBoard",
   "url": "https://www.tenderboard.biz/singaporetenders",
   "ref": "",
-  "title": "Supply, Installation, Configuration, Testing, Commissioning & Warranty of IP Phone System",
-  "buyer": "TANJONG PAGAR TOWN COUNCIL",
-  "category": "IT&Telecommunication: Telecommunication Devices",
-  "published": "2026-08-18",
-  "closing": "2026-08-26",
-  "fit": "Bundle/subcon",
-  "first_seen": "2026-08-19"
- },
- {
-  "source": "TenderBoard",
-  "url": "https://www.tenderboard.biz/singaporetenders",
-  "ref": "",
   "title": "Proposed dismantle, disposal of used aircon and installation of new aircon.",
   "buyer": "Lembaga Pentadbir Masjid Kampung Siglap",
   "category": "Facilities Management: Airconditioning, Refrigeration & Ventilation Accessories & Parts",
@@ -293,19 +317,6 @@
   "first_seen": "2026-08-19"
  },
  {
-  "source": "GeBIZ",
-  "url": "https://www.gebiz.gov.sg/ptn/opportunity/BOListing.xhtml?origin=menu",
-  "ref": "LTA000ETQ26000089",
-  "title": "Lease, Delivery, Installation and Removal of TV Display Screens",
-  "buyer": "Land Transport Authority",
-  "type": "Quotation",
-  "category": "Furniture, Office Equipment & Audio-Visual ⇒ AV Equipment, Photographic Equipment & Accessories",
-  "published": "2026-08-17",
-  "closing": "2026-08-26",
-  "fit": "Direct fit",
-  "first_seen": "2026-08-18"
- },
- {
   "source": "TenderBoard",
   "url": "https://www.tenderboard.biz/singaporetenders",
   "ref": "",
@@ -316,18 +327,6 @@
   "closing": "2026-09-01",
   "fit": "Bundle/subcon",
   "first_seen": "2026-08-18"
- },
- {
-  "source": "TenderBoard",
-  "url": "https://www.tenderboard.biz/singaporetenders",
-  "ref": "",
-  "title": "INVITATION TO QUOTE FOR NON-COMPREHENSIVE MAINTENANCE OF THE AIR-CONDITIONING AND MECHANICAL VENTILATION (ACMV) INSTALLATION AT PCICS ACADEMY (LEVEL 1 TO LEVEL 5), 51 BENCOOLEN STREET",
-  "buyer": "WBD LEGACY PTE. LTD.",
-  "category": "Facilities Management: Building, M&E Maintenance",
-  "published": "2026-08-14",
-  "closing": "2026-08-26",
-  "fit": "Bundle/subcon",
-  "first_seen": "2026-08-15"
  },
  {
   "source": "SESAMi",
@@ -370,36 +369,12 @@
   "source": "TenderBoard",
   "url": "https://www.tenderboard.biz/singaporetenders",
   "ref": "",
-  "title": "Replacement of Booster Pump Control Panel",
-  "buyer": "ALL SAINTS HOME",
-  "category": "Others: Others",
-  "published": "2026-08-13",
-  "closing": "2026-08-26",
-  "fit": "Bundle/subcon",
-  "first_seen": "2026-08-14"
- },
- {
-  "source": "TenderBoard",
-  "url": "https://www.tenderboard.biz/singaporetenders",
-  "ref": "",
   "title": "Provision of Lift Replacement (Dismantling and Installing) Services at Holland Bukit Panjang Town Council (53 Lifts)",
   "buyer": "E M Services Pte Ltd",
   "category": "Others: Others",
   "published": "2026-08-11",
   "closing": "2026-08-28",
   "fit": "Direct fit",
-  "first_seen": "2026-08-12"
- },
- {
-  "source": "SESAMi",
-  "url": "https://sesami.online/bizopps/businessOpportunities.jsp",
-  "ref": "2026/00505",
-  "title": "Design, Fabrication and Installation of Outdoor Scent & Floral Garden with Interactive Display and Workshop Area",
-  "buyer": "CAG",
-  "type": "RFQ",
-  "published": "2026-08-11",
-  "closing": "2026-08-31",
-  "fit": "Bundle/subcon",
   "first_seen": "2026-08-12"
  },
  {
@@ -428,28 +403,16 @@
   "first_seen": "2026-08-12"
  },
  {
-  "source": "TenderBoard",
-  "url": "https://www.tenderboard.biz/singaporetenders",
-  "ref": "",
-  "title": "Repair/Replace cycling pedal, rubber parts and missing screw/padding at climbing wall - Blk 119 Serangoon North Ave 1 Hwi Yoh Park",
-  "buyer": "Aljunied-Hougang Town Council",
-  "category": "Administration & Training: Sports & Recreational Equipment",
-  "published": "2026-08-07",
-  "closing": "2026-08-26",
-  "fit": "Direct fit",
-  "first_seen": "2026-08-07"
- },
- {
-  "source": "TenderBoard",
-  "url": "https://www.tenderboard.biz/singaporetenders",
-  "ref": "",
-  "title": "Maintenance of kitchen equipment (1 year)",
-  "buyer": "TANGLIN CLUB",
-  "category": "Others: Others",
-  "published": "2026-08-04",
-  "closing": "2026-08-26",
+  "source": "SESAMi",
+  "url": "https://sesami.online/bizopps/businessOpportunities.jsp",
+  "ref": "2026/00505",
+  "title": "Design, Fabrication and Installation of Outdoor Scent & Floral Garden with Interactive Display and Workshop Area",
+  "buyer": "CAG",
+  "type": "RFQ",
+  "published": "2026-08-11",
+  "closing": "2026-09-09",
   "fit": "Bundle/subcon",
-  "first_seen": "2026-08-07"
+  "first_seen": "2026-08-12"
  },
  {
   "source": "TenderBoard",
