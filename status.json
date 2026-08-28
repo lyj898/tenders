@@ -1,9 +1,9 @@
 {
- "run_at": "2026-08-27T06:34:18.191889+08:00",
+ "run_at": "2026-08-28T11:54:17.117051+08:00",
  "sources": {
   "SESAMi": {
    "ok": true,
-   "fetched": 116
+   "fetched": 120
   },
   "Jalan Besar Town Council": {
    "ok": true,
@@ -15,19 +15,19 @@
   },
   "Bishan-Toa Payoh Town Council": {
    "ok": true,
-   "fetched": 2
+   "fetched": 3
   },
   "GeBIZ": {
    "ok": true,
-   "fetched": 17
+   "fetched": 18
   },
   "TenderBoard": {
    "ok": true,
-   "fetched": 191
+   "fetched": 202
   }
  },
- "live": 45,
- "archived_total": 78,
- "newly_archived": 7,
+ "live": 53,
+ "archived_total": 81,
+ "newly_archived": 3,
  "dismissed": 0
 }
