@@ -1156,5 +1156,18 @@
   "fit": "Bundle/subcon",
   "first_seen": "2026-08-07",
   "archived_on": "2026-08-29"
+ },
+ {
+  "source": "TenderBoard",
+  "url": "https://www.tenderboard.biz/singaporetenders",
+  "ref": "",
+  "title": "water point installation",
+  "buyer": "Singapore Recreation Club",
+  "category": "Facilities Management: Plumbing & Sanitary Works",
+  "published": "2026-08-26",
+  "closing": "2026-08-29",
+  "fit": "Bundle/subcon",
+  "first_seen": "2026-08-27",
+  "archived_on": "2026-08-30"
  }
 ]
