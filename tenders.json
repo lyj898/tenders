@@ -1,5 +1,42 @@
 [
  {
+  "source": "GeBIZ",
+  "url": "https://www.gebiz.gov.sg/ptn/opportunity/BOListing.xhtml?origin=menu",
+  "ref": "PUB000ETQ26000073",
+  "title": "44260140/OED/Collection and Disposal of Documents and Files for 24 Months",
+  "buyer": "Public Utilities Board",
+  "type": "Quotation",
+  "category": "Miscellaneous ⇒ Disposal Management",
+  "published": "2026-08-31",
+  "closing": "2026-09-10",
+  "fit": "Direct fit",
+  "first_seen": "2026-09-01"
+ },
+ {
+  "source": "TenderBoard",
+  "url": "https://www.tenderboard.biz/singaporetenders",
+  "ref": "",
+  "title": "Supply, Installation and Monitoring of Instruments for the Proposed Wetlands by the Bay Development at Bay South, Gardens by the Bay",
+  "buyer": "GARDENS BY THE BAY",
+  "category": "Others: Others",
+  "published": "2026-08-31",
+  "closing": "2026-09-14",
+  "fit": "Bundle/subcon",
+  "first_seen": "2026-09-01"
+ },
+ {
+  "source": "TenderBoard",
+  "url": "https://www.tenderboard.biz/singaporetenders",
+  "ref": "",
+  "title": "F26080 RFQ for Supply, Delivery, Installation and Testing 4 Units of Medication Cart for All Saints Home Jurong East",
+  "buyer": "ALL SAINTS HOME",
+  "category": "Dental, Medical & Laboratory: Others",
+  "published": "2026-08-31",
+  "closing": "2026-09-14",
+  "fit": "Bundle/subcon",
+  "first_seen": "2026-09-01"
+ },
+ {
   "source": "TenderBoard",
   "url": "https://www.tenderboard.biz/singaporetenders",
   "ref": "",
@@ -59,18 +96,6 @@
   "closing": "2026-10-06",
   "fit": "Direct fit",
   "first_seen": "2026-08-29"
- },
- {
-  "source": "TenderBoard",
-  "url": "https://www.tenderboard.biz/singaporetenders",
-  "ref": "",
-  "title": "Stainless steel drip tray installation work",
-  "buyer": "Singapore Recreation Club",
-  "category": "Construction: Others",
-  "published": "2026-08-27",
-  "closing": "2026-08-31",
-  "fit": "Bundle/subcon",
-  "first_seen": "2026-08-28"
  },
  {
   "source": "TenderBoard",
@@ -315,18 +340,6 @@
   "first_seen": "2026-08-26"
  },
  {
-  "source": "SESAMi",
-  "url": "https://sesami.online/bizopps/businessOpportunities.jsp",
-  "ref": "WRS-TS-Q26-08-02047",
-  "title": "Request for Quotation for PRINT, SUPPLY, DELIVER AND INSTALL VINYL STICKERS FOR THE INTERNAL CEILING OF OKAPI EXPRESS ELECTRIC BUSES.",
-  "buyer": "Mandai Park Development Pte Ltd*",
-  "type": "RFQ",
-  "published": "2026-08-24",
-  "closing": "2026-08-31",
-  "fit": "Bundle/subcon",
-  "first_seen": "2026-08-25"
- },
- {
   "source": "GeBIZ",
   "url": "https://www.gebiz.gov.sg/ptn/opportunity/BOListing.xhtml?origin=menu",
   "ref": "IRA000ETQ26000020",
@@ -527,54 +540,6 @@
   "source": "TenderBoard",
   "url": "https://www.tenderboard.biz/singaporetenders",
   "ref": "",
-  "title": "TERM CONTRACT FOR COMPREHENSIVE MAINTENANCE AND CYCLICAL REPLACEMENT OF REFUSE HANDLING EQUIPMENT FOR ALJUNIED-HOUGANG TOWN COUNCIL FOR A PERIOD OF 3 YEARS WITH THE OPTION TO EXTEND 2 YEARS",
-  "buyer": "Aljunied-Hougang Town Council",
-  "category": "Facilities Management: Building, M&E Maintenance",
-  "published": "2026-07-28",
-  "closing": "2026-08-31",
-  "fit": "Direct fit",
-  "first_seen": "2026-08-07"
- },
- {
-  "source": "SESAMi",
-  "url": "https://sesami.online/bizopps/businessOpportunities.jsp",
-  "ref": "ITT-FMI-26-012",
-  "title": "Invitation To Tender (ITT) For Design, Supply, Install, Testing, Commissioning, Operation And Maintenance Of The Solar PV System At The Kallang",
-  "buyer": "THE KALLANG GROUP PTE. LTD.",
-  "type": "Tender",
-  "published": "2026-07-07",
-  "closing": "2026-08-31",
-  "fit": "Bundle/subcon",
-  "first_seen": "2026-08-07"
- },
- {
-  "source": "SESAMi",
-  "url": "https://sesami.online/bizopps/businessOpportunities.jsp",
-  "ref": "JPPL-2-001411",
-  "title": "JPPL-2-001411 - RETROFITTING OF THE WAREHOUSE ROOFING AT W8A AND W8BEligibility Criteriaa) Registration of Tenderer with BCA under work head of General Building (CW01) in the financial category of C1 and above and/or General Building (CW02) in the financial category of C1 and above and/or Ironmongery & Metalwork (TR01)b) Minimum of five (5) years proven experience on metal roofing installation worksInterested parties are required to inform the contact persons stated below to obtain tender documents download link from 7 August 2026, 1700hrs.Tender shall be submitted electronically through JP Supplier Portal,https://ephv.fa.ap2.oraclecloud.com/supplierPortal/faces/FndOverviewfndGlobalItemNodeId=itemNode_supplier_portal_supplier_portal not later than 31August 2026, 1700hrs.All expenses incurred by applicants in the submission of the document shall be borne by the applicants.For enquiries, please contact: Mr. Lai Fook Cheng, Tel: 6660 9523, Email: fookcheng@jp.com.sg",
-  "buyer": "JURONG PORT PTE LTD",
-  "type": "Tender",
-  "published": "2026-08-07",
-  "closing": "2026-08-31",
-  "fit": "Bundle/subcon",
-  "first_seen": "2026-08-07"
- },
- {
-  "source": "SESAMi",
-  "url": "https://sesami.online/bizopps/businessOpportunities.jsp",
-  "ref": "2026/00465",
-  "title": "Replacement of Junction Boxes at Departure Hall & Transit Thoroughfares (Main Building) at Terminal 3, Singapore Changi Airport",
-  "buyer": "CAG",
-  "type": "RFQ",
-  "published": "2026-08-06",
-  "closing": "2026-08-31",
-  "fit": "Bundle/subcon",
-  "first_seen": "2026-08-07"
- },
- {
-  "source": "TenderBoard",
-  "url": "https://www.tenderboard.biz/singaporetenders",
-  "ref": "",
   "title": "REPLACEMENT OF MECHANICAL VENTILATION WORKS",
   "buyer": "Ang Mo Kio - Thye Hua Kwan Hospital Ltd",
   "category": "Facilities Management: Airconditioning, Refrigeration & Ventilation Works & Maintenance",
@@ -594,17 +559,5 @@
   "closing": "2026-09-08",
   "fit": "Bundle/subcon",
   "first_seen": "2026-08-07"
- },
- {
-  "source": "SESAMi",
-  "url": "https://sesami.online/bizopps/businessOpportunities.jsp",
-  "ref": "2026/00483",
-  "title": "SUPPLY, DELIVERY, INSTALLATION, TESTING & COMMISSIONING WORKS OF SPLIT UNITS AIR-CONDITIONERS FOR 02L, 20R AND NORTH APRON AIRFIELD LIGHTING CONTROL CENTRES (AFLCC)S",
-  "buyer": "CAG",
-  "type": "Tender",
-  "published": "2026-08-05",
-  "closing": "2026-08-31",
-  "fit": "Bundle/subcon",
-  "first_seen": "2026-08-06"
  }
 ]
