@@ -1325,5 +1325,19 @@
   "fit": "Bundle/subcon",
   "first_seen": "2026-08-12",
   "archived_on": "2026-09-02"
+ },
+ {
+  "source": "GeBIZ",
+  "url": "https://www.gebiz.gov.sg/ptn/opportunity/BOListing.xhtml?origin=menu",
+  "ref": "IRA000ETQ26000020",
+  "title": "Invitation to Quote for the Provision of Secure Collection, Destruction and Disposal Services for Classified Items",
+  "buyer": "Inland Revenue Authority of Singapore",
+  "type": "Quotation",
+  "category": "Miscellaneous ⇒ Disposal Management",
+  "published": "2026-08-24",
+  "closing": "2026-09-02",
+  "fit": "Direct fit",
+  "first_seen": "2026-08-25",
+  "archived_on": "2026-09-03"
  }
 ]

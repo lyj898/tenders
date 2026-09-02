@@ -1,5 +1,89 @@
 [
  {
+  "source": "SESAMi",
+  "url": "https://sesami.online/bizopps/businessOpportunities.jsp",
+  "ref": "WRS-ED-Q26-09-02064",
+  "title": "Proposed Removal of Existing Kerb and Supply and Installation of New Railing with Simulated Timber Finishes in Night Safari",
+  "buyer": "Singapore Zoological Gardens",
+  "type": "RFQ",
+  "published": "2026-09-02",
+  "closing": "2026-09-08",
+  "fit": "Direct fit",
+  "first_seen": "2026-09-03"
+ },
+ {
+  "source": "TenderBoard",
+  "url": "https://www.tenderboard.biz/singaporetenders",
+  "ref": "",
+  "title": "Supply & Installation of Exhaust Fans at Pathlight School (Ang Mo Kio Campus 1), Block D, Level 1 to Level 3 Classrooms",
+  "buyer": "Pathlight School (Ang Mo Kio)",
+  "category": "Not Specified",
+  "published": "2026-09-02",
+  "closing": "2026-09-08",
+  "fit": "Bundle/subcon",
+  "first_seen": "2026-09-03"
+ },
+ {
+  "source": "TenderBoard",
+  "url": "https://www.tenderboard.biz/singaporetenders",
+  "ref": "",
+  "title": "RFQ TO FABRICATE, REMOVE & INSTALL NEW PLAY POOL SIGNAGES AT SICC ISLAND CLUBHOUSE",
+  "buyer": "The Singapore Island Country Club",
+  "category": "Construction: Signages",
+  "published": "2026-09-02",
+  "closing": "2026-09-09",
+  "fit": "Bundle/subcon",
+  "first_seen": "2026-09-03"
+ },
+ {
+  "source": "TenderBoard",
+  "url": "https://www.tenderboard.biz/singaporetenders",
+  "ref": "",
+  "title": "Invitation to Quote for Fabrication, Installation, Maintenance and Dismantling of Props and Display Items for Sunflower 2026 Display at Gardens By The Bay",
+  "buyer": "GARDENS BY THE BAY",
+  "category": "Facilities Management: Building Tradesmen",
+  "published": "2026-09-02",
+  "closing": "2026-09-10",
+  "fit": "Direct fit",
+  "first_seen": "2026-09-03"
+ },
+ {
+  "source": "SESAMi",
+  "url": "https://sesami.online/bizopps/businessOpportunities.jsp",
+  "ref": "2026/00564",
+  "title": "Dismantle Existing, Supply, Installation, Testing and Commissioning 2 Nos. Of Automatic Sliding Doors in T1 West TV Lounge",
+  "buyer": "CAG",
+  "type": "RFQ",
+  "published": "2026-09-02",
+  "closing": "2026-09-11",
+  "fit": "Direct fit",
+  "first_seen": "2026-09-03"
+ },
+ {
+  "source": "TenderBoard",
+  "url": "https://www.tenderboard.biz/singaporetenders",
+  "ref": "",
+  "title": "To supply labour, tools and equipment to carry out works for the removal of trees",
+  "buyer": "TANGLIN CLUB",
+  "category": "Others: Others",
+  "published": "2026-09-02",
+  "closing": "2026-09-18",
+  "fit": "Direct fit",
+  "first_seen": "2026-09-03"
+ },
+ {
+  "source": "SESAMi",
+  "url": "https://sesami.online/bizopps/businessOpportunities.jsp",
+  "ref": "0040008254",
+  "title": "FOR THE RECTIFICATION AND REPLACEMENT OF DEFECTIVE HOPPECKE CELLS AT TUAS POWER STATION",
+  "buyer": "TUAS POWER GENERATION PTE. LTD.",
+  "type": "Tender",
+  "published": "2026-09-02",
+  "closing": "2026-09-25",
+  "fit": "Bundle/subcon",
+  "first_seen": "2026-09-03"
+ },
+ {
   "source": "GeBIZ",
   "url": "https://www.gebiz.gov.sg/ptn/opportunity/BOListing.xhtml?origin=menu",
   "ref": "MOE000ETQ26000213",
@@ -232,18 +316,6 @@
   "first_seen": "2026-08-28"
  },
  {
-  "source": "SESAMi",
-  "url": "https://sesami.online/bizopps/businessOpportunities.jsp",
-  "ref": "2026/00551",
-  "title": "Fabrication and Installation of Ceiling Panels at T1 West Arrival (Public Area), Changi Airport",
-  "buyer": "CAG",
-  "type": "RFQ",
-  "published": "2026-08-27",
-  "closing": "2026-09-08",
-  "fit": "Bundle/subcon",
-  "first_seen": "2026-08-28"
- },
- {
   "source": "TenderBoard",
   "url": "https://www.tenderboard.biz/singaporetenders",
   "ref": "",
@@ -264,6 +336,18 @@
   "category": "Construction: Renovation Supplies & Services",
   "published": "2026-08-27",
   "closing": "2026-09-11",
+  "fit": "Bundle/subcon",
+  "first_seen": "2026-08-28"
+ },
+ {
+  "source": "SESAMi",
+  "url": "https://sesami.online/bizopps/businessOpportunities.jsp",
+  "ref": "2026/00551",
+  "title": "Fabrication and Installation of Ceiling Panels at T1 West Arrival (Public Area), Changi Airport",
+  "buyer": "CAG",
+  "type": "RFQ",
+  "published": "2026-08-27",
+  "closing": "2026-09-15",
   "fit": "Bundle/subcon",
   "first_seen": "2026-08-28"
  },
@@ -400,19 +484,6 @@
   "closing": "2026-09-11",
   "fit": "Bundle/subcon",
   "first_seen": "2026-08-26"
- },
- {
-  "source": "GeBIZ",
-  "url": "https://www.gebiz.gov.sg/ptn/opportunity/BOListing.xhtml?origin=menu",
-  "ref": "IRA000ETQ26000020",
-  "title": "Invitation to Quote for the Provision of Secure Collection, Destruction and Disposal Services for Classified Items",
-  "buyer": "Inland Revenue Authority of Singapore",
-  "type": "Quotation",
-  "category": "Miscellaneous ⇒ Disposal Management",
-  "published": "2026-08-24",
-  "closing": "2026-09-02",
-  "fit": "Direct fit",
-  "first_seen": "2026-08-25"
  },
  {
   "source": "TenderBoard",
