@@ -1431,5 +1431,45 @@
   "fit": "Bundle/subcon",
   "first_seen": "2026-08-07",
   "archived_on": "2026-09-04"
+ },
+ {
+  "source": "TenderBoard",
+  "url": "https://www.tenderboard.biz/singaporetenders",
+  "ref": "",
+  "title": "FF&E: Provision, Installation, Integration and Commissioning of Wireless Microphone and Audio Systems for The Groove Zone, Seminar Rooms and Indoor Sports Hall (ISH)",
+  "buyer": "APSN",
+  "category": "Facilities Management: Building, M&E Maintenance",
+  "published": "2026-08-25",
+  "closing": "2026-09-04",
+  "fit": "Bundle/subcon",
+  "first_seen": "2026-08-26",
+  "archived_on": "2026-09-05"
+ },
+ {
+  "source": "SESAMi",
+  "url": "https://sesami.online/bizopps/businessOpportunities.jsp",
+  "ref": "WRS-ZOO-Q26-08-02021",
+  "title": "RFQ Design and Install Rooftop Lifeline System and Aluminium Caged Ladder @ Australasia in Singapore Zoo",
+  "buyer": "Singapore Zoological Gardens",
+  "type": "RFQ",
+  "published": "2026-08-25",
+  "closing": "2026-09-04",
+  "fit": "Bundle/subcon",
+  "first_seen": "2026-08-26",
+  "archived_on": "2026-09-05"
+ },
+ {
+  "source": "GeBIZ",
+  "url": "https://www.gebiz.gov.sg/ptn/opportunity/BOListing.xhtml?origin=menu",
+  "ref": "NEA000ETQ26000078",
+  "title": "Supply and delivery of Refuse and Ash Cranes wire ropes to Tuas South Incineration Plant",
+  "buyer": "National Environment Agency",
+  "type": "Quotation",
+  "category": "Workshop Equipment and Services ⇒ Workshop Machinery, DIY Machinery & Supplies",
+  "published": "2026-08-19",
+  "closing": "2026-09-04",
+  "fit": "Direct fit",
+  "first_seen": "2026-08-19",
+  "archived_on": "2026-09-05"
  }
 ]
