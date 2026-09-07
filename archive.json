@@ -1471,5 +1471,58 @@
   "fit": "Direct fit",
   "first_seen": "2026-08-19",
   "archived_on": "2026-09-05"
+ },
+ {
+  "source": "TenderBoard",
+  "url": "https://www.tenderboard.biz/singaporetenders",
+  "ref": "",
+  "title": "F26076 Supply, Delivery, Installation, Testing and Commissioning 280 units of 16-Inch DC Orbital Fans and 22 units of BESTAR Rapture 60-Inch DC ceiling Fans 5-blade without LED light at All Saints Home Jurong East (inclusive of disposal of all existing Fans)",
+  "buyer": "ALL SAINTS HOME",
+  "category": "Construction: Renovation Supplies & Services",
+  "published": "2026-08-24",
+  "closing": "2026-09-07",
+  "fit": "Direct fit",
+  "first_seen": "2026-08-29",
+  "archived_on": "2026-09-08"
+ },
+ {
+  "source": "GeBIZ",
+  "url": "https://www.gebiz.gov.sg/ptn/opportunity/BOListing.xhtml?origin=menu",
+  "ref": "MOESCHETQ26003366",
+  "title": "Design, supply and installation of furniture",
+  "buyer": "Ministry of Education - Schools",
+  "type": "Quotation",
+  "category": "Furniture, Office Equipment & Audio-Visual ⇒ Furniture",
+  "published": "2026-08-25",
+  "closing": "2026-09-07",
+  "fit": "Bundle/subcon",
+  "first_seen": "2026-08-26",
+  "archived_on": "2026-09-08"
+ },
+ {
+  "source": "TenderBoard",
+  "url": "https://www.tenderboard.biz/singaporetenders",
+  "ref": "",
+  "title": "F26076 Supply, Delivery, Installation, Testing and Commissioning 280 units of BESTAR Raptor 38-Inch DC Ceiling Fans and 22 units of BESTAR Raptor 60-Inch DC ceiling Fans at All Saints Home Jurong East (inclusive of disposal of all existing KDK 60 Inches ceiling fans)",
+  "buyer": "ALL SAINTS HOME",
+  "category": "Construction: Renovation Supplies & Services",
+  "published": "2026-08-24",
+  "closing": "2026-09-07",
+  "fit": "Direct fit",
+  "first_seen": "2026-08-25",
+  "archived_on": "2026-09-08"
+ },
+ {
+  "source": "TenderBoard",
+  "url": "https://www.tenderboard.biz/singaporetenders",
+  "ref": "",
+  "title": "SUPPLY AND INSTALL OF AIR CONDITIONING SYSTEM SERVING D’ TANJONG LOUNGE AREA AND MSCP WET AREA",
+  "buyer": "Singapore Swimming Club",
+  "category": "Event Organising, Food & Beverages: Meeting Venues & Facilities",
+  "published": "2026-08-24",
+  "closing": "2026-09-07",
+  "fit": "Bundle/subcon",
+  "first_seen": "2026-08-25",
+  "archived_on": "2026-09-08"
  }
 ]
