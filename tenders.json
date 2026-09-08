@@ -1,5 +1,54 @@
 [
  {
+  "source": "SESAMi",
+  "url": "https://sesami.online/bizopps/businessOpportunities.jsp",
+  "ref": "2026/00584",
+  "title": "Supply, Delivery, Installation, Testing And Commissioning Of Air Curtain At Level 2 Departure Doors In Terminal 1, Singapore Changi Airport",
+  "buyer": "CAG",
+  "type": "RFQ",
+  "published": "2026-09-08",
+  "closing": "2026-09-15",
+  "fit": "Bundle/subcon",
+  "first_seen": "2026-09-09"
+ },
+ {
+  "source": "TenderBoard",
+  "url": "https://www.tenderboard.biz/singaporetenders",
+  "ref": "",
+  "title": "Supply, Delivery, Installation, Testing and Commissioning of Door Access Control System",
+  "buyer": "ALL SAINTS HOME",
+  "category": "Construction: Others",
+  "published": "2026-09-08",
+  "closing": "2026-09-18",
+  "fit": "Bundle/subcon",
+  "first_seen": "2026-09-09"
+ },
+ {
+  "source": "SESAMi",
+  "url": "https://sesami.online/bizopps/businessOpportunities.jsp",
+  "ref": "ITT-NTUCHealth-26-012",
+  "title": "INVITATION TO TENDER FOR GENERAL WASTE MANAGEMENT SERVICES FOR 6 NURSING HOMES FOR A PERIOD OF TWO YEARS, WITH AN OPTION TO EXTEND FOR ANOTHER TWO YEARS.",
+  "buyer": "NTUC HEALTH CO-OPERATIVE LTD",
+  "type": "Tender",
+  "published": "2026-09-08",
+  "closing": "2026-09-29",
+  "fit": "Direct fit",
+  "first_seen": "2026-09-09"
+ },
+ {
+  "source": "GeBIZ",
+  "url": "https://www.gebiz.gov.sg/ptn/opportunity/BOListing.xhtml?origin=menu",
+  "ref": "NLB000ETT26000029",
+  "title": "INVITATION TO TENDER FOR PROVISION OF FITTING OUT WORKS, LOOSE FURNITURES AND ANCILLARY WORKS AT LEVEL 7 IN NATIONAL LIBRARY BUILDING",
+  "buyer": "National Library Board",
+  "type": "Tender Lite",
+  "category": "Construction ⇒ Interior Decoration",
+  "published": "2026-09-08",
+  "closing": "2026-10-08",
+  "fit": "Bundle/subcon",
+  "first_seen": "2026-09-09"
+ },
+ {
   "source": "TenderBoard",
   "url": "https://www.tenderboard.biz/singaporetenders",
   "ref": "",
@@ -73,18 +122,6 @@
   "closing": "2026-09-18",
   "fit": "Direct fit",
   "first_seen": "2026-09-05"
- },
- {
-  "source": "SESAMi",
-  "url": "https://sesami.online/bizopps/businessOpportunities.jsp",
-  "ref": "WRS-ED-Q26-09-02064",
-  "title": "Proposed Removal of Existing Kerb and Supply and Installation of New Railing with Simulated Timber Finishes in Night Safari",
-  "buyer": "Singapore Zoological Gardens",
-  "type": "RFQ",
-  "published": "2026-09-02",
-  "closing": "2026-09-08",
-  "fit": "Direct fit",
-  "first_seen": "2026-09-03"
  },
  {
   "source": "TenderBoard",
@@ -393,18 +430,6 @@
  {
   "source": "SESAMi",
   "url": "https://sesami.online/bizopps/businessOpportunities.jsp",
-  "ref": "2026/00542",
-  "title": "Installation of one (1) overhead traffic light with pole and one (1) advance warning light with pole at T4 Boulevard, Changi Airport Singapore.",
-  "buyer": "CAG",
-  "type": "RFQ",
-  "published": "2026-08-26",
-  "closing": "2026-09-08",
-  "fit": "Bundle/subcon",
-  "first_seen": "2026-08-27"
- },
- {
-  "source": "SESAMi",
-  "url": "https://sesami.online/bizopps/businessOpportunities.jsp",
   "ref": "21002682",
   "title": "CCP3,4&5 SUPPLY, DELIVERY, INSTALLATION AND COMMISSIONING OF AUMA ACTUATORS AT SENOKO ENERGY PTE LTD",
   "buyer": "SENOKO ENERGY PTE. LTD.",
@@ -425,19 +450,6 @@
   "closing": "2026-09-28",
   "fit": "Direct fit",
   "first_seen": "2026-08-27"
- },
- {
-  "source": "GeBIZ",
-  "url": "https://www.gebiz.gov.sg/ptn/opportunity/BOListing.xhtml?origin=menu",
-  "ref": "PUB000ETT26000100",
-  "title": "44260101/WSP/Disposal of General and Control Equipment at Johor Works",
-  "buyer": "Public Utilities Board",
-  "type": "Tender",
-  "category": "Miscellaneous ⇒ Disposal Management",
-  "published": "2026-08-25",
-  "closing": "2026-09-08",
-  "fit": "Direct fit",
-  "first_seen": "2026-08-26"
  },
  {
   "source": "SESAMi",
@@ -548,17 +560,5 @@
   "closing": "2026-09-09",
   "fit": "Bundle/subcon",
   "first_seen": "2026-08-12"
- },
- {
-  "source": "SESAMi",
-  "url": "https://sesami.online/bizopps/businessOpportunities.jsp",
-  "ref": "2026/00485",
-  "title": "Electrical Installation, Equipment Mounting and Enclosures for Bag Hygiene Monitoring System at Terminal 1 and 4 Baggage Sorting Areas",
-  "buyer": "CAG",
-  "type": "RFQ",
-  "published": "2026-08-04",
-  "closing": "2026-09-08",
-  "fit": "Bundle/subcon",
-  "first_seen": "2026-08-07"
  }
 ]

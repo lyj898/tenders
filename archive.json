@@ -1524,5 +1524,58 @@
   "fit": "Bundle/subcon",
   "first_seen": "2026-08-25",
   "archived_on": "2026-09-08"
+ },
+ {
+  "source": "SESAMi",
+  "url": "https://sesami.online/bizopps/businessOpportunities.jsp",
+  "ref": "WRS-ED-Q26-09-02064",
+  "title": "Proposed Removal of Existing Kerb and Supply and Installation of New Railing with Simulated Timber Finishes in Night Safari",
+  "buyer": "Singapore Zoological Gardens",
+  "type": "RFQ",
+  "published": "2026-09-02",
+  "closing": "2026-09-08",
+  "fit": "Direct fit",
+  "first_seen": "2026-09-03",
+  "archived_on": "2026-09-09"
+ },
+ {
+  "source": "SESAMi",
+  "url": "https://sesami.online/bizopps/businessOpportunities.jsp",
+  "ref": "2026/00542",
+  "title": "Installation of one (1) overhead traffic light with pole and one (1) advance warning light with pole at T4 Boulevard, Changi Airport Singapore.",
+  "buyer": "CAG",
+  "type": "RFQ",
+  "published": "2026-08-26",
+  "closing": "2026-09-08",
+  "fit": "Bundle/subcon",
+  "first_seen": "2026-08-27",
+  "archived_on": "2026-09-09"
+ },
+ {
+  "source": "GeBIZ",
+  "url": "https://www.gebiz.gov.sg/ptn/opportunity/BOListing.xhtml?origin=menu",
+  "ref": "PUB000ETT26000100",
+  "title": "44260101/WSP/Disposal of General and Control Equipment at Johor Works",
+  "buyer": "Public Utilities Board",
+  "type": "Tender",
+  "category": "Miscellaneous ⇒ Disposal Management",
+  "published": "2026-08-25",
+  "closing": "2026-09-08",
+  "fit": "Direct fit",
+  "first_seen": "2026-08-26",
+  "archived_on": "2026-09-09"
+ },
+ {
+  "source": "SESAMi",
+  "url": "https://sesami.online/bizopps/businessOpportunities.jsp",
+  "ref": "2026/00485",
+  "title": "Electrical Installation, Equipment Mounting and Enclosures for Bag Hygiene Monitoring System at Terminal 1 and 4 Baggage Sorting Areas",
+  "buyer": "CAG",
+  "type": "RFQ",
+  "published": "2026-08-04",
+  "closing": "2026-09-08",
+  "fit": "Bundle/subcon",
+  "first_seen": "2026-08-07",
+  "archived_on": "2026-09-09"
  }
 ]
