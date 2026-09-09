@@ -1,5 +1,65 @@
 [
  {
+  "source": "TenderBoard",
+  "url": "https://www.tenderboard.biz/singaporetenders",
+  "ref": "",
+  "title": "SUPPLY AND DELIVERY OF x2 PAPER SHREDDER FOR TAMPINES TOWN COUNCIL LEVEL 1 AND LEVEL 2",
+  "buyer": "TAMPINES TOWN COUNCIL",
+  "category": "Administration & Training: Office Supplies & Stationery",
+  "published": "2026-09-09",
+  "closing": "2026-09-16",
+  "fit": "Direct fit",
+  "first_seen": "2026-09-10"
+ },
+ {
+  "source": "TenderBoard",
+  "url": "https://www.tenderboard.biz/singaporetenders",
+  "ref": "",
+  "title": "Purchase of Auto- Feed Shredder Machine for Finance & Hr Department @ SNM NH Chong Pang",
+  "buyer": "Sree Narayana Mission (Singapore)",
+  "category": "Others: Others",
+  "published": "2026-09-09",
+  "closing": "2026-09-16",
+  "fit": "Direct fit",
+  "first_seen": "2026-09-10"
+ },
+ {
+  "source": "SESAMi",
+  "url": "https://sesami.online/bizopps/businessOpportunities.jsp",
+  "ref": "2026/00585",
+  "title": "Design, Supply, Installation of Manual Transfer Switch and Sub-Boards for NEWater and Domestic Water Pump at Terminal 1 Extension",
+  "buyer": "CAG",
+  "type": "RFQ",
+  "published": "2026-09-09",
+  "closing": "2026-09-18",
+  "fit": "Bundle/subcon",
+  "first_seen": "2026-09-10"
+ },
+ {
+  "source": "TenderBoard",
+  "url": "https://www.tenderboard.biz/singaporetenders",
+  "ref": "",
+  "title": "QUOTATION FOR (A) SUPPLY AND INSTALLATION OF TABLES & PARTITIONS, (B) DISMANTLING OF CABINETS AND (C) SUPPLY AND INSTALLATION OF CABINETS WITH SHELVES FOR TOWN COUNCIL OFFICES",
+  "buyer": "Aljunied-Hougang Town Council",
+  "category": "Construction: Renovation Supplies & Services",
+  "published": "2026-09-09",
+  "closing": "2026-09-28",
+  "fit": "Direct fit",
+  "first_seen": "2026-09-10"
+ },
+ {
+  "source": "SESAMi",
+  "url": "https://sesami.online/bizopps/businessOpportunities.jsp",
+  "ref": "21002661",
+  "title": "REPLACEMENT OF 6.6KV STATION BOARD NO.6",
+  "buyer": "SENOKO ENERGY PTE. LTD.",
+  "type": "Tender",
+  "published": "2026-09-09",
+  "closing": "2026-10-02",
+  "fit": "Bundle/subcon",
+  "first_seen": "2026-09-10"
+ },
+ {
   "source": "SESAMi",
   "url": "https://sesami.online/bizopps/businessOpportunities.jsp",
   "ref": "2026/00584",
@@ -122,18 +182,6 @@
   "closing": "2026-09-18",
   "fit": "Direct fit",
   "first_seen": "2026-09-05"
- },
- {
-  "source": "TenderBoard",
-  "url": "https://www.tenderboard.biz/singaporetenders",
-  "ref": "",
-  "title": "RFQ TO FABRICATE, REMOVE & INSTALL NEW PLAY POOL SIGNAGES AT SICC ISLAND CLUBHOUSE",
-  "buyer": "The Singapore Island Country Club",
-  "category": "Construction: Signages",
-  "published": "2026-09-02",
-  "closing": "2026-09-09",
-  "fit": "Bundle/subcon",
-  "first_seen": "2026-09-03"
  },
  {
   "source": "TenderBoard",
@@ -500,19 +548,6 @@
   "first_seen": "2026-08-25"
  },
  {
-  "source": "GeBIZ",
-  "url": "https://www.gebiz.gov.sg/ptn/opportunity/BOListing.xhtml?origin=menu",
-  "ref": "SSC000ETT26000032",
-  "title": "Supply, Delivery and Installation of Indoor and Outdoor Furniture for Sport Centres",
-  "buyer": "Singapore Sports Council (Sport Singapore)",
-  "type": "Tender Lite",
-  "category": "Furniture, Office Equipment & Audio-Visual ⇒ Furniture",
-  "published": "2026-08-19",
-  "closing": "2026-09-09",
-  "fit": "Bundle/subcon",
-  "first_seen": "2026-08-20"
- },
- {
   "source": "SESAMi",
   "url": "https://sesami.online/bizopps/businessOpportunities.jsp",
   "ref": "TLL/19AUG/2026-06",
@@ -548,17 +583,5 @@
   "closing": "2026-09-25",
   "fit": "Direct fit",
   "first_seen": "2026-08-15"
- },
- {
-  "source": "SESAMi",
-  "url": "https://sesami.online/bizopps/businessOpportunities.jsp",
-  "ref": "2026/00505",
-  "title": "Design, Fabrication and Installation of Outdoor Scent & Floral Garden with Interactive Display and Workshop Area",
-  "buyer": "CAG",
-  "type": "RFQ",
-  "published": "2026-08-11",
-  "closing": "2026-09-09",
-  "fit": "Bundle/subcon",
-  "first_seen": "2026-08-12"
  }
 ]
