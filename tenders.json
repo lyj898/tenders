@@ -1,5 +1,78 @@
 [
  {
+  "source": "TenderBoard",
+  "url": "https://www.tenderboard.biz/singaporetenders",
+  "ref": "",
+  "title": "Disposal of 24 x Tables at SRC @ Level 1",
+  "buyer": "Singapore Recreation Club",
+  "category": "Miscellaneous: Disposal Management",
+  "published": "2026-09-15",
+  "closing": "2026-09-17",
+  "fit": "Direct fit",
+  "first_seen": "2026-09-16"
+ },
+ {
+  "source": "TenderBoard",
+  "url": "https://www.tenderboard.biz/singaporetenders",
+  "ref": "",
+  "title": "RFQ SUPPLY, DELIVERY, INSTALLATION, TESTING & COMMISSIONING OF NEW TYRE CHANGER WITH ALL NECESSARY. READY FOR OPERATION.",
+  "buyer": "The Singapore Island Country Club",
+  "category": "Workshop Equipment and Services: Workshop Tools, DIY Tools & Accessories",
+  "published": "2026-09-15",
+  "closing": "2026-09-22",
+  "fit": "Bundle/subcon",
+  "first_seen": "2026-09-16"
+ },
+ {
+  "source": "SESAMi",
+  "url": "https://sesami.online/bizopps/businessOpportunities.jsp",
+  "ref": "2026/00606",
+  "title": "Replacement of Floor Mats and Rectification of Existing Expansion Joints at Departure Hall in Singapore Changi Airport Terminal 3",
+  "buyer": "CAG",
+  "type": "RFQ",
+  "published": "2026-09-15",
+  "closing": "2026-09-23",
+  "fit": "Bundle/subcon",
+  "first_seen": "2026-09-16"
+ },
+ {
+  "source": "GeBIZ",
+  "url": "https://www.gebiz.gov.sg/ptn/opportunity/BOListing.xhtml?origin=menu",
+  "ref": "NYP000ETQ26000151",
+  "title": "Invitation to Quote (ITQ) for the Supply, Delivery and Installation of Customized Furniture at Nanyang Polytechnic",
+  "buyer": "Nanyang Polytechnic",
+  "type": "Quotation",
+  "category": "Furniture, Office Equipment & Audio-Visual ⇒ Furniture",
+  "published": "2026-09-15",
+  "closing": "2026-09-28",
+  "fit": "Bundle/subcon",
+  "first_seen": "2026-09-16"
+ },
+ {
+  "source": "TenderBoard",
+  "url": "https://www.tenderboard.biz/singaporetenders",
+  "ref": "",
+  "title": "F26089 Supply and Replacement of Sprinkler Tank Float Valves (2 Sets) with new gasket and flange at B1 Sprinkler Pump Room Storage Tank All Saints Home Jurong East",
+  "buyer": "ALL SAINTS HOME",
+  "category": "Facilities Management: Plumbing & Sanitary Works",
+  "published": "2026-09-15",
+  "closing": "2026-10-05",
+  "fit": "Bundle/subcon",
+  "first_seen": "2026-09-16"
+ },
+ {
+  "source": "SESAMi",
+  "url": "https://sesami.online/bizopps/businessOpportunities.jsp",
+  "ref": "21002691",
+  "title": "SUPPLY, INSTALLATION AND COMMISSION OF DC-DC CONVERTERS IN CCP4",
+  "buyer": "SENOKO ENERGY PTE. LTD.",
+  "type": "Tender",
+  "published": "2026-09-15",
+  "closing": "2026-10-09",
+  "fit": "Bundle/subcon",
+  "first_seen": "2026-09-16"
+ },
+ {
   "source": "SESAMi",
   "url": "https://sesami.online/bizopps/businessOpportunities.jsp",
   "ref": "2026/00599",
@@ -313,7 +386,7 @@
   "type": "Quotation",
   "category": "Miscellaneous ⇒ Others",
   "published": "2026-09-04",
-  "closing": "2026-09-18",
+  "closing": "2026-09-24",
   "fit": "Direct fit",
   "first_seen": "2026-09-05"
  },
@@ -340,30 +413,6 @@
   "closing": "2026-09-25",
   "fit": "Bundle/subcon",
   "first_seen": "2026-09-03"
- },
- {
-  "source": "SESAMi",
-  "url": "https://sesami.online/bizopps/businessOpportunities.jsp",
-  "ref": "WRS-ZOO-T26-08-02050",
-  "title": "RFQ for Minor A&A Work, Construction of Meerkat Exhibit at Rainforest Adventure East (RAE) Restaurant",
-  "buyer": "Singapore Zoological Gardens",
-  "type": "Tender",
-  "published": "2026-09-01",
-  "closing": "2026-09-15",
-  "fit": "Direct fit",
-  "first_seen": "2026-09-02"
- },
- {
-  "source": "SESAMi",
-  "url": "https://sesami.online/bizopps/businessOpportunities.jsp",
-  "ref": "WRS-ZOO-T26-08-02043",
-  "title": "RFQ for Minor A&A Works of Constructing Raceway at the Maned Wolves Exhibit to Explorer Outpost, Night Safari",
-  "buyer": "Singapore Zoological Gardens",
-  "type": "Tender",
-  "published": "2026-09-01",
-  "closing": "2026-09-15",
-  "fit": "Direct fit",
-  "first_seen": "2026-09-02"
  },
  {
   "source": "TenderBoard",
@@ -425,18 +474,6 @@
   "closing": "2026-10-06",
   "fit": "Direct fit",
   "first_seen": "2026-08-29"
- },
- {
-  "source": "SESAMi",
-  "url": "https://sesami.online/bizopps/businessOpportunities.jsp",
-  "ref": "2026/00551",
-  "title": "Fabrication and Installation of Ceiling Panels at T1 West Arrival (Public Area), Changi Airport",
-  "buyer": "CAG",
-  "type": "RFQ",
-  "published": "2026-08-27",
-  "closing": "2026-09-15",
-  "fit": "Bundle/subcon",
-  "first_seen": "2026-08-28"
  },
  {
   "source": "SESAMi",

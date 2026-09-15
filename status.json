@@ -1,9 +1,9 @@
 {
- "run_at": "2026-09-15T06:50:19.804442+08:00",
+ "run_at": "2026-09-16T06:31:05.396596+08:00",
  "sources": {
   "SESAMi": {
    "ok": true,
-   "fetched": 127
+   "fetched": 131
   },
   "Jalan Besar Town Council": {
    "ok": false,
@@ -19,15 +19,15 @@
   },
   "GeBIZ": {
    "ok": true,
-   "fetched": 18
+   "fetched": 19
   },
   "TenderBoard": {
    "ok": true,
-   "fetched": 165
+   "fetched": 170
   }
  },
- "live": 42,
- "archived_total": 142,
- "newly_archived": 5,
+ "live": 45,
+ "archived_total": 145,
+ "newly_archived": 3,
  "dismissed": 0
 }
