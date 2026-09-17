@@ -1971,5 +1971,31 @@
   "fit": "Bundle/subcon",
   "first_seen": "2026-08-28",
   "archived_on": "2026-09-17"
+ },
+ {
+  "source": "TenderBoard",
+  "url": "https://www.tenderboard.biz/singaporetenders",
+  "ref": "",
+  "title": "Disposal of 24 x Tables at SRC @ Level 1",
+  "buyer": "Singapore Recreation Club",
+  "category": "Miscellaneous: Disposal Management",
+  "published": "2026-09-15",
+  "closing": "2026-09-17",
+  "fit": "Direct fit",
+  "first_seen": "2026-09-16",
+  "archived_on": "2026-09-18"
+ },
+ {
+  "source": "TenderBoard",
+  "url": "https://www.tenderboard.biz/singaporetenders",
+  "ref": "",
+  "title": "REQUEST FOR PROPOSAL (RFP) TO (I) SCRAP SPD EXISTING BUS AND (II) SUPPLY AND MODIFY NEW PRIVATE BUS FOR SPD LTD.",
+  "buyer": "SPD Ltd.",
+  "category": "Transportation: Others",
+  "published": "2026-08-24",
+  "closing": "2026-09-17",
+  "fit": "Direct fit",
+  "first_seen": "2026-08-25",
+  "archived_on": "2026-09-18"
  }
 ]
