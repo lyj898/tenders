@@ -1997,5 +1997,57 @@
   "fit": "Direct fit",
   "first_seen": "2026-08-25",
   "archived_on": "2026-09-18"
+ },
+ {
+  "source": "TenderBoard",
+  "url": "https://www.tenderboard.biz/singaporetenders",
+  "ref": "",
+  "title": "RFQ: REPLACEMENT OF RETRACTABLE AWNING FABRIC COVER ONLY WITH A FIRE-RESISTANT TYPE SIZE : 12.4M X 2.5M INCLUDING INSTALLATION AND DISMENTAL",
+  "buyer": "The Singapore Island Country Club",
+  "category": "Construction: Others",
+  "published": "2026-09-11",
+  "closing": "2026-09-18",
+  "fit": "Bundle/subcon",
+  "first_seen": "2026-09-12",
+  "archived_on": "2026-09-19"
+ },
+ {
+  "source": "TenderBoard",
+  "url": "https://www.tenderboard.biz/singaporetenders",
+  "ref": "",
+  "title": "Supply, Delivery, Installation, Testing and Commissioning of Door Access Control System",
+  "buyer": "ALL SAINTS HOME",
+  "category": "Construction: Others",
+  "published": "2026-09-08",
+  "closing": "2026-09-18",
+  "fit": "Bundle/subcon",
+  "first_seen": "2026-09-09",
+  "archived_on": "2026-09-19"
+ },
+ {
+  "source": "TenderBoard",
+  "url": "https://www.tenderboard.biz/singaporetenders",
+  "ref": "",
+  "title": "To supply labour, tools and equipment to carry out works for the removal of trees",
+  "buyer": "TANGLIN CLUB",
+  "category": "Others: Others",
+  "published": "2026-09-02",
+  "closing": "2026-09-18",
+  "fit": "Direct fit",
+  "first_seen": "2026-09-03",
+  "archived_on": "2026-09-19"
+ },
+ {
+  "source": "SESAMi",
+  "url": "https://sesami.online/bizopps/businessOpportunities.jsp",
+  "ref": "21002681",
+  "title": "REPLACEMENT OF GT31 & ST38 GENERATOR STATIC EXCITATION SYSTEM",
+  "buyer": "SENOKO ENERGY PTE. LTD.",
+  "type": "Tender",
+  "published": "2026-08-27",
+  "closing": "2026-09-18",
+  "fit": "Bundle/subcon",
+  "first_seen": "2026-08-28",
+  "archived_on": "2026-09-19"
  }
 ]
