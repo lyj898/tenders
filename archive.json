@@ -2062,5 +2062,57 @@
   "fit": "Bundle/subcon",
   "first_seen": "2026-09-19",
   "archived_on": "2026-09-21"
+ },
+ {
+  "source": "SESAMi",
+  "url": "https://sesami.online/bizopps/businessOpportunities.jsp",
+  "ref": "2026/00599",
+  "title": "Supply and Installation of Boarding Signages at Terminal 1",
+  "buyer": "CAG",
+  "type": "RFQ",
+  "published": "2026-09-14",
+  "closing": "2026-09-21",
+  "fit": "Bundle/subcon",
+  "first_seen": "2026-09-15",
+  "archived_on": "2026-09-22"
+ },
+ {
+  "source": "SESAMi",
+  "url": "https://sesami.online/bizopps/businessOpportunities.jsp",
+  "ref": "2026/00596",
+  "title": "Removal of Temporary Construction Support Attachments from Terminal 3 Main Roof Structural Steelwork",
+  "buyer": "CAG",
+  "type": "RFQ",
+  "published": "2026-09-11",
+  "closing": "2026-09-21",
+  "fit": "Direct fit",
+  "first_seen": "2026-09-12",
+  "archived_on": "2026-09-22"
+ },
+ {
+  "source": "SESAMi",
+  "url": "https://sesami.online/bizopps/businessOpportunities.jsp",
+  "ref": "2026/00584",
+  "title": "Supply, Delivery, Installation, Testing And Commissioning Of Air Curtain At Level 2 Departure Doors In Terminal 1, Singapore Changi Airport",
+  "buyer": "CAG",
+  "type": "RFQ",
+  "published": "2026-09-08",
+  "closing": "2026-09-21",
+  "fit": "Bundle/subcon",
+  "first_seen": "2026-09-09",
+  "archived_on": "2026-09-22"
+ },
+ {
+  "source": "SESAMi",
+  "url": "https://sesami.online/bizopps/businessOpportunities.jsp",
+  "ref": "WRS-HORTI-T26-08-02056",
+  "title": "Tender for Provision of General Waste Management Services at Singapore Zoo, Night Safari, River Wonders, Bird Paradise, Mandai Wildlife West, Rainforest Wild Adventure (West) and Mandai Wildlife East for 2 Years from 1 December 2026 to 30 November 2028",
+  "buyer": "Singapore Zoological Gardens",
+  "type": "Tender",
+  "published": "2026-08-28",
+  "closing": "2026-09-21",
+  "fit": "Direct fit",
+  "first_seen": "2026-08-29",
+  "archived_on": "2026-09-22"
  }
 ]

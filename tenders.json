@@ -1,5 +1,43 @@
 [
  {
+  "source": "TenderBoard",
+  "url": "https://www.tenderboard.biz/singaporetenders",
+  "ref": "",
+  "title": "Delivery & Installation of Acrylic Notice Panels & Stickers for Telok Blangah Division Residential Lifts",
+  "buyer": "TANJONG PAGAR TOWN COUNCIL",
+  "category": "Construction: Signages",
+  "published": "2026-09-21",
+  "closing": "2026-09-23",
+  "fit": "Bundle/subcon",
+  "first_seen": "2026-09-22"
+ },
+ {
+  "source": "GeBIZ",
+  "url": "https://www.gebiz.gov.sg/ptn/opportunity/BOListing.xhtml?origin=menu",
+  "ref": "MOESCHETQ26004017",
+  "title": "Classroom table and chair set for JWPS including the removal and disposal of existing classroom tables and chairs",
+  "buyer": "Ministry of Education - Schools",
+  "type": "Quotation",
+  "category": "Furniture, Office Equipment & Audio-Visual ⇒ Furniture",
+  "published": "2026-09-21",
+  "closing": "2026-09-30",
+  "fit": "Direct fit",
+  "first_seen": "2026-09-22"
+ },
+ {
+  "source": "GeBIZ",
+  "url": "https://www.gebiz.gov.sg/ptn/opportunity/BOListing.xhtml?origin=menu",
+  "ref": "MOESCHETQ26004047",
+  "title": "Removal of Existing Lockers and Supply & Installation of New Student Lockers at Fairfield Methodist School (Secondary)",
+  "buyer": "Ministry of Education - Schools",
+  "type": "Quotation",
+  "category": "Furniture, Office Equipment & Audio-Visual ⇒ Furniture",
+  "published": "2026-09-21",
+  "closing": "2026-09-30",
+  "fit": "Direct fit",
+  "first_seen": "2026-09-22"
+ },
+ {
   "source": "SESAMi",
   "url": "https://sesami.online/bizopps/businessOpportunities.jsp",
   "ref": "SCCSSM-CM-2026-15",
@@ -294,18 +332,6 @@
   "first_seen": "2026-09-16"
  },
  {
-  "source": "SESAMi",
-  "url": "https://sesami.online/bizopps/businessOpportunities.jsp",
-  "ref": "2026/00599",
-  "title": "Supply and Installation of Boarding Signages at Terminal 1",
-  "buyer": "CAG",
-  "type": "RFQ",
-  "published": "2026-09-14",
-  "closing": "2026-09-21",
-  "fit": "Bundle/subcon",
-  "first_seen": "2026-09-15"
- },
- {
   "source": "GeBIZ",
   "url": "https://www.gebiz.gov.sg/ptn/opportunity/BOListing.xhtml?origin=menu",
   "ref": "LTA000ETQ26000098",
@@ -366,18 +392,6 @@
   "closing": "2026-10-08",
   "fit": "Bundle/subcon",
   "first_seen": "2026-09-15"
- },
- {
-  "source": "SESAMi",
-  "url": "https://sesami.online/bizopps/businessOpportunities.jsp",
-  "ref": "2026/00596",
-  "title": "Removal of Temporary Construction Support Attachments from Terminal 3 Main Roof Structural Steelwork",
-  "buyer": "CAG",
-  "type": "RFQ",
-  "published": "2026-09-11",
-  "closing": "2026-09-21",
-  "fit": "Direct fit",
-  "first_seen": "2026-09-12"
  },
  {
   "source": "TenderBoard",
@@ -450,18 +464,6 @@
   "closing": "2026-10-02",
   "fit": "Bundle/subcon",
   "first_seen": "2026-09-10"
- },
- {
-  "source": "SESAMi",
-  "url": "https://sesami.online/bizopps/businessOpportunities.jsp",
-  "ref": "2026/00584",
-  "title": "Supply, Delivery, Installation, Testing And Commissioning Of Air Curtain At Level 2 Departure Doors In Terminal 1, Singapore Changi Airport",
-  "buyer": "CAG",
-  "type": "RFQ",
-  "published": "2026-09-08",
-  "closing": "2026-09-21",
-  "fit": "Bundle/subcon",
-  "first_seen": "2026-09-09"
  },
  {
   "source": "SESAMi",
@@ -574,18 +576,6 @@
   "closing": "2026-10-05",
   "fit": "Bundle/subcon",
   "first_seen": "2026-09-02"
- },
- {
-  "source": "SESAMi",
-  "url": "https://sesami.online/bizopps/businessOpportunities.jsp",
-  "ref": "WRS-HORTI-T26-08-02056",
-  "title": "Tender for Provision of General Waste Management Services at Singapore Zoo, Night Safari, River Wonders, Bird Paradise, Mandai Wildlife West, Rainforest Wild Adventure (West) and Mandai Wildlife East for 2 Years from 1 December 2026 to 30 November 2028",
-  "buyer": "Singapore Zoological Gardens",
-  "type": "Tender",
-  "published": "2026-08-28",
-  "closing": "2026-09-21",
-  "fit": "Direct fit",
-  "first_seen": "2026-08-29"
  },
  {
   "source": "GeBIZ",
