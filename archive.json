@@ -2114,5 +2114,45 @@
   "fit": "Direct fit",
   "first_seen": "2026-08-29",
   "archived_on": "2026-09-22"
+ },
+ {
+  "source": "TenderBoard",
+  "url": "https://www.tenderboard.biz/singaporetenders",
+  "ref": "",
+  "title": "RFQ SUPPLY, DELIVERY, INSTALLATION, TESTING & COMMISSIONING OF NEW TYRE CHANGER WITH ALL NECESSARY. READY FOR OPERATION.",
+  "buyer": "The Singapore Island Country Club",
+  "category": "Workshop Equipment and Services: Workshop Tools, DIY Tools & Accessories",
+  "published": "2026-09-15",
+  "closing": "2026-09-22",
+  "fit": "Bundle/subcon",
+  "first_seen": "2026-09-16",
+  "archived_on": "2026-09-23"
+ },
+ {
+  "source": "GeBIZ",
+  "url": "https://www.gebiz.gov.sg/ptn/opportunity/BOListing.xhtml?origin=menu",
+  "ref": "MOESCHETQ26003549",
+  "title": "ITQ for the dismantling, removal and disposal of two existing retractable seating systems and associated control panels at YTSS School Hall",
+  "buyer": "Ministry of Education - Schools",
+  "type": "Quotation",
+  "category": "Miscellaneous ⇒ Disposal Management",
+  "published": "2026-09-08",
+  "closing": "2026-09-22",
+  "fit": "Direct fit",
+  "first_seen": "2026-09-08",
+  "archived_on": "2026-09-23"
+ },
+ {
+  "source": "TenderBoard",
+  "url": "https://www.tenderboard.biz/singaporetenders",
+  "ref": "",
+  "title": "TO2026017 - INVITATION TO TENDER FOR SUPPLY, DELIVERY, INSTALLATION, TESTING AND COMMISSIONING OF ONE (1) UNIT OF SMART MODULE EXPANSION CONTAINMENT SYSTEM FOR SINGAPORE INSTITUTE OF TECHNOLOGY",
+  "buyer": "SINGAPORE INSTITUTE OF TECHNOLOGY",
+  "category": "IT&Telecommunication: IT Services & Software Development",
+  "published": "2026-09-01",
+  "closing": "2026-09-22",
+  "fit": "Bundle/subcon",
+  "first_seen": "2026-09-02",
+  "archived_on": "2026-09-23"
  }
 ]

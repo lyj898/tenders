@@ -1,5 +1,89 @@
 [
  {
+  "source": "SESAMi",
+  "url": "https://sesami.online/bizopps/businessOpportunities.jsp",
+  "ref": "2026/00622",
+  "title": "SUPPLY AND INSTALL WALL PROTECTION AND SKIRTING, INCLUDING PAINTING WORKS ALONG GATE HOLD ROOM DOOR 4 AT ?C? AND ?D? PIER IN TERMINAL 1, SINGAPORE CHANGI AIRPORT",
+  "buyer": "CAG",
+  "type": "RFQ",
+  "published": "2026-09-22",
+  "closing": "2026-09-29",
+  "fit": "Bundle/subcon",
+  "first_seen": "2026-09-23"
+ },
+ {
+  "source": "TenderBoard",
+  "url": "https://www.tenderboard.biz/singaporetenders",
+  "ref": "",
+  "title": "RFQ CINEMATIC KARAOKE SYSTEM WITH UBOX SET & INSTALLATION FOR HABITAT",
+  "buyer": "The Singapore Island Country Club",
+  "category": "Furniture, Office Equipment & Audio-Visual: Electrical Appliances & Supplies",
+  "published": "2026-09-22",
+  "closing": "2026-09-29",
+  "fit": "Bundle/subcon",
+  "first_seen": "2026-09-23"
+ },
+ {
+  "source": "TenderBoard",
+  "url": "https://www.tenderboard.biz/singaporetenders",
+  "ref": "",
+  "title": "Car Park painting and wheel stopper & lighting installation",
+  "buyer": "Singapore Recreation Club",
+  "category": "Construction: Others",
+  "published": "2026-09-22",
+  "closing": "2026-09-30",
+  "fit": "Bundle/subcon",
+  "first_seen": "2026-09-23"
+ },
+ {
+  "source": "SESAMi",
+  "url": "https://sesami.online/bizopps/businessOpportunities.jsp",
+  "ref": "2026/00623",
+  "title": "REPLACEMENT OF TOILETS WALL HUNG WC BOWLS, SQUAT PANS AND WC SENSOR FLUSH VALVES, SINGAPORE CHANGI AIRPORT TERMINAL 4.",
+  "buyer": "CAG",
+  "type": "RFQ",
+  "published": "2026-09-22",
+  "closing": "2026-10-01",
+  "fit": "Bundle/subcon",
+  "first_seen": "2026-09-23"
+ },
+ {
+  "source": "TenderBoard",
+  "url": "https://www.tenderboard.biz/singaporetenders",
+  "ref": "",
+  "title": "Skylight Solar Control Film Installation at Mosque Dome",
+  "buyer": "Masjid En-Naeem",
+  "category": "Construction: Repairs & Redecoration",
+  "published": "2026-09-22",
+  "closing": "2026-10-06",
+  "fit": "Bundle/subcon",
+  "first_seen": "2026-09-23"
+ },
+ {
+  "source": "SESAMi",
+  "url": "https://sesami.online/bizopps/businessOpportunities.jsp",
+  "ref": "2026/00536",
+  "title": "Supply, Install and Commissioning of online leak detection and monitoring systems for Fire Hydrant system at Runways 1, 2 and 3 in Singapore Changi Airport",
+  "buyer": "CAG",
+  "type": "Tender",
+  "published": "2026-09-22",
+  "closing": "2026-10-13",
+  "fit": "Bundle/subcon",
+  "first_seen": "2026-09-23"
+ },
+ {
+  "source": "TenderBoard",
+  "url": "https://www.tenderboard.biz/singaporetenders",
+  "ref": "",
+  "title": "TERM CONTRACT FOR THE MAINTENANCE OF TRANSFER AND BOOSTER PUMPS, AUTOMATIC REFUSE CHUTE FLUSHING SYSTEM AND ROLLER SHUTTERS FOR EUNOS, BEDOK RESERVOIR-PUNGGOL (BEDOK RESERVOIR ROAD) AND KAKI BUKIT DIVISIONS FOR A PERIOD OF 3 YEARS WITH THE OPTION TO EXTEND 2 YEARS",
+  "buyer": "Aljunied-Hougang Town Council",
+  "category": "Facilities Management: Electrical Engineering Services",
+  "published": "2026-09-22",
+  "closing": "2026-10-14",
+  "fit": "Direct fit",
+  "first_seen": "2026-09-23"
+ },
+ {
   "source": "TenderBoard",
   "url": "https://www.tenderboard.biz/singaporetenders",
   "ref": "",
@@ -271,18 +355,6 @@
   "first_seen": "2026-09-17"
  },
  {
-  "source": "TenderBoard",
-  "url": "https://www.tenderboard.biz/singaporetenders",
-  "ref": "",
-  "title": "RFQ SUPPLY, DELIVERY, INSTALLATION, TESTING & COMMISSIONING OF NEW TYRE CHANGER WITH ALL NECESSARY. READY FOR OPERATION.",
-  "buyer": "The Singapore Island Country Club",
-  "category": "Workshop Equipment and Services: Workshop Tools, DIY Tools & Accessories",
-  "published": "2026-09-15",
-  "closing": "2026-09-22",
-  "fit": "Bundle/subcon",
-  "first_seen": "2026-09-16"
- },
- {
   "source": "SESAMi",
   "url": "https://sesami.online/bizopps/businessOpportunities.jsp",
   "ref": "2026/00606",
@@ -493,19 +565,6 @@
  {
   "source": "GeBIZ",
   "url": "https://www.gebiz.gov.sg/ptn/opportunity/BOListing.xhtml?origin=menu",
-  "ref": "MOESCHETQ26003549",
-  "title": "ITQ for the dismantling, removal and disposal of two existing retractable seating systems and associated control panels at YTSS School Hall",
-  "buyer": "Ministry of Education - Schools",
-  "type": "Quotation",
-  "category": "Miscellaneous ⇒ Disposal Management",
-  "published": "2026-09-08",
-  "closing": "2026-09-22",
-  "fit": "Direct fit",
-  "first_seen": "2026-09-08"
- },
- {
-  "source": "GeBIZ",
-  "url": "https://www.gebiz.gov.sg/ptn/opportunity/BOListing.xhtml?origin=menu",
   "ref": "LTA000ETQ26000099",
   "title": "Sale of used vehicles for scrapping",
   "buyer": "Land Transport Authority",
@@ -552,18 +611,6 @@
   "closing": "2026-09-25",
   "fit": "Bundle/subcon",
   "first_seen": "2026-09-03"
- },
- {
-  "source": "TenderBoard",
-  "url": "https://www.tenderboard.biz/singaporetenders",
-  "ref": "",
-  "title": "TO2026017 - INVITATION TO TENDER FOR SUPPLY, DELIVERY, INSTALLATION, TESTING AND COMMISSIONING OF ONE (1) UNIT OF SMART MODULE EXPANSION CONTAINMENT SYSTEM FOR SINGAPORE INSTITUTE OF TECHNOLOGY",
-  "buyer": "SINGAPORE INSTITUTE OF TECHNOLOGY",
-  "category": "IT&Telecommunication: IT Services & Software Development",
-  "published": "2026-09-01",
-  "closing": "2026-09-22",
-  "fit": "Bundle/subcon",
-  "first_seen": "2026-09-02"
  },
  {
   "source": "SESAMi",
