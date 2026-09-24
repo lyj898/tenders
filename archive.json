@@ -2207,5 +2207,32 @@
   "fit": "Direct fit",
   "first_seen": "2026-09-15",
   "archived_on": "2026-09-24"
+ },
+ {
+  "source": "TenderBoard",
+  "url": "https://www.tenderboard.biz/singaporetenders",
+  "ref": "",
+  "title": "REQUEST FOR QUOTATION (RFQ) FOR: DESIGN, SUPPLY, DELVERY, INSTALLATION, TESTING AND COMISSIONING OF CEILING HOIST SYSTEM FOR SPD ESLP",
+  "buyer": "SPD Ltd.",
+  "category": "Others: Others",
+  "published": "2026-09-16",
+  "closing": "2026-09-24",
+  "fit": "Bundle/subcon",
+  "first_seen": "2026-09-17",
+  "archived_on": "2026-09-25"
+ },
+ {
+  "source": "GeBIZ",
+  "url": "https://www.gebiz.gov.sg/ptn/opportunity/BOListing.xhtml?origin=menu",
+  "ref": "MHASCD03000029327",
+  "title": "SUPPLY AND DELIVERY OF STORAGE CONTAINERS WITH DISPOSAL OF EXISTING CONTAINERS FOR SCDF",
+  "buyer": "Ministry of Home Affairs - Singapore Civil Defence Force 1",
+  "type": "Quotation",
+  "category": "Miscellaneous ⇒ Others",
+  "published": "2026-09-04",
+  "closing": "2026-09-24",
+  "fit": "Direct fit",
+  "first_seen": "2026-09-05",
+  "archived_on": "2026-09-25"
  }
 ]
