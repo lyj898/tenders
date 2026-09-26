@@ -1,5 +1,5 @@
 {
- "run_at": "2026-09-26T06:55:12.082466+08:00",
+ "run_at": "2026-09-27T06:15:19.715379+08:00",
  "sources": {
   "SESAMi": {
    "ok": true,
@@ -23,11 +23,11 @@
   },
   "TenderBoard": {
    "ok": true,
-   "fetched": 166
+   "fetched": 167
   }
  },
  "live": 66,
  "archived_total": 176,
- "newly_archived": 6,
+ "newly_archived": 0,
  "dismissed": 0
 }
