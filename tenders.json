@@ -1,5 +1,54 @@
 [
  {
+  "source": "TenderBoard",
+  "url": "https://www.tenderboard.biz/singaporetenders",
+  "ref": "",
+  "title": "ITQ for classroom Students' furniture to be carried out at 10 Ang Mo Kio St 54 S569185 Level 3 Classrooms- Chaozheng Programme",
+  "buyer": "APSN",
+  "category": "Furniture, Office Equipment & Audio-Visual: Furniture",
+  "published": "2026-10-05",
+  "closing": "2026-10-12",
+  "fit": "Bundle/subcon",
+  "first_seen": "2026-10-06"
+ },
+ {
+  "source": "GeBIZ",
+  "url": "https://www.gebiz.gov.sg/ptn/opportunity/BOListing.xhtml?origin=menu",
+  "ref": "ITE000ETQ26000116",
+  "title": "(R) C-ITEa26-00734_CGS_STAS-ASC_Design, Fabrication, Installation and Dismantling of Graduation Theme & Logo, Stage and Photo Backdrops at ITE CC",
+  "buyer": "Institute of Technical Education",
+  "type": "Quotation",
+  "category": "Event Organising, Food & Beverages ⇒ Event Organising",
+  "published": "2026-10-05",
+  "closing": "2026-10-14",
+  "fit": "Direct fit",
+  "first_seen": "2026-10-06"
+ },
+ {
+  "source": "TenderBoard",
+  "url": "https://www.tenderboard.biz/singaporetenders",
+  "ref": "",
+  "title": "F26094 RFQ for Customization & Fabrication, Supply, Delivery, Installation Fire Fighting Equipment Cabinet for All Saints Home Jurong East",
+  "buyer": "ALL SAINTS HOME",
+  "category": "Construction: Renovation Supplies & Services",
+  "published": "2026-10-05",
+  "closing": "2026-10-19",
+  "fit": "Bundle/subcon",
+  "first_seen": "2026-10-06"
+ },
+ {
+  "source": "SESAMi",
+  "url": "https://sesami.online/bizopps/businessOpportunities.jsp",
+  "ref": "2026/00650",
+  "title": "REPLACEMENT OF JOINT SEALANT IN THE RIGID PAVEMENT AT TAXIWAYS ADJACENT TO RUNWAY 3, SINGAPORE CHANGI AIRPORT",
+  "buyer": "CAG",
+  "type": "Tender",
+  "published": "2026-10-05",
+  "closing": "2026-10-28",
+  "fit": "Bundle/subcon",
+  "first_seen": "2026-10-06"
+ },
+ {
   "source": "GeBIZ",
   "url": "https://www.gebiz.gov.sg/ptn/opportunity/BOListing.xhtml?origin=menu",
   "ref": "DEFNGPP7126101605",
@@ -341,18 +390,6 @@
   "first_seen": "2026-09-26"
  },
  {
-  "source": "TenderBoard",
-  "url": "https://www.tenderboard.biz/singaporetenders",
-  "ref": "",
-  "title": "Invitation to Quote for the Design, Supply, and Installation of Hoarding Works at Bay South Garden",
-  "buyer": "GARDENS BY THE BAY",
-  "category": "Construction: General Building & Minor Construction Works",
-  "published": "2026-09-24",
-  "closing": "2026-10-05",
-  "fit": "Bundle/subcon",
-  "first_seen": "2026-09-25"
- },
- {
   "source": "SESAMi",
   "url": "https://sesami.online/bizopps/businessOpportunities.jsp",
   "ref": "2026/00628",
@@ -558,18 +595,6 @@
   "first_seen": "2026-09-17"
  },
  {
-  "source": "TenderBoard",
-  "url": "https://www.tenderboard.biz/singaporetenders",
-  "ref": "",
-  "title": "F26089 Supply and Replacement of Sprinkler Tank Float Valves (2 Sets) with new gasket and flange at B1 Sprinkler Pump Room Storage Tank All Saints Home Jurong East",
-  "buyer": "ALL SAINTS HOME",
-  "category": "Facilities Management: Plumbing & Sanitary Works",
-  "published": "2026-09-15",
-  "closing": "2026-10-05",
-  "fit": "Bundle/subcon",
-  "first_seen": "2026-09-16"
- },
- {
   "source": "SESAMi",
   "url": "https://sesami.online/bizopps/businessOpportunities.jsp",
   "ref": "21002691",
@@ -618,18 +643,6 @@
   "closing": "2026-10-08",
   "fit": "Bundle/subcon",
   "first_seen": "2026-09-08"
- },
- {
-  "source": "SESAMi",
-  "url": "https://sesami.online/bizopps/businessOpportunities.jsp",
-  "ref": "VANVHPLRFP26004",
-  "title": "Replacement of Flooring across four ward levels (3,5,7 and 8) in Woodlands Care Home (WLCH) under Vanguard Healthcare Pte Ltd (VHPL)",
-  "buyer": "VANGUARD HEALTHCARE PTE. LTD.",
-  "type": "Tender",
-  "published": "2026-09-01",
-  "closing": "2026-10-05",
-  "fit": "Bundle/subcon",
-  "first_seen": "2026-09-02"
  },
  {
   "source": "GeBIZ",
