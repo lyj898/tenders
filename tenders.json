@@ -1,5 +1,66 @@
 [
  {
+  "source": "SESAMi",
+  "url": "https://sesami.online/bizopps/businessOpportunities.jsp",
+  "ref": "2026/00655",
+  "title": "Survey, Removal and Installation of Frangible Poles at Runway 3, Changi Airport",
+  "buyer": "CAG",
+  "type": "RFQ",
+  "published": "2026-10-08",
+  "closing": "2026-10-15",
+  "fit": "Direct fit",
+  "first_seen": "2026-10-09"
+ },
+ {
+  "source": "TenderBoard",
+  "url": "https://www.tenderboard.biz/singaporetenders",
+  "ref": "",
+  "title": "SUPPLY, DELIVERY INSTALLATION/COMMISSIONING, DISPOSAL AND MAINTENANCE OF PEDAL BOATS AND HYDROBIKES, AND DISPOSAL OF EXISTING PEDAL BOATS AT SINGAPORE DISCOVERY CENTRE",
+  "buyer": "Defence Collective Singapore Ltd",
+  "category": "Administration & Training: Sports & Recreational Equipment",
+  "published": "2026-10-08",
+  "closing": "2026-10-15",
+  "fit": "Direct fit",
+  "first_seen": "2026-10-09"
+ },
+ {
+  "source": "GeBIZ",
+  "url": "https://www.gebiz.gov.sg/ptn/opportunity/BOListing.xhtml?origin=menu",
+  "ref": "MHASPF03000029527",
+  "title": "Provision of Islandwide Removal Services for Solar-Powered Cameras (SOLCAM)",
+  "buyer": "Ministry of Home Affairs - Singapore Police Force 1",
+  "type": "Quotation",
+  "category": "Miscellaneous ⇒ Others",
+  "published": "2026-10-08",
+  "closing": "2026-10-19",
+  "fit": "Direct fit",
+  "first_seen": "2026-10-09"
+ },
+ {
+  "source": "TenderBoard",
+  "url": "https://www.tenderboard.biz/singaporetenders",
+  "ref": "",
+  "title": "SUPPLY, DELIVERY, INSTALLATION, TESTING AND COMMISSIONING OF TWO (2) UNITS OF GAS COMPRESSOR COOLING TOWER UT-5302A AND UT-5302B",
+  "buyer": "City Energy Pte. Ltd. (as Trustee of City Energy Trust)",
+  "category": "Others: Others",
+  "published": "2026-10-08",
+  "closing": "2026-10-22",
+  "fit": "Bundle/subcon",
+  "first_seen": "2026-10-09"
+ },
+ {
+  "source": "TenderBoard",
+  "url": "https://www.tenderboard.biz/singaporetenders",
+  "ref": "",
+  "title": "PRINTING, INSTALLATION AND DISMANTLING OF FESTIVE BILLBOARD BANNERS FROM 1 JANUARY 2027 – 31 DECEMBER 2029 (3 YEARS)",
+  "buyer": "Aljunied-Hougang Town Council",
+  "category": "Administration & Training: Printing Services",
+  "published": "2026-10-08",
+  "closing": "2026-10-27",
+  "fit": "Direct fit",
+  "first_seen": "2026-10-09"
+ },
+ {
   "source": "TenderBoard",
   "url": "https://www.tenderboard.biz/singaporetenders",
   "ref": "",
@@ -513,18 +574,6 @@
   "first_seen": "2026-09-24"
  },
  {
-  "source": "SESAMi",
-  "url": "https://sesami.online/bizopps/businessOpportunities.jsp",
-  "ref": "2026/00536",
-  "title": "Supply, Install and Commissioning of online leak detection and monitoring systems for Fire Hydrant system at Runways 1, 2 and 3 in Singapore Changi Airport",
-  "buyer": "CAG",
-  "type": "Tender",
-  "published": "2026-09-22",
-  "closing": "2026-10-13",
-  "fit": "Bundle/subcon",
-  "first_seen": "2026-09-23"
- },
- {
   "source": "TenderBoard",
   "url": "https://www.tenderboard.biz/singaporetenders",
   "ref": "",
@@ -539,6 +588,18 @@
  {
   "source": "SESAMi",
   "url": "https://sesami.online/bizopps/businessOpportunities.jsp",
+  "ref": "2026/00536",
+  "title": "Supply, Install and Commissioning of online leak detection and monitoring systems for Fire Hydrant system at Runways 1, 2 and 3 in Singapore Changi Airport",
+  "buyer": "CAG",
+  "type": "Tender",
+  "published": "2026-09-22",
+  "closing": "2026-10-20",
+  "fit": "Bundle/subcon",
+  "first_seen": "2026-09-23"
+ },
+ {
+  "source": "SESAMi",
+  "url": "https://sesami.online/bizopps/businessOpportunities.jsp",
   "ref": "SCCSSM-CM-2026-15",
   "title": "TWO-YEAR TERM CONTRACT FOR TREE PRUNING, CUTTING, REMOVAL AND ARBORICULTURE WORKS",
   "buyer": "SEMBAWANG COUNTRY CLUB",
@@ -547,19 +608,6 @@
   "closing": "2026-10-09",
   "fit": "Direct fit",
   "first_seen": "2026-09-20"
- },
- {
-  "source": "GeBIZ",
-  "url": "https://www.gebiz.gov.sg/ptn/opportunity/BOListing.xhtml?origin=menu",
-  "ref": "LTA000ETQ26000102",
-  "title": "Sale of vehicles to Scrapyard Operator",
-  "buyer": "Land Transport Authority",
-  "type": "Quotation",
-  "category": "Miscellaneous ⇒ Disposal Management",
-  "published": "2026-09-18",
-  "closing": "2026-10-08",
-  "fit": "Direct fit",
-  "first_seen": "2026-09-19"
  },
  {
   "source": "SESAMi",
@@ -576,18 +624,6 @@
  {
   "source": "SESAMi",
   "url": "https://sesami.online/bizopps/businessOpportunities.jsp",
-  "ref": "2026/00611",
-  "title": "Design, supply, delivery, installation, testing and commissioning of 1 no. of new water monitor at Singapore Changi Airport Terminal 3",
-  "buyer": "CAG",
-  "type": "RFQ",
-  "published": "2026-09-16",
-  "closing": "2026-10-08",
-  "fit": "Bundle/subcon",
-  "first_seen": "2026-09-17"
- },
- {
-  "source": "SESAMi",
-  "url": "https://sesami.online/bizopps/businessOpportunities.jsp",
   "ref": "21002691",
   "title": "SUPPLY, INSTALLATION AND COMMISSION OF DC-DC CONVERTERS IN CCP4",
   "buyer": "SENOKO ENERGY PTE. LTD.",
@@ -596,44 +632,6 @@
   "closing": "2026-10-09",
   "fit": "Bundle/subcon",
   "first_seen": "2026-09-16"
- },
- {
-  "source": "GeBIZ",
-  "url": "https://www.gebiz.gov.sg/ptn/opportunity/BOListing.xhtml?origin=menu",
-  "ref": "MOE000ETT26000050",
-  "title": "WHOLE-OF-GOVERNMENT DEMAND AGGREGATION CONTRACT FOR SUPPLY AND DELIVERY OF FURNITURE FOR TWO FIRM YEARS WITH OPTION TO EXTEND FOR TWO YEARS",
-  "buyer": "Ministry of Education",
-  "type": "Tender",
-  "category": "Furniture, Office Equipment & Audio-Visual ⇒ Furniture",
-  "published": "2026-09-14",
-  "closing": "2026-10-08",
-  "fit": "Bundle/subcon",
-  "first_seen": "2026-09-15"
- },
- {
-  "source": "GeBIZ",
-  "url": "https://www.gebiz.gov.sg/ptn/opportunity/BOListing.xhtml?origin=menu",
-  "ref": "NLB000ETT26000029",
-  "title": "INVITATION TO TENDER FOR PROVISION OF FITTING OUT WORKS, LOOSE FURNITURES AND ANCILLARY WORKS AT LEVEL 7 IN NATIONAL LIBRARY BUILDING",
-  "buyer": "National Library Board",
-  "type": "Tender Lite",
-  "category": "Construction ⇒ Interior Decoration",
-  "published": "2026-09-08",
-  "closing": "2026-10-08",
-  "fit": "Bundle/subcon",
-  "first_seen": "2026-09-09"
- },
- {
-  "source": "TenderBoard",
-  "url": "https://www.tenderboard.biz/singaporetenders",
-  "ref": "",
-  "title": "Tender for Nominated Sub-Contractor (NSC) - Replacement of Two (2) Existing Passenger Lifts for MINDSG Ltd at 800 Margaret Drive, Singapore 149310",
-  "buyer": "MINDS",
-  "category": "Facilities Management: Lift & Escalator Installation & Maintenance",
-  "published": "2026-09-07",
-  "closing": "2026-10-08",
-  "fit": "Bundle/subcon",
-  "first_seen": "2026-09-08"
  },
  {
   "source": "SESAMi",
