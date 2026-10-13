@@ -1,5 +1,65 @@
 [
  {
+  "source": "TenderBoard",
+  "url": "https://www.tenderboard.biz/singaporetenders",
+  "ref": "",
+  "title": "F26087 RFQ for Supply, Delivery, Installation of Bed Privacy Curtain for All Saints Home Jurong East Dormitory",
+  "buyer": "ALL SAINTS HOME",
+  "category": "Construction: Renovation Supplies & Services",
+  "published": "2026-10-08",
+  "closing": "2026-10-16",
+  "fit": "Bundle/subcon",
+  "first_seen": "2026-10-14"
+ },
+ {
+  "source": "TenderBoard",
+  "url": "https://www.tenderboard.biz/singaporetenders",
+  "ref": "",
+  "title": "RFQ SUPPLY AND INSTALLATION OF CUSTOM-MADE “THE BRAID BAR” LED ILLUMINATED SIGNAGE [1020 MM (W) × 650 MM (H)]",
+  "buyer": "The Singapore Island Country Club",
+  "category": "Construction: Signages",
+  "published": "2026-10-13",
+  "closing": "2026-10-20",
+  "fit": "Bundle/subcon",
+  "first_seen": "2026-10-14"
+ },
+ {
+  "source": "TenderBoard",
+  "url": "https://www.tenderboard.biz/singaporetenders",
+  "ref": "",
+  "title": "F26087 RFQ for Supply, Delivery, Installation 52 sets of Single-Door Wardrobe with Internal Locked Drawer for All Saints Home Jurong East (Inclusive disposal existing 52 wardrobe)",
+  "buyer": "ALL SAINTS HOME",
+  "category": "Construction: Renovation Supplies & Services",
+  "published": "2026-10-09",
+  "closing": "2026-10-26",
+  "fit": "Direct fit",
+  "first_seen": "2026-10-14"
+ },
+ {
+  "source": "TenderBoard",
+  "url": "https://www.tenderboard.biz/singaporetenders",
+  "ref": "",
+  "title": "supply, delivery, installation, integration, testing, commissioning and support of a production-grade NVIDIA HGX B200 GPU-as-a-Service infrastructure hosted in Singapore.",
+  "buyer": "SPTel Pte Ltd",
+  "category": "IT&Telecommunication: IT Services & Software Development",
+  "published": "2026-10-13",
+  "closing": "2026-10-28",
+  "fit": "Bundle/subcon",
+  "first_seen": "2026-10-14"
+ },
+ {
+  "source": "TenderBoard",
+  "url": "https://www.tenderboard.biz/singaporetenders",
+  "ref": "",
+  "title": "Invitation to Tender for the Provision of Supply, Installation, and Management of the Printer Fleet and Print Room Operator Services",
+  "buyer": "German European School Singapore",
+  "category": "IT&Telecommunication: Printers & Scanners",
+  "published": "2026-10-13",
+  "closing": "2026-11-13",
+  "fit": "Bundle/subcon",
+  "first_seen": "2026-10-14"
+ },
+ {
   "source": "SESAMi",
   "url": "https://sesami.online/bizopps/businessOpportunities.jsp",
   "ref": "WRS-ET-Q26-10-02102",
@@ -283,19 +343,6 @@
  {
   "source": "GeBIZ",
   "url": "https://www.gebiz.gov.sg/ptn/opportunity/BOListing.xhtml?origin=menu",
-  "ref": "DEFNGPP7126101605",
-  "title": "Supply and Installation of Batteries",
-  "buyer": "Ministry of Defence 6",
-  "type": "Quotation",
-  "category": "Miscellaneous ⇒ Others",
-  "published": "2026-10-02",
-  "closing": "2026-10-13",
-  "fit": "Bundle/subcon",
-  "first_seen": "2026-10-04"
- },
- {
-  "source": "GeBIZ",
-  "url": "https://www.gebiz.gov.sg/ptn/opportunity/BOListing.xhtml?origin=menu",
   "ref": "SCB000ETQ26000046",
   "title": "OPEN-TRENCH REPAIR / REPLACEMENT OF UNDERGROUND WATER PIPE AT EXTERNAL AREA OF OMNI-THEATRE BUILDING",
   "buyer": "Science Centre Board",
@@ -486,18 +533,6 @@
   "closing": "2026-10-30",
   "fit": "Bundle/subcon",
   "first_seen": "2026-09-25"
- },
- {
-  "source": "SESAMi",
-  "url": "https://sesami.online/bizopps/businessOpportunities.jsp",
-  "ref": "JPPL-2-001463",
-  "title": "[Project]Design, Supply, Delivery, Installation, Modification, Testing and Commissioning of Two (2) New Drive-Through Truck Dumping Station with Integration to the Existing Control System at RMC Terminal, Jurong Port, SingaporeEligibility Criteria:(Refer to attached Tender Notice for more details)a) Proven recent track recordsb) Tenderer must attend tender briefing and site show round on 01 Oct 2026, 1000hrs.c) Tenderer must not be under any suspension or debarment when participating in Jurong Ports notices.Tender shall be submitted electronically through Jurong Port?s Supplier Portal, https://ephv.fa.ap2.oraclecloud.com/supplierPortal/, not later than 13 Oct 2026 at 1700hrs.All expenses incurred by applicants in the submission of the document shall be borne by the applicants.For enquiries, please contact:Ms. Myat Su Wai, Tel: 6660 9028, Email: myatsu@jp.com.sg;Mr. Teo Yifeng, Tel: 6660 9043, Email: teoyifeng@jp.com.sg; and Copy to: contract_management@jp.com.sg",
-  "buyer": "JURONG PORT PTE LTD",
-  "type": "Tender",
-  "published": "2026-09-23",
-  "closing": "2026-10-13",
-  "fit": "Bundle/subcon",
-  "first_seen": "2026-09-24"
  },
  {
   "source": "SESAMi",

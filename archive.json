@@ -3133,5 +3133,32 @@
   "fit": "Bundle/subcon",
   "first_seen": "2026-09-26",
   "archived_on": "2026-10-13"
+ },
+ {
+  "source": "GeBIZ",
+  "url": "https://www.gebiz.gov.sg/ptn/opportunity/BOListing.xhtml?origin=menu",
+  "ref": "DEFNGPP7126101605",
+  "title": "Supply and Installation of Batteries",
+  "buyer": "Ministry of Defence 6",
+  "type": "Quotation",
+  "category": "Miscellaneous ⇒ Others",
+  "published": "2026-10-02",
+  "closing": "2026-10-13",
+  "fit": "Bundle/subcon",
+  "first_seen": "2026-10-04",
+  "archived_on": "2026-10-14"
+ },
+ {
+  "source": "SESAMi",
+  "url": "https://sesami.online/bizopps/businessOpportunities.jsp",
+  "ref": "JPPL-2-001463",
+  "title": "[Project]Design, Supply, Delivery, Installation, Modification, Testing and Commissioning of Two (2) New Drive-Through Truck Dumping Station with Integration to the Existing Control System at RMC Terminal, Jurong Port, SingaporeEligibility Criteria:(Refer to attached Tender Notice for more details)a) Proven recent track recordsb) Tenderer must attend tender briefing and site show round on 01 Oct 2026, 1000hrs.c) Tenderer must not be under any suspension or debarment when participating in Jurong Ports notices.Tender shall be submitted electronically through Jurong Port?s Supplier Portal, https://ephv.fa.ap2.oraclecloud.com/supplierPortal/, not later than 13 Oct 2026 at 1700hrs.All expenses incurred by applicants in the submission of the document shall be borne by the applicants.For enquiries, please contact:Ms. Myat Su Wai, Tel: 6660 9028, Email: myatsu@jp.com.sg;Mr. Teo Yifeng, Tel: 6660 9043, Email: teoyifeng@jp.com.sg; and Copy to: contract_management@jp.com.sg",
+  "buyer": "JURONG PORT PTE LTD",
+  "type": "Tender",
+  "published": "2026-09-23",
+  "closing": "2026-10-13",
+  "fit": "Bundle/subcon",
+  "first_seen": "2026-09-24",
+  "archived_on": "2026-10-14"
  }
 ]
