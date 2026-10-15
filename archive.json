@@ -3239,5 +3239,58 @@
   "fit": "Direct fit",
   "first_seen": "2026-09-23",
   "archived_on": "2026-10-15"
+ },
+ {
+  "source": "SESAMi",
+  "url": "https://sesami.online/bizopps/businessOpportunities.jsp",
+  "ref": "2026/00655",
+  "title": "Survey, Removal and Installation of Frangible Poles at Runway 3, Changi Airport",
+  "buyer": "CAG",
+  "type": "RFQ",
+  "published": "2026-10-08",
+  "closing": "2026-10-15",
+  "fit": "Direct fit",
+  "first_seen": "2026-10-09",
+  "archived_on": "2026-10-16"
+ },
+ {
+  "source": "SESAMi",
+  "url": "https://sesami.online/bizopps/businessOpportunities.jsp",
+  "ref": "HTNSITQ/FY2627/0040",
+  "title": "INVITATION TO QUOTE (ITQ) SUPPLY AND INSTALLATION OF 40A / 3 PHASE DISTRIBUTION BOX AND LOURVES FOR LEVEL 4 SUMMIT ROOM AT HOMETEAMNS KHATIB",
+  "buyer": "HOMETEAMNS",
+  "type": "RFQ",
+  "published": "2026-10-06",
+  "closing": "2026-10-15",
+  "fit": "Bundle/subcon",
+  "first_seen": "2026-10-07",
+  "archived_on": "2026-10-16"
+ },
+ {
+  "source": "SESAMi",
+  "url": "https://sesami.online/bizopps/businessOpportunities.jsp",
+  "ref": "HTNSITQ/FY2627/0041",
+  "title": "INVITATION TO QUOTE (ITQ) SUPPLY AND INSTALLATION OF DOUBLE LEAF TIMBER ACOUSTIC DOORS WITH LAMINATE FINISH",
+  "buyer": "HOMETEAMNS",
+  "type": "RFQ",
+  "published": "2026-10-06",
+  "closing": "2026-10-15",
+  "fit": "Bundle/subcon",
+  "first_seen": "2026-10-07",
+  "archived_on": "2026-10-16"
+ },
+ {
+  "source": "GeBIZ",
+  "url": "https://www.gebiz.gov.sg/ptn/opportunity/BOListing.xhtml?origin=menu",
+  "ref": "MOESCHETQ26004558",
+  "title": "Supply, delivery and display of classroom tables and chairs with disposal service for old classroom tables and chairs.",
+  "buyer": "Ministry of Education - Schools",
+  "type": "Quotation",
+  "category": "Furniture, Office Equipment & Audio-Visual ⇒ Furniture",
+  "published": "2026-10-06",
+  "closing": "2026-10-15",
+  "fit": "Direct fit",
+  "first_seen": "2026-10-07",
+  "archived_on": "2026-10-16"
  }
 ]

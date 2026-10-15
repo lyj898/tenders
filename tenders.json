@@ -2,6 +2,91 @@
  {
   "source": "SESAMi",
   "url": "https://sesami.online/bizopps/businessOpportunities.jsp",
+  "ref": "WRS-TS-Q26-10-02100",
+  "title": "The Supply and Installation of an Audio System for Okapi Bus Stations 1 & 2",
+  "buyer": "Singapore Zoological Gardens",
+  "type": "RFQ",
+  "published": "2026-10-15",
+  "closing": "2026-10-22",
+  "fit": "Bundle/subcon",
+  "first_seen": "2026-10-16"
+ },
+ {
+  "source": "TenderBoard",
+  "url": "https://www.tenderboard.biz/singaporetenders",
+  "ref": "",
+  "title": "Supply, delivery and installation of one hundred and eighty (180) ergonomic office chairs",
+  "buyer": "APSN",
+  "category": "Construction: Interior Decoration",
+  "published": "2026-10-15",
+  "closing": "2026-10-22",
+  "fit": "Bundle/subcon",
+  "first_seen": "2026-10-16"
+ },
+ {
+  "source": "TenderBoard",
+  "url": "https://www.tenderboard.biz/singaporetenders",
+  "ref": "",
+  "title": "Lounge 1883 New Curtain proposal with installation",
+  "buyer": "Singapore Recreation Club",
+  "category": "Construction: Interior Decoration",
+  "published": "2026-10-15",
+  "closing": "2026-10-22",
+  "fit": "Bundle/subcon",
+  "first_seen": "2026-10-16"
+ },
+ {
+  "source": "TenderBoard",
+  "url": "https://www.tenderboard.biz/singaporetenders",
+  "ref": "",
+  "title": "Invitation to Quote for the Design, Supply, and Installation of Hoarding Works at Bay South Garden",
+  "buyer": "GARDENS BY THE BAY",
+  "category": "Construction: General Building & Minor Construction Works",
+  "published": "2026-10-15",
+  "closing": "2026-10-23",
+  "fit": "Bundle/subcon",
+  "first_seen": "2026-10-16"
+ },
+ {
+  "source": "SESAMi",
+  "url": "https://sesami.online/bizopps/businessOpportunities.jsp",
+  "ref": "2026/00671",
+  "title": "THE DESIGN, SUPPLY, FABRICATION AND INSTALLATION OF MOORING BOLLARDS AND PROTECTIVE BARRIERS AT SEA RESCUE BASE",
+  "buyer": "CAG",
+  "type": "RFQ",
+  "published": "2026-10-15",
+  "closing": "2026-10-28",
+  "fit": "Bundle/subcon",
+  "first_seen": "2026-10-16"
+ },
+ {
+  "source": "TenderBoard",
+  "url": "https://www.tenderboard.biz/singaporetenders",
+  "ref": "",
+  "title": "Invitation to Tender for the Design, Supply, Installation, Testing & Commissioning of Air-Conditioning and Mechanical Ventilation (ACMV) System for an Approximately 8,000 Square Feet Office Premises at 104 Prinsep St",
+  "buyer": "LASALLE COLLEGE OF THE ARTS LIMITED",
+  "category": "Facilities Management: Airconditioning, Refrigeration & Ventilation Works & Maintenance",
+  "published": "2026-10-15",
+  "closing": "2026-11-06",
+  "fit": "Bundle/subcon",
+  "first_seen": "2026-10-16"
+ },
+ {
+  "source": "GeBIZ",
+  "url": "https://www.gebiz.gov.sg/ptn/opportunity/BOListing.xhtml?origin=menu",
+  "ref": "PUB000ETT26000136",
+  "title": "Term Contract for Water Meter Fixing, Changing and Removal (East & West) and Meter Interface Unit Servicing, 2027 - 2030",
+  "buyer": "Public Utilities Board",
+  "type": "Tender",
+  "category": "Miscellaneous ⇒ Others",
+  "published": "2026-10-16",
+  "closing": "2026-11-12",
+  "fit": "Direct fit",
+  "first_seen": "2026-10-16"
+ },
+ {
+  "source": "SESAMi",
+  "url": "https://sesami.online/bizopps/businessOpportunities.jsp",
   "ref": "WRS-AV-Q26-10-02103",
   "title": "RFQ for Supply, Fabrication, and Installation of 88 Stainless Steel Circular Trays at Bird Paradise",
   "buyer": "Singapore Zoological Gardens",
@@ -181,18 +266,6 @@
   "first_seen": "2026-10-10"
  },
  {
-  "source": "SESAMi",
-  "url": "https://sesami.online/bizopps/businessOpportunities.jsp",
-  "ref": "2026/00655",
-  "title": "Survey, Removal and Installation of Frangible Poles at Runway 3, Changi Airport",
-  "buyer": "CAG",
-  "type": "RFQ",
-  "published": "2026-10-08",
-  "closing": "2026-10-15",
-  "fit": "Direct fit",
-  "first_seen": "2026-10-09"
- },
- {
   "source": "TenderBoard",
   "url": "https://www.tenderboard.biz/singaporetenders",
   "ref": "",
@@ -200,7 +273,7 @@
   "buyer": "Defence Collective Singapore Ltd",
   "category": "Administration & Training: Sports & Recreational Equipment",
   "published": "2026-10-08",
-  "closing": "2026-10-15",
+  "closing": "2026-10-19",
   "fit": "Direct fit",
   "first_seen": "2026-10-09"
  },
@@ -304,43 +377,6 @@
   "first_seen": "2026-10-08"
  },
  {
-  "source": "SESAMi",
-  "url": "https://sesami.online/bizopps/businessOpportunities.jsp",
-  "ref": "HTNSITQ/FY2627/0040",
-  "title": "INVITATION TO QUOTE (ITQ) SUPPLY AND INSTALLATION OF 40A / 3 PHASE DISTRIBUTION BOX AND LOURVES FOR LEVEL 4 SUMMIT ROOM AT HOMETEAMNS KHATIB",
-  "buyer": "HOMETEAMNS",
-  "type": "RFQ",
-  "published": "2026-10-06",
-  "closing": "2026-10-15",
-  "fit": "Bundle/subcon",
-  "first_seen": "2026-10-07"
- },
- {
-  "source": "SESAMi",
-  "url": "https://sesami.online/bizopps/businessOpportunities.jsp",
-  "ref": "HTNSITQ/FY2627/0041",
-  "title": "INVITATION TO QUOTE (ITQ) SUPPLY AND INSTALLATION OF DOUBLE LEAF TIMBER ACOUSTIC DOORS WITH LAMINATE FINISH",
-  "buyer": "HOMETEAMNS",
-  "type": "RFQ",
-  "published": "2026-10-06",
-  "closing": "2026-10-15",
-  "fit": "Bundle/subcon",
-  "first_seen": "2026-10-07"
- },
- {
-  "source": "GeBIZ",
-  "url": "https://www.gebiz.gov.sg/ptn/opportunity/BOListing.xhtml?origin=menu",
-  "ref": "MOESCHETQ26004558",
-  "title": "Supply, delivery and display of classroom tables and chairs with disposal service for old classroom tables and chairs.",
-  "buyer": "Ministry of Education - Schools",
-  "type": "Quotation",
-  "category": "Furniture, Office Equipment & Audio-Visual ⇒ Furniture",
-  "published": "2026-10-06",
-  "closing": "2026-10-15",
-  "fit": "Direct fit",
-  "first_seen": "2026-10-07"
- },
- {
   "source": "TenderBoard",
   "url": "https://www.tenderboard.biz/singaporetenders",
   "ref": "",
@@ -400,18 +436,6 @@
   "closing": "2026-10-29",
   "fit": "Bundle/subcon",
   "first_seen": "2026-10-03"
- },
- {
-  "source": "TenderBoard",
-  "url": "https://www.tenderboard.biz/singaporetenders",
-  "ref": "",
-  "title": "Supply, Delivery, Installation, Testing and Commissioning of Door Access Control System",
-  "buyer": "ALL SAINTS HOME",
-  "category": "Construction: Others",
-  "published": "2026-10-01",
-  "closing": "2026-10-15",
-  "fit": "Bundle/subcon",
-  "first_seen": "2026-10-02"
  },
  {
   "source": "GeBIZ",
