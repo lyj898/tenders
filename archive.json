@@ -3332,5 +3332,71 @@
   "fit": "Bundle/subcon",
   "first_seen": "2026-09-26",
   "archived_on": "2026-10-17"
+ },
+ {
+  "source": "TenderBoard",
+  "url": "https://www.tenderboard.biz/singaporetenders",
+  "ref": "",
+  "title": "SUPPLY, DELIVERY INSTALLATION/COMMISSIONING, DISPOSAL AND MAINTENANCE OF PEDAL BOATS AND HYDROBIKES, AND DISPOSAL OF EXISTING PEDAL BOATS AT SINGAPORE DISCOVERY CENTRE",
+  "buyer": "Defence Collective Singapore Ltd",
+  "category": "Administration & Training: Sports & Recreational Equipment",
+  "published": "2026-10-08",
+  "closing": "2026-10-19",
+  "fit": "Direct fit",
+  "first_seen": "2026-10-09",
+  "archived_on": "2026-10-20"
+ },
+ {
+  "source": "GeBIZ",
+  "url": "https://www.gebiz.gov.sg/ptn/opportunity/BOListing.xhtml?origin=menu",
+  "ref": "MHASPF03000029527",
+  "title": "Provision of Islandwide Removal Services for Solar-Powered Cameras (SOLCAM)",
+  "buyer": "Ministry of Home Affairs - Singapore Police Force 1",
+  "type": "Quotation",
+  "category": "Miscellaneous ⇒ Others",
+  "published": "2026-10-08",
+  "closing": "2026-10-19",
+  "fit": "Direct fit",
+  "first_seen": "2026-10-09",
+  "archived_on": "2026-10-20"
+ },
+ {
+  "source": "TenderBoard",
+  "url": "https://www.tenderboard.biz/singaporetenders",
+  "ref": "",
+  "title": "F26094 RFQ for Customization & Fabrication, Supply, Delivery, Installation Fire Fighting Equipment Cabinet for All Saints Home Jurong East",
+  "buyer": "ALL SAINTS HOME",
+  "category": "Construction: Renovation Supplies & Services",
+  "published": "2026-10-05",
+  "closing": "2026-10-19",
+  "fit": "Bundle/subcon",
+  "first_seen": "2026-10-06",
+  "archived_on": "2026-10-20"
+ },
+ {
+  "source": "TenderBoard",
+  "url": "https://www.tenderboard.biz/singaporetenders",
+  "ref": "",
+  "title": "Provision and Installation of EV Charger and Associated Electrical Works",
+  "buyer": "SINGAPORE YOUTH FLYING CLUB",
+  "category": "Facilities Management: Electrical Engineering Services",
+  "published": "2026-09-25",
+  "closing": "2026-10-19",
+  "fit": "Bundle/subcon",
+  "first_seen": "2026-09-26",
+  "archived_on": "2026-10-20"
+ },
+ {
+  "source": "TenderBoard",
+  "url": "https://www.tenderboard.biz/singaporetenders",
+  "ref": "",
+  "title": "SUPPLY, DELIVERY, INSTALLATION AND COMMISSIONING OF SLOT MACHINES FOR SAFRA NATIONAL SERVICE ASSOCIATION",
+  "buyer": "SAFRA National Service Association",
+  "category": "Others: Others",
+  "published": "2026-09-25",
+  "closing": "2026-10-19",
+  "fit": "Bundle/subcon",
+  "first_seen": "2026-09-26",
+  "archived_on": "2026-10-20"
  }
 ]
