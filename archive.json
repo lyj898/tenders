@@ -3398,5 +3398,70 @@
   "fit": "Bundle/subcon",
   "first_seen": "2026-09-26",
   "archived_on": "2026-10-20"
+ },
+ {
+  "source": "TenderBoard",
+  "url": "https://www.tenderboard.biz/singaporetenders",
+  "ref": "",
+  "title": "RFQ SUPPLY AND INSTALLATION OF CUSTOM-MADE “THE BRAID BAR” LED ILLUMINATED SIGNAGE [1020 MM (W) × 650 MM (H)]",
+  "buyer": "The Singapore Island Country Club",
+  "category": "Construction: Signages",
+  "published": "2026-10-13",
+  "closing": "2026-10-20",
+  "fit": "Bundle/subcon",
+  "first_seen": "2026-10-14",
+  "archived_on": "2026-10-21"
+ },
+ {
+  "source": "SESAMi",
+  "url": "https://sesami.online/bizopps/businessOpportunities.jsp",
+  "ref": "WRS-ET-Q26-10-02102",
+  "title": "Supply, print, and install buggy wraps for guest tour buggies based on provided artwork, including site measurement, production, installation, and post-installation warranty.",
+  "buyer": "Singapore Zoological Gardens",
+  "type": "RFQ",
+  "published": "2026-10-12",
+  "closing": "2026-10-20",
+  "fit": "Bundle/subcon",
+  "first_seen": "2026-10-13",
+  "archived_on": "2026-10-21"
+ },
+ {
+  "source": "TenderBoard",
+  "url": "https://www.tenderboard.biz/singaporetenders",
+  "ref": "",
+  "title": "RFQ DESIGN, SUPPLY AND INSTALLATION OF AUTOMATED TRACTION SYSTEM AT BUKIT BISTRO ALFRESCO AREA",
+  "buyer": "The Singapore Island Country Club",
+  "category": "Construction: General Building & Minor Construction Works",
+  "published": "2026-10-07",
+  "closing": "2026-10-20",
+  "fit": "Bundle/subcon",
+  "first_seen": "2026-10-08",
+  "archived_on": "2026-10-21"
+ },
+ {
+  "source": "SESAMi",
+  "url": "https://sesami.online/bizopps/businessOpportunities.jsp",
+  "ref": "2026/00634",
+  "title": "Supply, Delivery, Installation, Testing and Commissioning of Drop-Arm Barriers, Ground Loop Sensors and Associated Works at Terminal 2",
+  "buyer": "CAG",
+  "type": "RFQ",
+  "published": "2026-09-28",
+  "closing": "2026-10-20",
+  "fit": "Bundle/subcon",
+  "first_seen": "2026-09-29",
+  "archived_on": "2026-10-21"
+ },
+ {
+  "source": "SESAMi",
+  "url": "https://sesami.online/bizopps/businessOpportunities.jsp",
+  "ref": "2026/00536",
+  "title": "Supply, Install and Commissioning of online leak detection and monitoring systems for Fire Hydrant system at Runways 1, 2 and 3 in Singapore Changi Airport",
+  "buyer": "CAG",
+  "type": "Tender",
+  "published": "2026-09-22",
+  "closing": "2026-10-20",
+  "fit": "Bundle/subcon",
+  "first_seen": "2026-09-23",
+  "archived_on": "2026-10-21"
  }
 ]
