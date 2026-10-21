@@ -3463,5 +3463,31 @@
   "fit": "Bundle/subcon",
   "first_seen": "2026-09-23",
   "archived_on": "2026-10-21"
+ },
+ {
+  "source": "SESAMi",
+  "url": "https://sesami.online/bizopps/businessOpportunities.jsp",
+  "ref": "2026/00656",
+  "title": "Quotation for the Supply, Delivery and Installation of Fall Arrest System on Elevated Planters at Changi Airport, Singapore",
+  "buyer": "CAG",
+  "type": "RFQ",
+  "published": "2026-10-07",
+  "closing": "2026-10-21",
+  "fit": "Bundle/subcon",
+  "first_seen": "2026-10-08",
+  "archived_on": "2026-10-22"
+ },
+ {
+  "source": "SESAMi",
+  "url": "https://sesami.online/bizopps/businessOpportunities.jsp",
+  "ref": "WRS-ACRFW-T26-09-02089",
+  "title": "RFQ for Minor A&A Works: Construct & Fabricate New Otter Habitat / Dens a t Flex 3 Habitat, Rainforest Wild Adventure West",
+  "buyer": "Mandai Park Development Pte Ltd*",
+  "type": "Tender",
+  "published": "2026-10-07",
+  "closing": "2026-10-21",
+  "fit": "Direct fit",
+  "first_seen": "2026-10-08",
+  "archived_on": "2026-10-22"
  }
 ]

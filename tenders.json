@@ -1,5 +1,53 @@
 [
  {
+  "source": "SESAMi",
+  "url": "https://sesami.online/bizopps/businessOpportunities.jsp",
+  "ref": "WRS-PAMKT-Q26-10-02117",
+  "title": "Production, Installation and Maintenance of Red Panda Campaign In-Park Decor at River Wonders",
+  "buyer": "Singapore Zoological Gardens",
+  "type": "RFQ",
+  "published": "2026-10-21",
+  "closing": "2026-10-27",
+  "fit": "Bundle/subcon",
+  "first_seen": "2026-10-22"
+ },
+ {
+  "source": "SESAMi",
+  "url": "https://sesami.online/bizopps/businessOpportunities.jsp",
+  "ref": "HTNSITQ/FY2627/0043",
+  "title": "INVITATION TO QUOTE (ITQ) SUPPLY AND INSTALLATION OF FIRE RATED GYPSUM PARTITON BOARD WITH ROCKWOOL INSULATION BOX-UP FOR FRESH AIR FAN MOTOR WITH ACCESS DOOR",
+  "buyer": "HOMETEAMNS",
+  "type": "RFQ",
+  "published": "2026-10-21",
+  "closing": "2026-10-28",
+  "fit": "Bundle/subcon",
+  "first_seen": "2026-10-22"
+ },
+ {
+  "source": "SESAMi",
+  "url": "https://sesami.online/bizopps/businessOpportunities.jsp",
+  "ref": "2026/00683",
+  "title": "SUPPLY, DELIVERY AND INSTALLATION OF AVIATION FIREFIGHTER FITNESS TEST (AFFT) LIFTING SYSTEM FOR AIRPORT EMERGENCY SERVICE (AES)",
+  "buyer": "CAG",
+  "type": "RFQ",
+  "published": "2026-10-21",
+  "closing": "2026-11-02",
+  "fit": "Bundle/subcon",
+  "first_seen": "2026-10-22"
+ },
+ {
+  "source": "SESAMi",
+  "url": "https://sesami.online/bizopps/businessOpportunities.jsp",
+  "ref": "21002702",
+  "title": "REPLACEMENT OF FIRE ALARM PANELS, FIELD DEVICES AND CABLES FOR ALSTOM UNIT AT SENOKO ENERGY PTE LTD",
+  "buyer": "SENOKO ENERGY PTE. LTD.",
+  "type": "Tender",
+  "published": "2026-10-21",
+  "closing": "2026-11-20",
+  "fit": "Bundle/subcon",
+  "first_seen": "2026-10-22"
+ },
+ {
   "source": "TenderBoard",
   "url": "https://www.tenderboard.biz/singaporetenders",
   "ref": "",
@@ -482,30 +530,6 @@
   "closing": "2026-10-27",
   "fit": "Direct fit",
   "first_seen": "2026-10-09"
- },
- {
-  "source": "SESAMi",
-  "url": "https://sesami.online/bizopps/businessOpportunities.jsp",
-  "ref": "2026/00656",
-  "title": "Quotation for the Supply, Delivery and Installation of Fall Arrest System on Elevated Planters at Changi Airport, Singapore",
-  "buyer": "CAG",
-  "type": "RFQ",
-  "published": "2026-10-07",
-  "closing": "2026-10-21",
-  "fit": "Bundle/subcon",
-  "first_seen": "2026-10-08"
- },
- {
-  "source": "SESAMi",
-  "url": "https://sesami.online/bizopps/businessOpportunities.jsp",
-  "ref": "WRS-ACRFW-T26-09-02089",
-  "title": "RFQ for Minor A&A Works: Construct & Fabricate New Otter Habitat / Dens a t Flex 3 Habitat, Rainforest Wild Adventure West",
-  "buyer": "Mandai Park Development Pte Ltd*",
-  "type": "Tender",
-  "published": "2026-10-07",
-  "closing": "2026-10-21",
-  "fit": "Direct fit",
-  "first_seen": "2026-10-08"
  },
  {
   "source": "GeBIZ",
