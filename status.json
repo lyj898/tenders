@@ -1,5 +1,5 @@
 {
- "run_at": "2026-10-25T06:04:32.830385+08:00",
+ "run_at": "2026-10-26T06:09:08.382777+08:00",
  "sources": {
   "SESAMi": {
    "ok": true,
@@ -19,11 +19,11 @@
   },
   "GeBIZ": {
    "ok": true,
-   "fetched": 10
+   "fetched": 17
   },
   "TenderBoard": {
    "ok": true,
-   "fetched": 0
+   "fetched": 187
   }
  },
  "live": 51,
