@@ -3778,5 +3778,44 @@
   "fit": "Direct fit",
   "first_seen": "2026-10-08",
   "archived_on": "2026-10-28"
+ },
+ {
+  "source": "SESAMi",
+  "url": "https://sesami.online/bizopps/businessOpportunities.jsp",
+  "ref": "HTNSITQ/FY2627/0043",
+  "title": "INVITATION TO QUOTE (ITQ) SUPPLY AND INSTALLATION OF FIRE RATED GYPSUM PARTITON BOARD WITH ROCKWOOL INSULATION BOX-UP FOR FRESH AIR FAN MOTOR WITH ACCESS DOOR",
+  "buyer": "HOMETEAMNS",
+  "type": "RFQ",
+  "published": "2026-10-21",
+  "closing": "2026-10-28",
+  "fit": "Bundle/subcon",
+  "first_seen": "2026-10-22",
+  "archived_on": "2026-10-29"
+ },
+ {
+  "source": "SESAMi",
+  "url": "https://sesami.online/bizopps/businessOpportunities.jsp",
+  "ref": "2026/00671",
+  "title": "THE DESIGN, SUPPLY, FABRICATION AND INSTALLATION OF MOORING BOLLARDS AND PROTECTIVE BARRIERS AT SEA RESCUE BASE",
+  "buyer": "CAG",
+  "type": "RFQ",
+  "published": "2026-10-15",
+  "closing": "2026-10-28",
+  "fit": "Bundle/subcon",
+  "first_seen": "2026-10-16",
+  "archived_on": "2026-10-29"
+ },
+ {
+  "source": "SESAMi",
+  "url": "https://sesami.online/bizopps/businessOpportunities.jsp",
+  "ref": "2026/00650",
+  "title": "REPLACEMENT OF JOINT SEALANT IN THE RIGID PAVEMENT AT TAXIWAYS ADJACENT TO RUNWAY 3, SINGAPORE CHANGI AIRPORT",
+  "buyer": "CAG",
+  "type": "Tender",
+  "published": "2026-10-05",
+  "closing": "2026-10-28",
+  "fit": "Bundle/subcon",
+  "first_seen": "2026-10-06",
+  "archived_on": "2026-10-29"
  }
 ]
