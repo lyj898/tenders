@@ -3817,5 +3817,72 @@
   "fit": "Bundle/subcon",
   "first_seen": "2026-10-06",
   "archived_on": "2026-10-29"
+ },
+ {
+  "source": "SESAMi",
+  "url": "https://sesami.online/bizopps/businessOpportunities.jsp",
+  "ref": "WRS-AV-Q26-10-02101",
+  "title": "RFQ for Minor A&A for Modification of Animal Holdings at Heart of Africa, Bird Paradise",
+  "buyer": "Mandai Park Development Pte Ltd*",
+  "type": "RFQ",
+  "published": "2026-10-14",
+  "closing": "2026-10-29",
+  "fit": "Direct fit",
+  "first_seen": "2026-10-15",
+  "archived_on": "2026-10-30"
+ },
+ {
+  "source": "GeBIZ",
+  "url": "https://www.gebiz.gov.sg/ptn/opportunity/BOListing.xhtml?origin=menu",
+  "ref": "ITE000ETQ26000125",
+  "title": "(R) E-ITEa26-00776_CGS_CAS_Dismantling Existing Water Dispensers and Installing New Contactless Bottle Filler Water Dispensers with Drinking Bubbler",
+  "buyer": "Institute of Technical Education",
+  "type": "Quotation",
+  "category": "Furniture, Office Equipment & Audio-Visual ⇒ Others",
+  "published": "2026-10-14",
+  "closing": "2026-10-29",
+  "fit": "Direct fit",
+  "first_seen": "2026-10-15",
+  "archived_on": "2026-10-30"
+ },
+ {
+  "source": "SESAMi",
+  "url": "https://sesami.online/bizopps/businessOpportunities.jsp",
+  "ref": "SAS/T/2026-010",
+  "title": "Tender for Installation of new Air-Conditioning Systems for all DormitoriesAn Addendum has been issued, changes as follows:- Scope of Work for additional level 9 and added on of Room Area measurement- Layout/Drawing for Dormitories- SLD",
+  "buyer": "Society for The Aged Sick",
+  "type": "Tender",
+  "published": "2026-09-24",
+  "closing": "2026-10-29",
+  "fit": "Bundle/subcon",
+  "first_seen": "2026-10-03",
+  "archived_on": "2026-10-30"
+ },
+ {
+  "source": "GeBIZ",
+  "url": "https://www.gebiz.gov.sg/ptn/opportunity/BOListing.xhtml?origin=menu",
+  "ref": "PUB000ETT26000122",
+  "title": "Flotsam and Aquatic Plant Collection and Removal at Reservoirs in Singapore",
+  "buyer": "Public Utilities Board",
+  "type": "Tender",
+  "category": "Miscellaneous ⇒ Others",
+  "published": "2026-10-02",
+  "closing": "2026-10-29",
+  "fit": "Direct fit",
+  "first_seen": "2026-10-02",
+  "archived_on": "2026-10-30"
+ },
+ {
+  "source": "SESAMi",
+  "url": "https://sesami.online/bizopps/businessOpportunities.jsp",
+  "ref": "SAS/T/2026-010",
+  "title": "Tender for Installation of new Air-Conditioning Systems in all Dormitories",
+  "buyer": "Society for The Aged Sick",
+  "type": "Tender",
+  "published": "2026-09-24",
+  "closing": "2026-10-29",
+  "fit": "Bundle/subcon",
+  "first_seen": "2026-09-25",
+  "archived_on": "2026-10-30"
  }
 ]
