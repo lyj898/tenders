@@ -1,13 +1,13 @@
 {
- "run_at": "2026-10-30T07:41:38.902208+08:00",
+ "run_at": "2026-10-31T07:21:01.898134+08:00",
  "sources": {
   "SESAMi": {
-   "ok": true,
-   "fetched": 110
+   "ok": false,
+   "error": "HTTPSConnectionPool(host='sesami.online', port=443): Max retries exceeded with url: /bizopps/businessOpportunities.jsp (Caused by ConnectTimeoutError(<HTTPSConnection(host='sesami.online', port=443) at 0x7a5109b16ba0>, 'Connection to sesami.online timed out. (connect timeout=60)'))"
   },
   "Jalan Besar Town Council": {
    "ok": false,
-   "error": "JBTC: no tables found (page layout changed or blocked)"
+   "error": "('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
   },
   "Marine Parade Town Council": {
    "ok": true,
@@ -19,15 +19,15 @@
   },
   "GeBIZ": {
    "ok": true,
-   "fetched": 19
+   "fetched": 20
   },
   "TenderBoard": {
    "ok": true,
-   "fetched": 234
+   "fetched": 220
   }
  },
- "live": 58,
- "archived_total": 295,
+ "live": 53,
+ "archived_total": 300,
  "newly_archived": 5,
  "dismissed": 0
 }
