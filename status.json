@@ -1,9 +1,9 @@
 {
- "run_at": "2026-10-31T07:21:01.898134+08:00",
+ "run_at": "2026-11-01T06:54:21.573142+08:00",
  "sources": {
   "SESAMi": {
-   "ok": false,
-   "error": "HTTPSConnectionPool(host='sesami.online', port=443): Max retries exceeded with url: /bizopps/businessOpportunities.jsp (Caused by ConnectTimeoutError(<HTTPSConnection(host='sesami.online', port=443) at 0x7a5109b16ba0>, 'Connection to sesami.online timed out. (connect timeout=60)'))"
+   "ok": true,
+   "fetched": 107
   },
   "Jalan Besar Town Council": {
    "ok": false,
@@ -23,11 +23,11 @@
   },
   "TenderBoard": {
    "ok": true,
-   "fetched": 220
+   "fetched": 213
   }
  },
- "live": 53,
+ "live": 55,
  "archived_total": 300,
- "newly_archived": 5,
+ "newly_archived": 0,
  "dismissed": 0
 }
