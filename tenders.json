@@ -2,6 +2,66 @@
  {
   "source": "SESAMi",
   "url": "https://sesami.online/bizopps/businessOpportunities.jsp",
+  "ref": "2026/Q022",
+  "title": "REQUEST FOR QUOTATION (RFQ) FOR THE SUPPLY AND REPLACEMENT OF PRE-ROTATION VANE (PRV) ACTUATOR FOR CHILLER CH-RE-B2-04 IN JEWEL CHANGI AIRPORT",
+  "buyer": "JEWEL CHANGI AIRPORT DEVT PTE. LTD.",
+  "type": "RFQ",
+  "published": "2026-11-02",
+  "closing": "2026-11-10",
+  "fit": "Bundle/subcon",
+  "first_seen": "2026-11-03"
+ },
+ {
+  "source": "TenderBoard",
+  "url": "https://www.tenderboard.biz/singaporetenders",
+  "ref": "",
+  "title": "Supply and replacement of damaged cranking gearboxes for our existing operable wall systems at Masjid Darul Ghufran. Please refer to the attached document for the scope of work and equipment details. 1. Locations of Affected Operable Walls The replacement works are required at the following locations: Level 2 – Alive Classroom 1 & 2: Panel 4 Level 2 – Alive Classroom 3: AP Panel Level 4 – Classroom 12/13: Panel 7 2. Scope of Works The proposed works shall include, but not be limited to: Supply of three (3) new cranking gearboxes, Model 41022, or suitable compatible replacements. Provision of all necessary manpower, tools and equipment. Dismantling and removal of the affected operable wall panels. Transportation of the affected panels to the workshop or factory, if required. Removal of existing damaged gearboxes and installation of new replacement units. Reinstatement of surface boards and laminate finishes to match the existing appearance as closely as possible. Transportation and reinstallation of the repaired operable wall panels on-site. Testing and commissioning to ensure smooth and proper operation of the operable wall systems. Removal and proper disposal of damaged components. 3. Quotation Requirements Kindly include the following information in your quotation: Itemised cost breakdown for each affected panel. Cost of replacement gearboxes, labour and transportation. Estimated lead time for replacement parts. Estimated duration required to complete the works. Warranty period for replacement parts and workmanship. Quotation validity and payment terms. Any additional charges or exclusions, if applicable. Please also indicate whether the replacement works can be carried out on-site or whether the affected panels must be transported to your workshop. As the classrooms are regularly used for mosque programmes and activities, we would appreciate your proposed work schedule to minimise disruption to our daily operations.",
+  "buyer": "Darul Ghufran Mosque",
+  "category": "Construction: Repairs & Redecoration",
+  "published": "2026-11-02",
+  "closing": "2026-11-15",
+  "fit": "Direct fit",
+  "first_seen": "2026-11-03"
+ },
+ {
+  "source": "SESAMi",
+  "url": "https://sesami.online/bizopps/businessOpportunities.jsp",
+  "ref": "WRS-FM-T26-07-01985",
+  "title": "Tender for the Proposed Installation of Fire Hydrant Piping at Night Safari West Loop",
+  "buyer": "Singapore Zoological Gardens",
+  "type": "Tender",
+  "published": "2026-11-02",
+  "closing": "2026-11-16",
+  "fit": "Bundle/subcon",
+  "first_seen": "2026-11-03"
+ },
+ {
+  "source": "TenderBoard",
+  "url": "https://www.tenderboard.biz/singaporetenders",
+  "ref": "",
+  "title": "RFQ for Remove and Dispose Wash Sinks at All Saints Home (Tampines)",
+  "buyer": "ALL SAINTS HOME",
+  "category": "Facilities Management: Building, M&E Maintenance",
+  "published": "2026-11-02",
+  "closing": "2026-11-18",
+  "fit": "Direct fit",
+  "first_seen": "2026-11-03"
+ },
+ {
+  "source": "TenderBoard",
+  "url": "https://www.tenderboard.biz/singaporetenders",
+  "ref": "",
+  "title": "Replacement of Musician Chairs, Music Stands and Music Stand Lights For Victoria Theatre and Victoria Concert Hall",
+  "buyer": "ARTS HOUSE LTD.",
+  "category": "Furniture, Office Equipment & Audio-Visual: AV Equipment, Photographic Equipment & Accessories",
+  "published": "2026-11-02",
+  "closing": "2026-12-01",
+  "fit": "Bundle/subcon",
+  "first_seen": "2026-11-03"
+ },
+ {
+  "source": "SESAMi",
+  "url": "https://sesami.online/bizopps/businessOpportunities.jsp",
   "ref": "40008303",
   "title": "For The Replacement Of ABB Active Harmonic Filter Panels At Tembusu Multi-Utilities Complex, Jurong Island",
   "buyer": "TP UTILITIES PTE. LTD.",
@@ -107,18 +167,6 @@
   "closing": "2026-11-20",
   "fit": "Bundle/subcon",
   "first_seen": "2026-10-30"
- },
- {
-  "source": "TenderBoard",
-  "url": "https://www.tenderboard.biz/singaporetenders",
-  "ref": "",
-  "title": "Supply and Install Interface Relay, Power Supply, Cable c/w Wiring, Conduit Pipe, Necessary Fittings, Junction Boxes and Support Brackets to Link EM Lock System to MAP for 2 No.s of Existing Auto Doors at SNM Nursing Home@Chong Pang",
-  "buyer": "Sree Narayana Mission (Singapore)",
-  "category": "Facilities Management: Electrical Engineering Services",
-  "published": "2026-10-26",
-  "closing": "2026-11-02",
-  "fit": "Bundle/subcon",
-  "first_seen": "2026-10-29"
  },
  {
   "source": "SESAMi",
@@ -256,18 +304,6 @@
   "first_seen": "2026-10-28"
  },
  {
-  "source": "TenderBoard",
-  "url": "https://www.tenderboard.biz/singaporetenders",
-  "ref": "",
-  "title": "Supply, installation and disposal of Rheem EHG-60L Classic Electric Storage Water Heaters",
-  "buyer": "KWONG WAI SHIU HOSPITAL",
-  "category": "Not Specified",
-  "published": "2026-10-26",
-  "closing": "2026-11-02",
-  "fit": "Direct fit",
-  "first_seen": "2026-10-27"
- },
- {
   "source": "SESAMi",
   "url": "https://sesami.online/bizopps/businessOpportunities.jsp",
   "ref": "2026/00704",
@@ -378,18 +414,6 @@
  {
   "source": "SESAMi",
   "url": "https://sesami.online/bizopps/businessOpportunities.jsp",
-  "ref": "2026/00683",
-  "title": "SUPPLY, DELIVERY AND INSTALLATION OF AVIATION FIREFIGHTER FITNESS TEST (AFFT) LIFTING SYSTEM FOR AIRPORT EMERGENCY SERVICE (AES)",
-  "buyer": "CAG",
-  "type": "RFQ",
-  "published": "2026-10-21",
-  "closing": "2026-11-02",
-  "fit": "Bundle/subcon",
-  "first_seen": "2026-10-22"
- },
- {
-  "source": "SESAMi",
-  "url": "https://sesami.online/bizopps/businessOpportunities.jsp",
   "ref": "21002702",
   "title": "REPLACEMENT OF FIRE ALARM PANELS, FIELD DEVICES AND CABLES FOR ALSTOM UNIT AT SENOKO ENERGY PTE LTD",
   "buyer": "SENOKO ENERGY PTE. LTD.",
@@ -398,30 +422,6 @@
   "closing": "2026-11-20",
   "fit": "Bundle/subcon",
   "first_seen": "2026-10-22"
- },
- {
-  "source": "TenderBoard",
-  "url": "https://www.tenderboard.biz/singaporetenders",
-  "ref": "",
-  "title": "F26098 Supply, Delivery, Installation, Testing, Commissioning and Maintenance of 8 units Air Coolers for All Saints Home Jurong East",
-  "buyer": "ALL SAINTS HOME",
-  "category": "Facilities Management: Airconditioning, Refrigeration & Ventilation Works & Maintenance",
-  "published": "2026-10-20",
-  "closing": "2026-11-02",
-  "fit": "Bundle/subcon",
-  "first_seen": "2026-10-21"
- },
- {
-  "source": "TenderBoard",
-  "url": "https://www.tenderboard.biz/singaporetenders",
-  "ref": "",
-  "title": "Replacement of Main Toilet Door & Door Frame at Level 3",
-  "buyer": "Masjid Assyakirin",
-  "category": "Construction: Others",
-  "published": "2026-10-19",
-  "closing": "2026-11-02",
-  "fit": "Bundle/subcon",
-  "first_seen": "2026-10-21"
  },
  {
   "source": "SESAMi",
@@ -568,18 +568,6 @@
   "closing": "2026-11-12",
   "fit": "Direct fit",
   "first_seen": "2026-10-16"
- },
- {
-  "source": "TenderBoard",
-  "url": "https://www.tenderboard.biz/singaporetenders",
-  "ref": "",
-  "title": "TENDER FOR UPGRADING OF AIR CONDITIONING SYSTEM SUPPLY, DELIVERY, INSTALLATION, TESTING AND COMMISSIONING OF AIR CONDITIONING UNITS AT SAFRA MOUNT FABER - ENERYONE GYM",
-  "buyer": "SAFRA National Service Association",
-  "category": "Facilities Management: Airconditioning, Refrigeration & Ventilation Works & Maintenance",
-  "published": "2026-10-14",
-  "closing": "2026-11-02",
-  "fit": "Bundle/subcon",
-  "first_seen": "2026-10-15"
  },
  {
   "source": "TenderBoard",
