@@ -4027,5 +4027,83 @@
   "fit": "Bundle/subcon",
   "first_seen": "2026-10-15",
   "archived_on": "2026-11-03"
+ },
+ {
+  "source": "TenderBoard",
+  "url": "https://www.tenderboard.biz/singaporetenders",
+  "ref": "",
+  "title": "Installation Charge for StarTrac Machine",
+  "buyer": "SIM - Singapore Institute of Management",
+  "category": "Not Specified",
+  "published": "2026-10-29",
+  "closing": "2026-11-03",
+  "fit": "Bundle/subcon",
+  "first_seen": "2026-10-30",
+  "archived_on": "2026-11-04"
+ },
+ {
+  "source": "TenderBoard",
+  "url": "https://www.tenderboard.biz/singaporetenders",
+  "ref": "",
+  "title": "RFQ TO SUPPLY & INSTALL 3 UNITS OF MOTORIZED OPERATED LATIN BLIND/LOOP BLIND SYSTEM AT BUKIT BISTRO ALFRESCO AREA",
+  "buyer": "The Singapore Island Country Club",
+  "category": "Construction: General Building & Minor Construction Works",
+  "published": "2026-10-27",
+  "closing": "2026-11-03",
+  "fit": "Bundle/subcon",
+  "first_seen": "2026-10-28",
+  "archived_on": "2026-11-04"
+ },
+ {
+  "source": "TenderBoard",
+  "url": "https://www.tenderboard.biz/singaporetenders",
+  "ref": "",
+  "title": "Supply of furniture and snooker cue locker",
+  "buyer": "Singapore Recreation Club",
+  "category": "Furniture, Office Equipment & Audio-Visual: Others",
+  "published": "2026-10-27",
+  "closing": "2026-11-03",
+  "fit": "Bundle/subcon",
+  "first_seen": "2026-10-28",
+  "archived_on": "2026-11-04"
+ },
+ {
+  "source": "TenderBoard",
+  "url": "https://www.tenderboard.biz/singaporetenders",
+  "ref": "",
+  "title": "CYS-TS Shared Expenses: Supply and Installation of Cat6A PoE LAN Points (CYS-TS Foyer and CYS Guard House)",
+  "buyer": "APSN",
+  "category": "IT&Telecommunication: IT Services & Software Development",
+  "published": "2026-10-22",
+  "closing": "2026-11-03",
+  "fit": "Bundle/subcon",
+  "first_seen": "2026-10-23",
+  "archived_on": "2026-11-04"
+ },
+ {
+  "source": "SESAMi",
+  "url": "https://sesami.online/bizopps/businessOpportunities.jsp",
+  "ref": "BMMT 0017",
+  "title": "SUPPLY, INSTALLATION, TESTING AND COMMISSIONING (SITC) OF ADDITIONAL AIR-CONDITIONING SYSTEMS AT HANGAR 2 AND HANGAR 3 FOR BASE MAINTENANCE MALAYSIA",
+  "buyer": "BASE MAINTENANCE MALAYSIA SDN. BHD.",
+  "type": "Tender",
+  "published": "2026-10-20",
+  "closing": "2026-11-03",
+  "fit": "Bundle/subcon",
+  "first_seen": "2026-10-21",
+  "archived_on": "2026-11-04"
+ },
+ {
+  "source": "TenderBoard",
+  "url": "https://www.tenderboard.biz/singaporetenders",
+  "ref": "",
+  "title": "F26094 RFQ for Supply, Delivery, Installation, Testing and Commissioning Cert Equipment for All Saints Home Jurong East",
+  "buyer": "ALL SAINTS HOME",
+  "category": "Miscellaneous: Safety & Rescue Equipment",
+  "published": "2026-10-20",
+  "closing": "2026-11-03",
+  "fit": "Bundle/subcon",
+  "first_seen": "2026-10-21",
+  "archived_on": "2026-11-04"
  }
 ]
