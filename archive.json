@@ -4157,5 +4157,18 @@
   "fit": "Bundle/subcon",
   "first_seen": "2026-10-17",
   "archived_on": "2026-11-05"
+ },
+ {
+  "source": "SESAMi",
+  "url": "https://sesami.online/bizopps/businessOpportunities.jsp",
+  "ref": "2026/00712",
+  "title": "Bird Nest Removal in the vicinity of Changi Airport",
+  "buyer": "CAG",
+  "type": "RFQ",
+  "published": "2026-10-29",
+  "closing": "2026-11-05",
+  "fit": "Direct fit",
+  "first_seen": "2026-10-30",
+  "archived_on": "2026-11-06"
  }
 ]
